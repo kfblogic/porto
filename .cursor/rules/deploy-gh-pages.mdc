@@ -1,0 +1,36 @@
+---
+description: Deploy ke GitHub Pages (gh-pages) setelah pekerjaan selesai
+alwaysApply: true
+---
+
+# Deploy & commit setelah selesai
+
+## Kapan deploy
+
+Setelah perubahan **script**, **tampilan**, atau **logika** selesai dan `npm run build` sukses:
+
+1. Tanyakan ke user: lanjut deploy ke **gh-pages**? (kecuali user sudah bilang deploy/commit di query yang sama).
+2. Jika **ya** → jalankan `npm run deploy` (build + push isi `dist/` ke `kfblogic.github.io`, branch `gh-pages`).
+3. Jika **tidak** → selesai tanpa deploy.
+
+## Commit (repo sumber)
+
+Folder Porto bisa tanpa `git`. Jika ada repo git untuk **kode sumber** (bukan isi `dist/`):
+
+- Commit **Conventional Commits**, pesan **bahasa Inggris**.
+- Contoh: `feat(ui): improve light mode glass cards`, `fix(skills): keep skill icons dark on light theme`.
+- Jangan commit secret (PAT, `.env`).
+
+Branch **gh-pages** di repo GitHub Pages hanya berisi artefak static dari `npm run deploy` — bukan tempat commit manual kode React.
+
+## Urutan disarankan
+
+```bash
+npm run build
+# opsional: git add … && git commit -m "feat: …"  (repo sumber, jika ada)
+npm run deploy   # hanya jika user setuju
+```
+
+## Dokumentasi
+
+Setelah deploy atau perubahan deploy workflow, update [CONTEXT.md](../../CONTEXT.md) jika langkah deploy berubah.

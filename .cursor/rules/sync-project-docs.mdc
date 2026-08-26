@@ -1,0 +1,30 @@
+---
+description: Sinkronkan CONTEXT, AGENTS, DESIGN saat kode/UI/logika berubah
+alwaysApply: true
+---
+
+# Sinkronkan dokumentasi proyek
+
+Setelah mengubah **script**, **tampilan (CSS/komponen)**, atau **logika** di repo Porto, perbarui dokumen yang relevan di root:
+
+| Perubahan | Perbarui |
+|-----------|----------|
+| Struktur folder, routing, admin, deploy, data JSON | [CONTEXT.md](../../CONTEXT.md) |
+| Perintah npm, aturan agent, do/don't, fitur baru | [AGENTS.md](../../AGENTS.md) |
+| Token warna, tema, kelas CSS, pola UI, animasi | [DESIGN.md](../../DESIGN.md) |
+
+## Wajib
+
+- Jangan biarkan kode dan dokumentasi berbeda (mis. fitur i18n/theme ada di kode tapi tidak di AGENTS/DESIGN).
+- Perubahan kecil: satu paragraf atau baris tabel di dokumen yang tepat.
+- Perubahan besar: tambah subsection + tabel referensi di CONTEXT.
+
+## Cek cepat sebelum selesai
+
+1. Apakah CONTEXT masih menjelaskan cara kerja fitur yang baru/diubah?
+2. Apakah AGENTS mencantumkan perintah/aturan baru untuk AI?
+3. Apakah DESIGN mencantumkan token/kelas CSS baru?
+4. UI bahasa Indonesia di `src/lib/i18n.js` — natural, bukan bahasa baku.
+5. Deploy: ikuti `.cursor/rules/deploy-gh-pages.mdc` (tanya user, lalu `npm run deploy` jika setuju).
+
+Jika tidak ada perubahan dokumentasi yang diperlukan, tidak perlu edit file kosong — hanya pastikan tidak ada drift.

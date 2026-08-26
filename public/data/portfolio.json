@@ -1,0 +1,374 @@
+{
+  "profile": {
+    "name": "Kevin Febrian Bimantara",
+    "headlines": [
+      "Software Engineer",
+      "Fullstack Developer"
+    ],
+    "description": "Saya merupakan seorang developer yang passionate dalam pengembangan web dan mobile. Memiliki pengalaman dalam pengembangan aplikasi menggunakan berbagai teknologi modern seperti React, Laravel, Dart, dan  Next.js. Selalu bersemangat untuk belajar teknologi baru dan mengembangkan solusi yang inovatif.",
+    "description_en": "I am a developer passionate about web and mobile development. I build applications with modern technologies such as React, Laravel, Dart, and Next.js, and I enjoy learning new tools to ship innovative solutions.",
+    "headlines_en": [
+      "Software Engineer",
+      "Fullstack Developer"
+    ],
+    "photo": "./assets/portfolio/profile/1.png",
+    "cv_path": "./assets/portfolio/cv/cv.pdf",
+    "github_url": "https://github.com/kfblogic",
+    "linkedin_url": "https://linkedin.com/in/kevinfeb",
+    "instagram_url": "https://instagram.com/vin.fbrn",
+    "twitter_url": "",
+    "email": "kfebrian789@gmail.com"
+  },
+  "activities": [
+    {
+      "id": 1,
+      "heading": "MyCoach ID (Head Of Infrastructure)",
+      "heading_en": "MyCoach ID (Head of Infrastructure)",
+      "caption": "Sebagai Head Of Infrastructure di MyCoach ID, saya bertanggung jawab dalam pengembangan dan pemeliharaan aplikasi  dan website, menggunakan teknologi modern untuk menghasilkan solusi yang efektif dan scalable.",
+      "caption_en": "As Head of Infrastructure at MyCoach ID, I lead development and maintenance of apps and websites using modern technologies to deliver effective, scalable solutions."
+    }
+  ],
+  "projects": [
+    {
+      "id": 1,
+      "name": "Website Pencarian Lowongan Pekerjaan",
+      "category": "Website Fullstack",
+      "slug": "website-pencarian-lowongan-pekerjaan",
+      "excerpt": "Website untuk mencari lowongan pekerjaan yang mengambil data dari 3 situs lowongan kerja (glints, jobstreet, karir.com)",
+      "artikel": "<p><b><span style=\"font-size: 24px;\"><span style=\"font-size: 24px;\">Integrasi Data Lowongan Kerja dari Berbagai Platform Daring Menggunakan Teknik Web Scraping dan API</span></span></b></p><p><span style=\"font-size: 16px;\"><span style=\"font-weight: normal;\"><span style=\"font-size: 18px;\">Perkembangan teknologi informasi telah membawa dampak yang sangat signifikan terhadap cara individu dalam mencari dan mengakses informasi lowongan pekerjaan. Saat ini, berbagai platform daring seperti Glints, Jobstreet, dan Karir.com telah menyediakan informasi lowongan kerja yang sangat beragam bagi masyarakat. Namun, penyebaran informasi di berbagai platform tersebut justru sering kali menimbulkan kendala dan belum mampu memberikan pengalaman pencarian yang efektif maupun efisien. Para pencari kerja masih dihadapkan pada masalah fragmentasi, di mana mereka harus membuang banyak waktu untuk berpindah dari satu situs ke situs lainnya secara terpisah demi memperoleh informasi peluang karir yang lengkap.</span></span></span></p><p><span style=\"font-size: 16px;\">Untuk mengatasi permasalahan fragmentasi informasi tersebut, teknologi </span><i data-path-to-node=\"3\" data-index-in-node=\"71\" style=\"font-size: 16px;\">web scraping</i><span style=\"font-size: 16px;\"> hadir sebagai salah satu teknik pengumpulan data secara otomatis yang sangat ideal. Penerapan </span><i data-path-to-node=\"3\" data-index-in-node=\"210\" style=\"font-size: 16px;\">web scraping</i><span style=\"font-size: 16px;\"> memungkinkan ekstraksi data dari berbagai situs web dilakukan secara cepat dan sistematis, sehingga jauh lebih memudahkan dalam proses pengolahan dan pemanfaatan informasi. Efektivitas penggunaan metode otomatis ini dalam menghasilkan data yang relevan dan terstruktur untuk membangun peta lowongan kerja di Indonesia. Meskipun beberapa penelitian sebelumnya telah menerapkan </span><i data-path-to-node=\"3\" data-index-in-node=\"650\" style=\"font-size: 16px;\">web scraping</i><span style=\"font-size: 16px;\"> untuk berbagai bidang—seperti pengambilan data produk </span><i data-path-to-node=\"3\" data-index-in-node=\"717\" style=\"font-size: 16px;\">e-commerce</i><span style=\"font-size: 16px;\">&nbsp;, pemetaan keahlian siswa , maupun perancangan sistem informasi lowongan kerja secara umum belum ada studi yang secara khusus mengintegrasikan </span><i data-path-to-node=\"3\" data-index-in-node=\"945\" style=\"font-size: 16px;\">scraping</i><span style=\"font-size: 16px;\"> dari beberapa platform pencari kerja raksasa sekaligus ke dalam satu bentuk situs web yang interaktif.</span></p><p>Berangkat dari celah penelitian dan tingginya kebutuhan akan sistem yang lebih terpusat tersebut, penelitian ini merancang dan membangun sebuah <i data-path-to-node=\"4\" data-index-in-node=\"144\">website</i> terintegrasi yang mampu memetakan data lowongan kerja secara otomatis dan sistematis. Proses pengumpulan data dilakukan melalui dua pendekatan utama yang disesuaikan dengan infrastruktur masing-masing platform. Pendekatan pertama menggunakan teknik <i data-path-to-node=\"4\" data-index-in-node=\"401\">web scraping</i> yang memanfaatkan <i data-path-to-node=\"4\" data-index-in-node=\"432\">library</i> BeautifulSoup untuk mengekstraksi data langsung dari situs Glints dan Jobstreet. Sementara itu, pendekatan kedua memanfaatkan <i data-path-to-node=\"4\" data-index-in-node=\"566\">Application Programming Interface</i> (API) untuk mengambil data secara legal dan terstruktur dari Karir.com. Melalui metode ganda ini, sistem dapat menghimpun berbagai informasi krusial secara komprehensif, meliputi nama pekerjaan, nama perusahaan, lokasi penempatan, kisaran gaji, hingga tautan detail menuju halaman lowongan kerja tersebut.</p><p>Seluruh data yang berhasil dikumpulkan kemudian disajikan dalam sebuah antarmuka <i data-path-to-node=\"5\" data-index-in-node=\"81\">website</i> yang rapi dan terstruktur. Guna meningkatkan pengalaman dan kemudahan pengguna, <i data-path-to-node=\"5\" data-index-in-node=\"169\">website</i> ini turut dibekali dengan fitur pencarian dan penyaringan (filter) yang interaktif. Berdasarkan hasil pengujian <i data-path-to-node=\"5\" data-index-in-node=\"289\">User Acceptance Test</i> (UAT) yang telah dilakukan, sistem ini berhasil mencatatkan tingkat penerimaan pengguna yang tinggi, yakni sebesar 89%. Angka ini menandakan bahwa <i data-path-to-node=\"5\" data-index-in-node=\"457\">website</i> yang dikembangkan telah menjawab dan memenuhi kebutuhan para pencari kerja dengan sangat baik. Secara keseluruhan, inovasi sistem ini terbukti berhasil mengintegrasikan tiga sumber lowongan kerja besar melalui dua metode pengambilan data secara efektif, yang pada akhirnya secara nyata mampu meningkatkan efisiensi pencarian kerja serta menyediakan akses informasi yang jauh lebih terpusat, relevan, dan mudah digunakan.</p>",
+      "link": "https://job-vacancy-python.vercel.app/",
+      "image_path": "./assets/portfolio/projects/project-1-0.png",
+      "images": [
+        {
+          "id": 1000,
+          "path": "./assets/portfolio/projects/project-1-0.png"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Website Squad Laundry Express",
+      "category": "Website Fullstack",
+      "slug": "website-squad-laundry-express",
+      "excerpt": "Sebuah website untuk UMKM laundry bernama Squad Laundry Express yang menggunakan framework Laravel",
+      "artikel": "<p><span style=\"font-size: 20px;\"><span style=\"font-size: 24px;\"><b>SQUAD Laundry Express: Digitalisasi dan Efisiensi Pengelolaan Layanan Jasa Cuci Pakaian</b></span></span></p><p><span style=\"font-size: 20px;\"></span><span style=\"font-size: 24px;\">​</span>Di era digital saat ini, kemudahan dan efisiensi telah menjadi kebutuhan utama masyarakat di berbagai aspek kehidupan, termasuk dalam urusan kebersihan pakaian. Layanan <i data-path-to-node=\"2\" data-index-in-node=\"169\">laundry</i> kini semakin menjadi pilihan populer, terutama bagi masyarakat dengan tingkat kesibukan tinggi yang tidak lagi memiliki waktu luang untuk mencuci pakaiannya sendiri. Sayangnya, di tengah pesatnya perkembangan teknologi informasi, masih banyak penyedia jasa <i data-path-to-node=\"2\" data-index-in-node=\"434\">laundry</i> yang mengandalkan sistem pencatatan manual dalam mengelola data transaksi pemesanan maupun data pelanggannya. Pendekatan konvensional ini sering kali memicu masalah ketidakefisienan dalam operasional sehari-hari. Oleh karena itu, muncul sebuah urgensi akan hadirnya sistem <i data-path-to-node=\"2\" data-index-in-node=\"715\">e-business</i> yang lebih modern dan terintegrasi untuk membantu para pemilik usaha dalam mengelola data secara lebih terstruktur.</p><p><!--StartFragment-->Berangkat dari permasalahan tersebut, penelitian ini merancang dan membangun sebuah platform bernama SQUAD Laundry Express, yaitu inovasi layanan <i data-path-to-node=\"3\" data-index-in-node=\"146\">laundry</i> berbasis <i data-path-to-node=\"3\" data-index-in-node=\"163\">website</i> yang bertujuan menjembatani kebutuhan pelanggan dan pengelola usaha. Pemanfaatan teknologi informasi dan komunikasi pada aplikasi ini difokuskan untuk memberikan kemudahan yang maksimal. Dari sisi pengguna (<i data-path-to-node=\"3\" data-index-in-node=\"378\">customer</i>), <i data-path-to-node=\"3\" data-index-in-node=\"389\">website</i> ini memungkinkan mereka untuk memesan layanan jasa <i data-path-to-node=\"3\" data-index-in-node=\"448\">laundry</i>, melacak status pesanan secara berkala, hingga melakukan proses pembayaran secara <i data-path-to-node=\"3\" data-index-in-node=\"538\">online</i>. Sementara itu, dari sisi pemilik <i data-path-to-node=\"3\" data-index-in-node=\"579\">laundry</i>, platform ini menawarkan sistem digital yang sangat memudahkan proses rekapitulasi data transaksi dan manajemen informasi pelanggan, sehingga efektivitas dan efisiensi operasional layanan dapat meningkat secara signifikan.<!--EndFragment--></p><p><!--StartFragment-->Dalam proses pengembangannya, <i data-path-to-node=\"4\" data-index-in-node=\"30\">website</i> SQUAD Laundry Express dibangun dengan menerapkan metode <i data-path-to-node=\"4\" data-index-in-node=\"94\">Software Development Life Cycle</i> (SDLC) yang sistematis. Proses pengembangannya melalui tahapan yang komprehensif, mulai dari perencanaan, analisis kebutuhan, desain, implementasi, uji coba, hingga tahap pengelolaan. Secara teknis, sistem ini dirancang menggunakan <i data-path-to-node=\"4\" data-index-in-node=\"358\">text editor</i> Visual Studio Code dan bahasa pemrograman PHP yang ditopang oleh ketangguhan <i data-path-to-node=\"4\" data-index-in-node=\"447\">framework</i> Laravel. Guna memastikan kualitas dan keandalannya, aplikasi ini telah melewati serangkaian pengujian <i data-path-to-node=\"4\" data-index-in-node=\"559\">blackbox testing</i> dan uji coba <i data-path-to-node=\"4\" data-index-in-node=\"589\">website</i>. Hasil pengujian tersebut memastikan bahwa seluruh fungsionalitas sistem telah terintegrasi dengan baik dan siap digunakan, menjadikan SQUAD Laundry Express sebagai solusi digital yang nyata dalam memodernisasi tata kelola bisnis <i data-path-to-node=\"4\" data-index-in-node=\"827\">laundry</i>.<!--EndFragment--></p>",
+      "link": "",
+      "image_path": "./assets/portfolio/projects/project-2-0.png",
+      "images": [
+        {
+          "id": 2000,
+          "path": "./assets/portfolio/projects/project-2-0.png"
+        },
+        {
+          "id": 2001,
+          "path": "./assets/portfolio/projects/project-2-1.png"
+        },
+        {
+          "id": 2002,
+          "path": "./assets/portfolio/projects/project-2-2.png"
+        },
+        {
+          "id": 2003,
+          "path": "./assets/portfolio/projects/project-2-3.png"
+        },
+        {
+          "id": 2004,
+          "path": "./assets/portfolio/projects/project-2-4.png"
+        },
+        {
+          "id": 2005,
+          "path": "./assets/portfolio/projects/project-2-5.png"
+        },
+        {
+          "id": 2006,
+          "path": "./assets/portfolio/projects/project-2-6.png"
+        },
+        {
+          "id": 2007,
+          "path": "./assets/portfolio/projects/project-2-7.png"
+        },
+        {
+          "id": 2008,
+          "path": "./assets/portfolio/projects/project-2-8.png"
+        },
+        {
+          "id": 2009,
+          "path": "./assets/portfolio/projects/project-2-9.png"
+        },
+        {
+          "id": 2010,
+          "path": "./assets/portfolio/projects/project-2-10.png"
+        },
+        {
+          "id": 2011,
+          "path": "./assets/portfolio/projects/project-2-11.png"
+        },
+        {
+          "id": 2012,
+          "path": "./assets/portfolio/projects/project-2-12.png"
+        },
+        {
+          "id": 2013,
+          "path": "./assets/portfolio/projects/project-2-13.png"
+        },
+        {
+          "id": 2014,
+          "path": "./assets/portfolio/projects/project-2-14.png"
+        }
+      ]
+    },
+    {
+      "id": 1779113849784,
+      "name": "Aplikasi Warung Mamah Yudha",
+      "category": "Aplikasi Mobile",
+      "slug": "aplikasi-warung-mamah-yudha",
+      "excerpt": "Aplikasi E-Commerce yang dibangun menggunakan bahasa pemrograman Dart dan menggunakan framework Flutter",
+      "artikel": "<!--StartFragment--><span style=\"font-size: 24px;\"><b>Transformasi Digital UMKM Kuliner: Pengembangan Aplikasi Penjualan \"Mama Yuda\"</b></span><!--EndFragment--><div><span style=\"font-size: 24px;\"><b><span style=\"font-size: 16px;\">​</span></b></span>Makanan merupakan kebutuhan pokok manusia yang pemenuhannya tidak dapat ditunda, dan seiring dengan pesatnya kemajuan zaman serta teknologi, industri kuliner pun turut mengalami pertumbuhan yang sangat signifikan. Saat ini, transisi menuju bisnis kuliner berbasis daring telah membuka peluang emas bagi para pelaku usaha untuk memperluas jangkauan pasar mereka tanpa batasan geografis. Sayangnya, banyak bisnis kuliner, khususnya pada sektor Usaha Mikro, Kecil, dan Menengah (UMKM), yang masih menghadapi kendala serius dalam upaya pengembangan usahanya akibat minimnya literasi dan pemanfaatan teknologi. Ketergantungan yang kuat pada metode penjualan konvensional membuat para pelaku UMKM kuliner ini kesulitan untuk beradaptasi, sehingga daya saing mereka menurun jika dibandingkan dengan kompetitor yang telah lebih dahulu mengadopsi teknologi digital.<span style=\"font-size: 24px;\"><b><br></b></span></div><div><!--StartFragment-->Beranjak dari urgensi untuk meningkatkan daya saing UMKM tersebut, penelitian ini bertujuan untuk merancang dan mengembangkan sebuah sistem penjualan daring yang diberi nama \"Mama Yuda\". Aplikasi ini hadir sebagai solusi konkret bagi bisnis kuliner agar lebih mudah dan terstruktur dalam mengelola operasional penjualan harian. Dalam proses pembangunannya, aplikasi ini dirancang menggunakan Flutter sebagai <i data-path-to-node=\"3\" data-index-in-node=\"408\">framework</i> utama untuk pengembangan di platform <i data-path-to-node=\"3\" data-index-in-node=\"455\">mobile</i>. Sementara itu, manajemen basis datanya mengandalkan ketangguhan Firebase guna menyimpan seluruh informasi krusial seperti katalog produk, riwayat transaksi, hingga profil pengguna. Untuk memastikan pengembangan berjalan sistematis, penelitian ini menerapkan metode <i data-path-to-node=\"3\" data-index-in-node=\"728\">System Development Life Cycle</i> (SDLC) yang mencakup serangkaian tahapan bertahap, mulai dari perencanaan dan analisis, perancangan, implementasi, hingga proses uji coba menyeluruh.<!--EndFragment--></div><div><!--StartFragment-->Guna memastikan fungsionalitas yang terarah, aplikasi \"Mama Yuda\" membagi ekosistemnya ke dalam dua tipe pengguna dengan hak akses yang berbeda. Tipe pengguna pertama adalah <i data-path-to-node=\"4\" data-index-in-node=\"174\">admin</i>, yang memiliki kendali penuh untuk mengelola ketersediaan produk dan memproses setiap pesanan yang masuk. Adapun tipe pengguna kedua adalah <i data-path-to-node=\"4\" data-index-in-node=\"320\">user</i> atau pelanggan, yang difasilitasi dengan antarmuka untuk melihat daftar menu makanan, menambahkan pilihan ke dalam keranjang, dan melakukan <i data-path-to-node=\"4\" data-index-in-node=\"465\">checkout</i> pemesanan. Melalui peluncuran aplikasi ini, diharapkan proses jual beli makanan secara daring dapat berlangsung dengan jauh lebih praktis dan terstruktur. Ke depannya, inovasi digital ini tidak hanya berpotensi meningkatkan efisiensi dalam hal pelayanan pelanggan dan pengelolaan pesanan, tetapi juga menjadi ujung tombak bagi UMKM kuliner dalam memperluas jangkauan pasar mereka di era modern.<!--EndFragment--></div><div><br></div><!--StartFragment--><!--EndFragment-->",
+      "link": "",
+      "image_path": "./assets/portfolio/projects/project-1779113849784-0.png",
+      "images": [
+        {
+          "id": 1779113849784000,
+          "path": "./assets/portfolio/projects/project-1779113849784-0.png"
+        },
+        {
+          "id": 1779113849784001,
+          "path": "./assets/portfolio/projects/project-1779113849784-1.png"
+        },
+        {
+          "id": 1779113849784002,
+          "path": "./assets/portfolio/projects/project-1779113849784-2.png"
+        },
+        {
+          "id": 1779113849784003,
+          "path": "./assets/portfolio/projects/project-1779113849784-3.png"
+        },
+        {
+          "id": 1779113849784004,
+          "path": "./assets/portfolio/projects/project-1779113849784-4.png"
+        },
+        {
+          "id": 1779113849784005,
+          "path": "./assets/portfolio/projects/project-1779113849784-5.png"
+        },
+        {
+          "id": 1779113849784006,
+          "path": "./assets/portfolio/projects/project-1779113849784-6.png"
+        },
+        {
+          "id": 1779113849784007,
+          "path": "./assets/portfolio/projects/project-1779113849784-7.png"
+        },
+        {
+          "id": 1779113849784008,
+          "path": "./assets/portfolio/projects/project-1779113849784-8.png"
+        }
+      ]
+    },
+    {
+      "id": 1779184116975,
+      "name": "Aplikasi Kasir Ary Seafood",
+      "category": "Aplikasi Mobile",
+      "slug": "aplikasi-kasir-ary-seafood",
+      "excerpt": "Aplikasi kasir/POS yang dibangun menggunakan bahasa pemrograman Dart dengan framework Flutter",
+      "artikel": "<span style=\"font-size: 24px;\"><b>Pengenalan Aplikasi Ary Seafood POS</b></span><div><span style=\"font-size: 24px;\"><span style=\"font-size: 16px;\"><span style=\"font-size: 14px;\"><span style=\"font-size: 16px;\">​Ary Seafood POS adalah sebuah aplikasi Point of Sale (POS) atau sistem kasir digital yang dirancang khusus untuk memenuhi kebutuhan operasional bisnis kuliner seafood. Aplikasi ini dibangun menggunakan framework Flutter, sebuah teknologi lintas platform buatan Google yang memungkinkan satu basis kode berjalan di berbagai perangkat seperti Android, iOS, desktop, maupun web. Dengan memanfaatkan Flutter dan bahasa pemrograman Dart, Ary Seafood POS menawarkan performa yang cepat, antarmuka yang modern, serta pengalaman pengguna yang responsif baik digunakan pada perangkat smartphone maupun tabl</span>et.</span></span><br></span></div><div><span style=\"font-size: 24px;\"><span style=\"font-size: 16px;\"><span style=\"font-size: 14px;\"><span style=\"font-size: 24px;\"><b>​Backend dan Sinkronisasi Data Realtime</b></span><br></span></span></span></div><div><span style=\"font-size: 24px;\"><span style=\"font-size: 16px;\"><span style=\"font-size: 14px;\"><span style=\"font-size: 24px;\"><span style=\"font-size: 16px;\">​Sebagai tulang punggung pengelolaan data, Ary Seafood POS menggunakan Supabase, yaitu platform Backend-as-a-Service (BaaS) berbasis open-source yang menyediakan database PostgreSQL, autentikasi, dan fitur realtime secara terintegrasi. Penggunaan Supabase memungkinkan seluruh data menu, transaksi, dan kategori tersinkronisasi secara realtime antar perangkat tanpa perlu melakukan refresh manual. Arsitektur aplikasi ini menerapkan pola koneksi stream tunggal yang dibuka satu kali di level utama aplikasi, lalu dibagikan ke seluruh layar yang membutuhkan. Pendekatan ini memastikan efisiensi koneksi, menghindari duplikasi koneksi realtime, serta menjaga konsistensi data yang ditampilkan di setiap halaman secara bersamaan.</span><br></span></span></span></span></div><div><span style=\"font-size: 24px;\"><span style=\"font-size: 16px;\"><span style=\"font-size: 14px;\"><span style=\"font-size: 24px;\"><span style=\"font-size: 16px;\"><span style=\"font-size: 24px;\"><b><span style=\"font-size: 24px;\">​Fitur Dashboard — Ringkasan Bisnis dalam Satu Tampilan</span></b></span></span></span></span></span></span></div><div><span style=\"font-size: 24px;\"><span style=\"font-size: 16px;\"><span style=\"font-size: 14px;\"><span style=\"font-size: 24px;\"><span style=\"font-size: 16px;\"><span style=\"font-size: 24px;\"><span style=\"font-size: 14px;\"><span style=\"font-size: 16px;\">Halaman Dashboard menjadi tampilan utama yang menyajikan ringkasan performa bisnis secara langsung. Pada bagian atas halaman, terdapat kartu besar bergradien warna oranye yang menampilkan total pemasukan dari seluruh transaksi yang pernah tercatat. Di bawahnya, tersedia tiga kartu statistik yang menampilkan jumlah transaksi hari ini, total seluruh transaksi yang tercatat, serta jumlah menu yang tersedia. Seluruh data ini diperbarui secara otomatis karena memanfaatkan fitur realtime stream dari Supabase, sehingga setiap kali ada transaksi baru yang dibuat melalui halaman kasir, angka-angka di dashboard akan langsung berubah tanpa perlu berpindah halaman atau melakukan tindakan apapun.</span></span></span></span></span></span></span></span></div><div><span style=\"font-size: 24px;\"><span style=\"font-size: 16px;\"><span style=\"font-size: 14px;\"><span style=\"font-size: 24px;\"><span style=\"font-size: 16px;\"><span style=\"font-size: 24px;\"><span style=\"font-size: 14px;\"><span style=\"font-size: 16px;\"><span style=\"font-size: 20px;\"><span style=\"font-size: 20px;\"><span style=\"font-size: 24px;\"><b>Fitur Kasir — Proses Transaksi yang Cepat dan Intuitif</b></span></span></span></span></span></span></span></span></span></span></span></div><div><span style=\"font-size: 24px;\"><span style=\"font-size: 16px;\"><span style=\"font-size: 14px;\"><span style=\"font-size: 24px;\"><span style=\"font-size: 16px;\"><span style=\"font-size: 24px;\"><span style=\"font-size: 14px;\"><span style=\"font-size: 16px;\"><span style=\"font-size: 20px;\"><span style=\"font-size: 20px;\"></span></span><span style=\"font-size: 24px;\"><span style=\"font-size: 16px;\">​Halaman Kasir merupakan inti utama dari aplikasi ini, yaitu tempat dimana proses pencatatan penjualan dilakukan. Halaman ini menyajikan daftar seluruh menu dalam tampilan grid yang rapi, lengkap dengan ikon kategori (makanan, minuman, atau nasi) dan harga dalam format mata uang Rupiah. Pengguna dapat mencari menu melalui kolom pencarian, serta memasukkan nama pelanggan secara opsional untuk keperluan identifikasi pesanan. Ketika sebuah menu ditekan, item tersebut akan otomatis masuk ke dalam keranjang pesanan. Panel keranjang menampilkan daftar item yang dipesan beserta kuantitasnya, kolom input untuk memasukkan jumlah uang yang diterima dari pelanggan dengan format mata uang otomatis, perhitungan kembalian secara realtime, serta tombol \"Bayar Sekarang\" yang aktif hanya ketika jumlah pembayaran mencukupi. Setelah tombol pembayaran ditekan, data transaksi akan langsung tersimpan ke database Supabase dan keranjang akan direset secara otomatis.</span></span></span></span></span></span></span></span></span></span></div><div><span style=\"font-size: 24px;\"><span style=\"font-size: 16px;\"><span style=\"font-size: 14px;\"><span style=\"font-size: 24px;\"><span style=\"font-size: 16px;\"><span style=\"font-size: 24px;\"><span style=\"font-size: 14px;\"><span style=\"font-size: 16px;\"><span style=\"font-size: 24px;\"><span style=\"font-size: 16px;\"><b><span style=\"font-size: 24px;\">Fitur Riwayat Transaksi — Pelacakan dan Manajemen Pesanan</span></b></span></span></span></span></span></span></span></span></span></span></div><div><span style=\"font-size: 24px;\"><span style=\"font-size: 16px;\"><span style=\"font-size: 14px;\"><span style=\"font-size: 24px;\"><span style=\"font-size: 16px;\"><span style=\"font-size: 24px;\"><span style=\"font-size: 14px;\"><span style=\"font-size: 16px;\"><span style=\"font-size: 24px;\"><span style=\"font-size: 16px;\"><span style=\"font-size: 24px;\"><span style=\"font-size: 16px;\">Halaman Riwayat Transaksi berfungsi untuk menampilkan seluruh catatan transaksi yang pernah dilakukan. Pengguna dapat memfilter transaksi berdasarkan tanggal tertentu menggunakan date picker, serta memfilter berdasarkan status pesanan yaitu \"Pesanan Baru\", \"Dalam Proses\", dan \"Selesai\". Setiap kartu transaksi menampilkan informasi lengkap meliputi nama pelanggan, nomor urut antrian untuk pesanan yang masih aktif, tanggal dan waktu transaksi dalam format Indonesia, rincian item yang dipesan, dan total pembayaran. Sistem manajemen status pesanan memungkinkan pengguna untuk mengubah status secara bertahap: dari \"Pesanan Baru\" ke \"Dalam Proses\", kemudian ke \"Selesai\". Pada pesanan yang sudah berstatus \"Selesai\", tersedia tombol untuk mencetak struk pembayaran melalui printer Bluetooth.</span></span></span></span></span></span></span></span></span></span></span></span></div><div><span style=\"font-size: 24px;\"><span style=\"font-size: 16px;\"><span style=\"font-size: 14px;\"><span style=\"font-size: 24px;\"><span style=\"font-size: 16px;\"><span style=\"font-size: 24px;\"><span style=\"font-size: 14px;\"><span style=\"font-size: 16px;\"><span style=\"font-size: 24px;\"><span style=\"font-size: 16px;\"><span style=\"font-size: 24px;\"><span style=\"font-size: 16px;\"><b><span style=\"font-size: 24px;\">Fitur Cetak Struk Bluetooth — Pencetakan Struk Thermal</span></b></span></span></span></span></span></span></span></span></span></span></span></span></div><div><span style=\"font-size: 24px;\"><span style=\"font-size: 16px;\"><span style=\"font-size: 14px;\"><span style=\"font-size: 24px;\"><span style=\"font-size: 16px;\"><span style=\"font-size: 24px;\"><span style=\"font-size: 14px;\"><span style=\"font-size: 16px;\"><span style=\"font-size: 24px;\"><span style=\"font-size: 16px;\"><span style=\"font-size: 24px;\"><span style=\"font-size: 16px;\"><span style=\"font-size: 24px;\"><span style=\"font-size: 16px;\">Salah satu fitur unggulan Ary Seafood POS adalah kemampuan mencetak struk pembayaran secara langsung melalui printer thermal Bluetooth. Aplikasi ini menggunakan library <i>print_bluetooth_thermal</i> dan <i>esc_pos_utils_plus</i> untuk menghasilkan format struk dengan lebar kertas 58mm. Struk yang dihasilkan mencantumkan nama usaha \"ARY SEAFOOD 74\", informasi pelanggan, tanggal dan waktu transaksi, rincian pesanan beserta harga per item, total pembayaran, jumlah uang tunai yang diterima, kembalian, serta pesan terima kasih dan informasi kontak WhatsApp untuk pemesanan. Halaman Pengaturan Printer menyediakan antarmuka untuk melakukan pairing, scanning, koneksi, maupun pemutusan koneksi dengan perangkat printer Bluetooth, dilengkapi indikator status koneksi yang jelas.</span></span></span></span></span></span></span></span></span></span></span></span></span></span></div><div><span style=\"font-size: 24px;\"><span style=\"font-size: 16px;\"><span style=\"font-size: 14px;\"><span style=\"font-size: 24px;\"><span style=\"font-size: 16px;\"><span style=\"font-size: 24px;\"><span style=\"font-size: 14px;\"><span style=\"font-size: 16px;\"><span style=\"font-size: 24px;\"><span style=\"font-size: 16px;\"><span style=\"font-size: 24px;\"><span style=\"font-size: 16px;\"><span style=\"font-size: 24px;\"><span style=\"font-size: 16px;\"><b><span style=\"font-size: 24px;\">Fitur Manajemen Menu dan Kategori — Pengelolaan Data Produk</span></b></span></span></span></span></span></span></span></span></span></span></span></span></span></span></div><div><span style=\"font-size: 24px;\"><span style=\"font-size: 16px;\"><span style=\"font-size: 14px;\"><span style=\"font-size: 24px;\"><span style=\"font-size: 16px;\"><span style=\"font-size: 24px;\"><span style=\"font-size: 14px;\"><span style=\"font-size: 16px;\"><span style=\"font-size: 24px;\"><span style=\"font-size: 16px;\"><span style=\"font-size: 24px;\"><span style=\"font-size: 16px;\"><span style=\"font-size: 24px;\"><span style=\"font-size: 16px;\"><span style=\"font-size: 24px;\"><span style=\"font-size: 16px;\">Halaman Menu memberikan kontrol penuh kepada pengguna untuk mengelola seluruh data produk yang dijual. Sistem ini menggunakan navigasi dua tingkat: pertama menampilkan daftar kategori beserta jumlah item di dalamnya, kemudian setelah kategori dipilih, barulah ditampilkan daftar menu pada kategori tersebut. Pengguna dapat menambahkan kategori baru, menghapus kategori yang kosong, menambahkan menu baru dengan formulir yang lengkap (nama, kategori, dan harga), mengedit menu yang sudah ada, serta menghapus menu yang tidak diperlukan lagi. Setiap perubahan yang dilakukan akan langsung tersinkronisasi secara realtime ke seluruh bagian aplikasi berkat arsitektur stream yang digunakan.</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></div><div><span style=\"font-size: 24px;\"><span style=\"font-size: 16px;\"><span style=\"font-size: 14px;\"><span style=\"font-size: 24px;\"><span style=\"font-size: 16px;\"><span style=\"font-size: 24px;\"><span style=\"font-size: 14px;\"><span style=\"font-size: 16px;\"><span style=\"font-size: 24px;\"><span style=\"font-size: 16px;\"><span style=\"font-size: 24px;\"><span style=\"font-size: 16px;\"><span style=\"font-size: 24px;\"><span style=\"font-size: 16px;\"><span style=\"font-size: 24px;\"><span style=\"font-size: 16px;\"><b><span style=\"font-size: 24px;\">Teknologi dan Arsitektur yang Digunakan</span></b></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></div><div><span style=\"font-size: 24px;\"><span style=\"font-size: 16px;\"><span style=\"font-size: 14px;\"><span style=\"font-size: 24px;\"><span style=\"font-size: 16px;\"><span style=\"font-size: 24px;\"><span style=\"font-size: 14px;\"><span style=\"font-size: 16px;\"><span style=\"font-size: 24px;\"><span style=\"font-size: 16px;\"><span style=\"font-size: 24px;\"><span style=\"font-size: 16px;\"><span style=\"font-size: 24px;\"><span style=\"font-size: 16px;\"><span style=\"font-size: 24px;\"><span style=\"font-size: 16px;\"><span style=\"font-size: 24px;\"><span style=\"font-size: 16px;\">​Secara keseluruhan, Ary Seafood POS dibangun dengan fondasi teknologi modern yang solid. Flutter sebagai framework utama memastikan performa native-like di berbagai platform. Supabase sebagai backend menyediakan database PostgreSQL yang handal dengan kemampuan realtime. Material Design 3 digunakan sebagai sistem desain untuk menciptakan antarmuka yang bersih, modern, dan konsisten. Library <i>intl</i> menangani format tanggal dan mata uang sesuai standar Indonesia (locale id_ID). Library <i>print_bluetooth_thermal</i> dan <i>esc_pos_utils_plus</i> memungkinkan integrasi pencetakan struk thermal. Sementara itu, library <i>permission_handler</i> mengelola perizinan perangkat secara elegan pada Android 12 ke atas. Kombinasi seluruh teknologi ini menjadikan Ary Seafood POS sebagai solusi kasir digital yang komprehensif, efisien, dan siap digunakan untuk operasional bisnis kuliner sehari-hari.</span><br></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></div><!--EndFragment-->",
+      "link": "https://drive.google.com/file/d/1Lm3pc9lYYHlVFKLsKtGnq5FrQNAiEogw/view?usp=drive_link",
+      "image_path": "./assets/portfolio/projects/project-1779184116975-0.png",
+      "images": [
+        {
+          "id": 1779184116975000,
+          "path": "./assets/portfolio/projects/project-1779184116975-0.png"
+        },
+        {
+          "id": 1779184116975001,
+          "path": "./assets/portfolio/projects/project-1779184116975-1.png"
+        },
+        {
+          "id": 1779184116975002,
+          "path": "./assets/portfolio/projects/project-1779184116975-2.png"
+        },
+        {
+          "id": 1779184116975003,
+          "path": "./assets/portfolio/projects/project-1779184116975-3.png"
+        },
+        {
+          "id": 1779184116975004,
+          "path": "./assets/portfolio/projects/project-1779184116975-4.png"
+        }
+      ]
+    }
+  ],
+  "categories": [
+    "All",
+    "Website Fullstack",
+    "Aplikasi Mobile"
+  ],
+  "educations": [
+    {
+      "id": 1,
+      "school": "Universitas Gunadarma",
+      "degree": "S1",
+      "program": "Informatika",
+      "start_date": "2021-09-01",
+      "end_date": "2025-09-01",
+      "grade": "3.63",
+      "description": "Aktif dalam berbagai kompetisi pemrograman dan pengembangan project."
+    }
+  ],
+  "experiences": [
+    {
+      "id": 1,
+      "title": "Fullstack Developer",
+      "employment_type": "internship",
+      "employment_type_label": "Internship",
+      "company": "PT CONTROL SYSTEM ARENA PARA NUSA",
+      "start_date": "2020-01-01",
+      "end_date": "2024-03-01",
+      "location": "Jakarta, Indonesia",
+      "location_type": "on_site",
+      "location_type_label": "On-site",
+      "description": "Mengembangkan aplikasi web perusahaan menggunakan PHP murni",
+      "photo": "./assets/portfolio/experience/experience-1.jpg"
+    }
+  ],
+  "certifications": [
+    {
+      "id": 1779111215733,
+      "name": "Building Website using HTML 5",
+      "issuer": "Universitas Gunadarma",
+      "issued_at": "2024-07-25",
+      "expires_at": "2025-12-31",
+      "credential_id": "320644",
+      "credential_url": "",
+      "image": "./assets/portfolio/certifications/cert-1779111215733.pdf",
+      "cover": "./assets/portfolio/certifications/cert-1779111215733-cover.png"
+    },
+    {
+      "id": 1779111294341,
+      "name": "FUNDAMENTAL DBMS",
+      "issuer": "Universitas Gunadarma",
+      "issued_at": "2022-08-22",
+      "expires_at": "2025-12-31",
+      "credential_id": "745795",
+      "credential_url": "",
+      "image": "./assets/portfolio/certifications/cert-1779111294341.pdf",
+      "cover": "./assets/portfolio/certifications/cert-1779111294341-cover.png"
+    },
+    {
+      "id": 1779111385580,
+      "name": "FUNDAMENTAL WEB PROGRAMMING",
+      "issuer": "Universitas Gunadarma",
+      "issued_at": "2022-02-21",
+      "expires_at": "2025-12-31",
+      "credential_id": "235877",
+      "credential_url": "",
+      "image": "./assets/portfolio/certifications/cert-1779111385580.pdf",
+      "cover": "./assets/portfolio/certifications/cert-1779111385580-cover.png"
+    },
+    {
+      "id": 1779111838417,
+      "name": "ORACLE FOR INTERMEDIATE",
+      "issuer": "Universitas Gunadarma",
+      "issued_at": "2024-08-18",
+      "expires_at": "2025-12-31",
+      "credential_id": "345562",
+      "credential_url": "",
+      "image": "./assets/portfolio/certifications/cert-1779111838417.png",
+      "cover": ""
+    },
+    {
+      "id": 1779112650727,
+      "name": "SQL SERVER FOR INTERMEDIATE",
+      "issuer": "Universitas Gunadarma",
+      "issued_at": "2024-02-19",
+      "expires_at": "2030-12-31",
+      "credential_id": "184121",
+      "credential_url": "",
+      "image": "./assets/portfolio/certifications/cert-1779112650727.pdf",
+      "cover": "./assets/portfolio/certifications/cert-1779112650727-cover.png"
+    }
+  ],
+  "skills": [
+    {
+      "id": 1,
+      "skill": "React",
+      "category": "Frontend"
+    },
+    {
+      "id": 2,
+      "skill": "Vue JS",
+      "category": "Frontend"
+    },
+    {
+      "id": 3,
+      "skill": "Laravel",
+      "category": "Backend",
+      "svg": "<svg viewBox=\"-4 0 264 264\" version=\"1.1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" preserveAspectRatio=\"xMidYMid\" fill=\"#000000\"><g id=\"SVGRepo_bgCarrier\" stroke-width=\"0\"></g><g id=\"SVGRepo_tracerCarrier\" stroke-linecap=\"round\" stroke-linejoin=\"round\"></g><g id=\"SVGRepo_iconCarrier\"> <g> <path d=\"M255.855641,59.619717 C255.950565,59.9710596 256,60.3333149 256,60.6972536 L256,117.265345 C256,118.743206 255.209409,120.108149 253.927418,120.843385 L206.448786,148.178786 L206.448786,202.359798 C206.448786,203.834322 205.665123,205.195421 204.386515,205.937838 L105.27893,262.990563 C105.05208,263.119455 104.804608,263.201946 104.557135,263.289593 C104.464333,263.320527 104.376687,263.377239 104.278729,263.403017 C103.585929,263.58546 102.857701,263.58546 102.164901,263.403017 C102.051476,263.372083 101.948363,263.310215 101.840093,263.26897 C101.613244,263.186479 101.376082,263.1143 101.159544,262.990563 L2.07258227,205.937838 C0.7913718,205.201819 0,203.837372 0,202.359798 L0,32.6555248 C0,32.2843161 0.0515567729,31.9234187 0.144358964,31.5728326 C0.175293028,31.454252 0.24747251,31.3459828 0.288717928,31.2274022 C0.366053087,31.0108638 0.438232569,30.7891697 0.55165747,30.5880982 C0.628992629,30.4540506 0.742417529,30.3457814 0.83521972,30.2220451 C0.953800298,30.0570635 1.06206952,29.8869261 1.20127281,29.7425672 C1.31985339,29.6239866 1.4745237,29.5363401 1.60857131,29.4332265 C1.75808595,29.3094903 1.89213356,29.1754427 2.06227091,29.0774848 L2.06742659,29.0774848 L51.6134853,0.551122364 C52.8901903,-0.183535768 54.4613221,-0.183535768 55.7380271,0.551122364 L105.284086,29.0774848 L105.294397,29.0774848 C105.459379,29.1805983 105.598582,29.3094903 105.748097,29.4280708 C105.882144,29.5311844 106.031659,29.6239866 106.15024,29.7374115 C106.294599,29.8869261 106.397712,30.0570635 106.521448,30.2220451 C106.609095,30.3457814 106.727676,30.4540506 106.799855,30.5880982 C106.918436,30.7943253 106.985459,31.0108638 107.06795,31.2274022 C107.109196,31.3459828 107.181375,31.454252 107.212309,31.5779883 C107.307234,31.9293308 107.355765,32.2915861 107.356668,32.6555248 L107.356668,138.651094 L148.643332,114.878266 L148.643332,60.6920979 C148.643332,60.3312005 148.694889,59.9651474 148.787691,59.619717 C148.823781,59.4959808 148.890804,59.3877116 148.93205,59.269131 C149.014541,59.0525925 149.08672,58.8308984 149.200145,58.629827 C149.27748,58.4957794 149.390905,58.3875102 149.478552,58.2637739 C149.602288,58.0987922 149.705401,57.9286549 149.84976,57.7842959 C149.968341,57.6657153 150.117856,57.5780688 150.251903,57.4749553 C150.406573,57.351219 150.540621,57.2171714 150.705603,57.1192136 L150.710758,57.1192136 L200.261973,28.5928511 C201.538395,27.8571345 203.110093,27.8571345 204.386515,28.5928511 L253.932573,57.1192136 C254.107866,57.2223271 254.241914,57.351219 254.396584,57.4697996 C254.525476,57.5729132 254.674991,57.6657153 254.793572,57.7791402 C254.93793,57.9286549 255.041044,58.0987922 255.16478,58.2637739 C255.257582,58.3875102 255.371007,58.4957794 255.443187,58.629827 C255.561767,58.8308984 255.628791,59.0525925 255.711282,59.269131 C255.757683,59.3877116 255.824707,59.4959808 255.855641,59.619717 Z M247.740605,114.878266 L247.740605,67.8378666 L230.402062,77.8192579 L206.448786,91.6106946 L206.448786,138.651094 L247.745761,114.878266 L247.740605,114.878266 Z M198.194546,199.97272 L198.194546,152.901386 L174.633101,166.357704 L107.351512,204.757188 L107.351512,252.27191 L198.194546,199.97272 Z M8.25939501,39.7961379 L8.25939501,199.97272 L99.0921175,252.266755 L99.0921175,204.762344 L51.6392637,177.906421 L51.6237967,177.89611 L51.603174,177.885798 C51.443348,177.792996 51.3093004,177.658949 51.1597857,177.545524 C51.0308938,177.44241 50.8813791,177.359919 50.7679542,177.246494 L50.7576429,177.231027 C50.6235953,177.102135 50.5307931,176.942309 50.4173682,176.79795 C50.3142546,176.658747 50.1905184,176.540167 50.1080276,176.395808 L50.1028719,176.380341 C50.0100697,176.22567 49.9533572,176.040066 49.8863334,175.864773 C49.8193096,175.710103 49.7316631,175.565744 49.6904177,175.400762 L49.6904177,175.395606 C49.6388609,175.19969 49.6285496,174.993463 49.6079269,174.792392 C49.5873041,174.637722 49.5460587,174.483051 49.5460587,174.328381 L49.5460587,174.31807 L49.5460587,63.5689658 L25.5979377,49.7723734 L8.25939501,39.8012935 L8.25939501,39.7961379 Z M53.6809119,8.89300821 L12.3994039,32.6555248 L53.6706006,56.4180414 L94.9469529,32.6503692 L53.6706006,8.89300821 L53.6809119,8.89300821 Z M75.1491521,157.19091 L99.0972731,143.404629 L99.0972731,39.7961379 L81.7587304,49.7775291 L57.8054537,63.5689658 L57.8054537,167.177457 L75.1491521,157.19091 Z M202.324244,36.934737 L161.047891,60.6972536 L202.324244,84.4597702 L243.59544,60.6920979 L202.324244,36.934737 Z M198.194546,91.6106946 L174.24127,77.8192579 L156.902727,67.8378666 L156.902727,114.878266 L180.850848,128.664547 L198.194546,138.651094 L198.194546,91.6106946 Z M103.216659,197.616575 L163.759778,163.052915 L194.023603,145.781396 L152.778185,122.034346 L105.289242,149.374903 L62.0073307,174.292291 L103.216659,197.616575 Z\" fill=\"#FF2D20\"> </path> </g> </g></svg>"
+    },
+    {
+      "id": 4,
+      "skill": "Node JS",
+      "category": "Backend",
+      "svg": "<svg viewBox=\"0 0 32 32\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><g id=\"SVGRepo_bgCarrier\" stroke-width=\"0\"></g><g id=\"SVGRepo_tracerCarrier\" stroke-linecap=\"round\" stroke-linejoin=\"round\"></g><g id=\"SVGRepo_iconCarrier\"> <path d=\"M17.1725 2.29872C16.4627 1.89953 15.5373 1.90132 14.8269 2.29872C11.2689 4.26227 7.71082 6.22641 4.15216 8.18906C3.45969 8.55335 2.99264 9.29698 3.00009 10.0688V21.9328C2.99509 22.7197 3.48622 23.4705 4.19655 23.8298C5.21871 24.3736 6.2118 24.9726 7.25244 25.4802C8.45451 26.0709 9.95843 26.2015 11.1752 25.5855C12.1629 25.075 12.6016 23.9395 12.6003 22.896C12.6083 18.9806 12.6016 15.0651 12.6034 11.1496C12.6269 10.9756 12.4962 10.7896 12.3064 10.7938C11.8517 10.7866 11.3964 10.7896 10.9417 10.7926C10.7699 10.7764 10.6022 10.9191 10.6152 11.0918C10.6091 14.982 10.6164 18.8734 10.6115 22.7642C10.6214 23.3024 10.2578 23.8196 9.73913 24.0014C8.5412 24.4213 5.12198 22.2012 5.12198 22.2012C4.9965 22.1431 4.91682 22.007 4.92912 21.8718C4.92912 17.9576 4.92973 14.0433 4.92912 10.1297C4.91187 9.97191 5.00912 9.8298 5.15402 9.76538C8.70033 7.8134 12.2448 5.85654 15.7911 3.90336C15.9143 3.82115 16.086 3.8214 16.2089 3.90396C19.7552 5.85654 23.3003 7.81161 26.8472 9.76368C26.9926 9.828 27.0857 9.9725 27.0709 10.1297C27.0703 14.0433 27.0721 17.9576 27.0697 21.8713C27.0802 22.0098 27.0086 22.144 26.8793 22.2048C23.3661 24.1462 19.8129 26.025 16.3315 28.0228C16.1796 28.1099 16.0075 28.2086 15.8373 28.1126C14.9218 27.6062 14.0174 27.0801 13.1049 26.5688C13.0057 26.5069 12.8794 26.4803 12.7759 26.5496C12.3668 26.7652 11.982 26.9398 11.5122 27.1258C10.8524 27.387 10.9578 27.4938 11.5529 27.8405C12.62 28.4444 13.6889 29.0459 14.756 29.6504C15.4585 30.0888 16.4024 30.12 17.1275 29.7149C20.6861 27.7538 24.2436 25.7904 27.8029 23.8293C28.5113 23.468 29.0049 22.7202 28.9999 21.9327V10.0688C29.0068 9.31264 28.5576 8.58227 27.886 8.21259C24.3156 6.23947 20.7435 4.27064 17.1725 2.29872Z\" fill=\"#8CC84B\"></path> <path d=\"M22.5419 11.2062C21.1452 10.459 19.4836 10.4192 17.9315 10.5169C16.8102 10.6277 15.6309 10.9371 14.814 11.7409C13.9761 12.5489 13.7937 13.8537 14.1917 14.9085C14.4769 15.6539 15.1948 16.1386 15.9372 16.395C16.8935 16.7326 17.8979 16.837 18.9026 16.9414C19.819 17.0366 20.7357 17.1319 21.6165 17.4042C21.9763 17.5234 22.3953 17.7058 22.5055 18.0973C22.6073 18.5609 22.4957 19.0998 22.1193 19.4219C20.9237 20.3682 17.5979 20.2232 16.4166 19.4784C15.939 19.1611 15.7332 18.5994 15.6495 18.0641C15.6402 17.8973 15.5059 17.7443 15.3248 17.757C14.8713 17.7516 14.4178 17.7528 13.9643 17.7564C13.8061 17.7431 13.6416 17.8557 13.6329 18.0172C13.5397 20.4689 15.7914 21.5377 17.9039 21.773C19.1108 21.888 20.3442 21.8814 21.5327 21.6224C22.4261 21.419 23.3219 21.0444 23.9369 20.3563C24.6953 19.52 24.8444 18.2749 24.5043 17.2332C24.2443 16.4559 23.5012 15.9573 22.7416 15.7008C21.7086 15.3466 20.4844 15.1562 19.5488 15.0671C18.1889 14.9376 16.5729 14.9905 16.188 14.0969C16.0345 13.629 16.1651 13.048 16.5951 12.7602C17.7328 11.9885 20.0483 12.091 21.2265 12.6675C21.7675 12.9384 22.081 13.4948 22.2104 14.0565C22.2344 14.2215 22.3454 14.3937 22.5364 14.3865C22.9868 14.3955 23.4372 14.3889 23.8875 14.3895C24.0422 14.4003 24.2116 14.313 24.2418 14.1546C24.2227 12.9806 23.6232 11.7788 22.5419 11.2062Z\" fill=\"#8CC84B\"></path> </g></svg>"
+    },
+    {
+      "id": 5,
+      "skill": "MySQL",
+      "category": "Database",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 128 128\"><path fill=\"#00618A\" d=\"M116.948 97.807c-6.863-.187-12.104.452-16.585 2.341-1.273.537-3.305.552-3.513 2.147.7.733.809 1.829 1.365 2.731 1.07 1.73 2.876 4.052 4.488 5.268 1.762 1.33 3.577 2.751 5.465 3.902 3.358 2.047 7.107 3.217 10.34 5.268 1.906 1.21 3.799 2.733 5.658 4.097.92.675 1.537 1.724 2.732 2.147v-.194c-.628-.8-.79-1.898-1.366-2.733l-2.537-2.537c-2.48-3.292-5.629-6.184-8.976-8.585-2.669-1.916-8.642-4.504-9.755-7.609l-.195-.195c1.892-.214 4.107-.898 5.854-1.367 2.934-.786 5.556-.583 8.585-1.365l4.097-1.171v-.78c-1.531-1.571-2.623-3.651-4.292-5.073-4.37-3.72-9.138-7.437-14.048-10.537-2.724-1.718-6.089-2.835-8.976-4.292-.971-.491-2.677-.746-3.318-1.562-1.517-1.932-2.342-4.382-3.511-6.633-2.449-4.717-4.854-9.868-7.024-14.831-1.48-3.384-2.447-6.72-4.293-9.756-8.86-14.567-18.396-23.358-33.169-32-3.144-1.838-6.929-2.563-10.929-3.513-2.145-.129-4.292-.26-6.438-.391-1.311-.546-2.673-2.149-3.902-2.927C17.811 4.565 5.257-2.16 1.633 6.682c-2.289 5.581 3.421 11.025 5.462 13.854 1.434 1.982 3.269 4.207 4.293 6.438.674 1.467.79 2.938 1.367 4.489 1.417 3.822 2.652 7.98 4.487 11.511.927 1.788 1.949 3.67 3.122 5.268.718.981 1.951 1.413 2.145 2.927-1.204 1.686-1.273 4.304-1.95 6.44-3.05 9.615-1.899 21.567 2.537 28.683 1.36 2.186 4.567 6.871 8.975 5.073 3.856-1.57 2.995-6.438 4.098-10.732.249-.973.096-1.689.585-2.341v.195l3.513 7.024c2.6 4.187 7.212 8.562 11.122 11.514 2.027 1.531 3.623 4.177 6.244 5.073v-.196h-.195c-.508-.791-1.303-1.119-1.951-1.755-1.527-1.497-3.225-3.358-4.487-5.073-3.556-4.827-6.698-10.11-9.561-15.609-1.368-2.627-2.557-5.523-3.709-8.196-.444-1.03-.438-2.589-1.364-3.122-1.263 1.958-3.122 3.542-4.098 5.854-1.561 3.696-1.762 8.204-2.341 12.878-.342.122-.19.038-.391.194-2.718-.655-3.672-3.452-4.683-5.853-2.554-6.07-3.029-15.842-.781-22.829.582-1.809 3.21-7.501 2.146-9.172-.508-1.666-2.184-2.63-3.121-3.903-1.161-1.574-2.319-3.646-3.124-5.464-2.09-4.731-3.066-10.044-5.267-14.828-1.053-2.287-2.832-4.602-4.293-6.634-1.617-2.253-3.429-3.912-4.683-6.635-.446-.968-1.051-2.518-.391-3.513.21-.671.508-.951 1.171-1.17 1.132-.873 4.284.29 5.462.779 3.129 1.3 5.741 2.538 8.392 4.294 1.271.844 2.559 2.475 4.097 2.927h1.756c2.747.631 5.824.195 8.391.975 4.536 1.378 8.601 3.523 12.292 5.854 11.246 7.102 20.442 17.21 26.732 29.269 1.012 1.942 1.45 3.794 2.341 5.854 1.798 4.153 4.063 8.426 5.852 12.488 1.786 4.052 3.526 8.141 6.05 11.513 1.327 1.772 6.451 2.723 8.781 3.708 1.632.689 4.307 1.409 5.854 2.34 2.953 1.782 5.815 3.903 8.586 5.855 1.383.975 5.64 3.116 5.852 4.879zM29.729 23.466c-1.431-.027-2.443.156-3.513.389v.195h.195c.683 1.402 1.888 2.306 2.731 3.513.65 1.367 1.301 2.732 1.952 4.097l.194-.193c1.209-.853 1.762-2.214 1.755-4.294-.484-.509-.555-1.147-.975-1.755-.556-.811-1.635-1.272-2.339-1.952z\"/></svg>"
+    },
+    {
+      "id": 6,
+      "skill": "MongoDB",
+      "category": "Database",
+      "svg": "<svg viewBox=\"0 0 1024 1024\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"#000000\"><g id=\"SVGRepo_bgCarrier\" stroke-width=\"0\"></g><g id=\"SVGRepo_tracerCarrier\" stroke-linecap=\"round\" stroke-linejoin=\"round\"></g><g id=\"SVGRepo_iconCarrier\"> <circle cx=\"512\" cy=\"512\" r=\"512\" style=\"fill:#13aa52\"></circle> <path d=\"M648.86 449.44c-32.34-142.73-108.77-189.66-117-207.59-9-12.65-18.12-35.15-18.12-35.15-.15-.38-.39-1.05-.67-1.7-.93 12.65-1.41 17.53-13.37 30.29-18.52 14.48-113.54 94.21-121.27 256.37-7.21 151.24 109.25 241.36 125 252.85l1.79 1.27v-.11c.1.76 5 36 8.44 73.34H526a726.68 726.68 0 0 1 13-78.53l1-.65a204.48 204.48 0 0 0 20.11-16.45l.72-.65c33.48-30.93 93.67-102.47 93.08-216.53a347.07 347.07 0 0 0-5.05-56.76zM512.35 659.12s0-212.12 7-212.08c5.46 0 12.53 273.61 12.53 273.61-9.72-1.17-19.53-45.03-19.53-61.53z\" style=\"fill:#fff\"></path> </g></svg>"
+    },
+    {
+      "id": 7,
+      "skill": "Python",
+      "category": "Programming Language",
+      "svg": "<svg viewBox=\"0 0 32 32\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><g id=\"SVGRepo_bgCarrier\" stroke-width=\"0\"></g><g id=\"SVGRepo_tracerCarrier\" stroke-linecap=\"round\" stroke-linejoin=\"round\"></g><g id=\"SVGRepo_iconCarrier\"> <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M13.0164 2C10.8193 2 9.03825 3.72453 9.03825 5.85185V8.51852H15.9235V9.25926H5.97814C3.78107 9.25926 2 10.9838 2 13.1111L2 18.8889C2 21.0162 3.78107 22.7407 5.97814 22.7407H8.27322V19.4815C8.27322 17.3542 10.0543 15.6296 12.2514 15.6296H19.5956C21.4547 15.6296 22.9617 14.1704 22.9617 12.3704V5.85185C22.9617 3.72453 21.1807 2 18.9836 2H13.0164ZM12.0984 6.74074C12.8589 6.74074 13.4754 6.14378 13.4754 5.40741C13.4754 4.67103 12.8589 4.07407 12.0984 4.07407C11.3378 4.07407 10.7213 4.67103 10.7213 5.40741C10.7213 6.14378 11.3378 6.74074 12.0984 6.74074Z\" fill=\"url(#paint0_linear_87_8204)\"></path> <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M18.9834 30C21.1805 30 22.9616 28.2755 22.9616 26.1482V23.4815L16.0763 23.4815L16.0763 22.7408L26.0217 22.7408C28.2188 22.7408 29.9998 21.0162 29.9998 18.8889V13.1111C29.9998 10.9838 28.2188 9.25928 26.0217 9.25928L23.7266 9.25928V12.5185C23.7266 14.6459 21.9455 16.3704 19.7485 16.3704L12.4042 16.3704C10.5451 16.3704 9.03809 17.8296 9.03809 19.6296L9.03809 26.1482C9.03809 28.2755 10.8192 30 13.0162 30H18.9834ZM19.9015 25.2593C19.1409 25.2593 18.5244 25.8562 18.5244 26.5926C18.5244 27.329 19.1409 27.9259 19.9015 27.9259C20.662 27.9259 21.2785 27.329 21.2785 26.5926C21.2785 25.8562 20.662 25.2593 19.9015 25.2593Z\" fill=\"url(#paint1_linear_87_8204)\"></path> <defs> <linearGradient id=\"paint0_linear_87_8204\" x1=\"12.4809\" y1=\"2\" x2=\"12.4809\" y2=\"22.7407\" gradientUnits=\"userSpaceOnUse\"> <stop stop-color=\"#327EBD\"></stop> <stop offset=\"1\" stop-color=\"#1565A7\"></stop> </linearGradient> <linearGradient id=\"paint1_linear_87_8204\" x1=\"19.519\" y1=\"9.25928\" x2=\"19.519\" y2=\"30\" gradientUnits=\"userSpaceOnUse\"> <stop stop-color=\"#FFDA4B\"></stop> <stop offset=\"1\" stop-color=\"#F9C600\"></stop> </linearGradient> </defs> </g></svg>"
+    },
+    {
+      "id": 8,
+      "skill": "JavaScript",
+      "category": "Programming Language",
+      "svg": "<svg viewBox=\"0 0 256 256\" version=\"1.1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" preserveAspectRatio=\"xMidYMid\" fill=\"#000000\"><g id=\"SVGRepo_bgCarrier\" stroke-width=\"0\"></g><g id=\"SVGRepo_tracerCarrier\" stroke-linecap=\"round\" stroke-linejoin=\"round\"></g><g id=\"SVGRepo_iconCarrier\"> <g> <path d=\"M0,0 L256,0 L256,256 L0,256 L0,0 Z\" fill=\"#F7DF1E\"> </path> <path d=\"M67.311746,213.932292 L86.902654,202.076241 C90.6821079,208.777346 94.1202286,214.447137 102.367086,214.447137 C110.272203,214.447137 115.256076,211.354819 115.256076,199.326883 L115.256076,117.528787 L139.313575,117.528787 L139.313575,199.666997 C139.313575,224.58433 124.707759,235.925943 103.3984,235.925943 C84.1532952,235.925943 72.9819429,225.958603 67.3113397,213.93026\" fill=\"#000000\"> </path> <path d=\"M152.380952,211.354413 L171.969422,200.0128 C177.125994,208.433981 183.827911,214.619835 195.684368,214.619835 C205.652521,214.619835 212.009041,209.635962 212.009041,202.762159 C212.009041,194.513676 205.479416,191.592025 194.481168,186.78207 L188.468419,184.202565 C171.111213,176.81473 159.597308,167.53534 159.597308,147.944838 C159.597308,129.901308 173.344508,116.153295 194.825752,116.153295 C210.119924,116.153295 221.117765,121.48094 229.021663,135.400432 L210.29059,147.428775 C206.166146,140.040127 201.699556,137.119289 194.826159,137.119289 C187.78047,137.119289 183.312254,141.587098 183.312254,147.428775 C183.312254,154.646349 187.78047,157.568406 198.089956,162.036622 L204.103924,164.614095 C224.553448,173.378641 236.067352,182.313448 236.067352,202.418387 C236.067352,224.071924 219.055137,235.927975 196.200432,235.927975 C173.860978,235.927975 159.425829,225.274311 152.381359,211.354413\" fill=\"#000000\"> </path> </g> </g></svg>"
+    },
+    {
+      "id": 9,
+      "skill": "Tailwind",
+      "category": "Others",
+      "svg": "<svg viewBox=\"0 0 32 32\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"#000000\"><g id=\"SVGRepo_bgCarrier\" stroke-width=\"0\"></g><g id=\"SVGRepo_tracerCarrier\" stroke-linecap=\"round\" stroke-linejoin=\"round\"></g><g id=\"SVGRepo_iconCarrier\"><title>file_type_tailwind</title><path d=\"M9,13.7q1.4-5.6,7-5.6c5.6,0,6.3,4.2,9.1,4.9q2.8.7,4.9-2.1-1.4,5.6-7,5.6c-5.6,0-6.3-4.2-9.1-4.9Q11.1,10.9,9,13.7ZM2,22.1q1.4-5.6,7-5.6c5.6,0,6.3,4.2,9.1,4.9q2.8.7,4.9-2.1-1.4,5.6-7,5.6c-5.6,0-6.3-4.2-9.1-4.9Q4.1,19.3,2,22.1Z\" style=\"fill:#44a8b3\"></path></g></svg>"
+    },
+    {
+      "id": 10,
+      "skill": "Git",
+      "category": "Others",
+      "svg": "<svg viewBox=\"0 0 32 32\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><g id=\"SVGRepo_bgCarrier\" stroke-width=\"0\"></g><g id=\"SVGRepo_tracerCarrier\" stroke-linecap=\"round\" stroke-linejoin=\"round\"></g><g id=\"SVGRepo_iconCarrier\"> <path d=\"M2.58536 17.4132C1.80488 16.6327 1.80488 15.3673 2.58536 14.5868L14.5868 2.58536C15.3673 1.80488 16.6327 1.80488 17.4132 2.58536L29.4146 14.5868C30.1951 15.3673 30.1951 16.6327 29.4146 17.4132L17.4132 29.4146C16.6327 30.1951 15.3673 30.1951 14.5868 29.4146L2.58536 17.4132Z\" fill=\"#EE513B\"></path> <path d=\"M12.1489 5.06152L10.9336 6.27686L14.0725 9.41577C13.9455 9.68819 13.8746 9.99201 13.8746 10.3124C13.8746 11.222 14.4461 11.9981 15.2496 12.3012V19.9798C14.4461 20.2829 13.8746 21.059 13.8746 21.9686C13.8746 23.1422 14.826 24.0936 15.9996 24.0936C17.1732 24.0936 18.1246 23.1422 18.1246 21.9686C18.1246 21.144 17.6549 20.429 16.9684 20.0768V12.3117L19.9689 15.3122C19.8481 15.5791 19.7809 15.8754 19.7809 16.1874C19.7809 17.361 20.7323 18.3124 21.9059 18.3124C23.0795 18.3124 24.0309 17.361 24.0309 16.1874C24.0309 15.0138 23.0795 14.0624 21.9059 14.0624C21.6778 14.0624 21.4582 14.0983 21.2522 14.1648L18.0297 10.9423C18.0914 10.7433 18.1246 10.5317 18.1246 10.3124C18.1246 9.13878 17.1732 8.18738 15.9996 8.18738C15.7803 8.18738 15.5688 8.22061 15.3697 8.2823L12.1489 5.06152Z\" fill=\"white\"></path> </g></svg>"
+    },
+    {
+      "id": 1779098753322,
+      "skill": "Next JS",
+      "category": "Backend",
+      "svg": "<svg viewBox=\"0 0 256 256\" version=\"1.1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" preserveAspectRatio=\"xMidYMid\" fill=\"#000000\"><g id=\"SVGRepo_bgCarrier\" stroke-width=\"0\"></g><g id=\"SVGRepo_tracerCarrier\" stroke-linecap=\"round\" stroke-linejoin=\"round\"></g><g id=\"SVGRepo_iconCarrier\"> <g> <path d=\"M119.616813,0.0688905149 C119.066276,0.118932037 117.314565,0.294077364 115.738025,0.419181169 C79.3775171,3.69690087 45.3192571,23.3131775 23.7481916,53.4631946 C11.7364614,70.2271045 4.05395894,89.2428829 1.15112414,109.384595 C0.12512219,116.415429 0,118.492153 0,128.025062 C0,137.557972 0.12512219,139.634696 1.15112414,146.665529 C8.10791789,194.730411 42.3163245,235.11392 88.7116325,250.076335 C97.0197458,252.753556 105.778299,254.580072 115.738025,255.680985 C119.616813,256.106338 136.383187,256.106338 140.261975,255.680985 C157.453763,253.779407 172.017986,249.525878 186.382014,242.194795 C188.584164,241.068861 189.00958,240.768612 188.709286,240.518404 C188.509091,240.36828 179.124927,227.782837 167.86393,212.570214 L147.393939,184.922273 L121.743891,146.965779 C107.630108,126.098464 96.0187683,109.034305 95.9186706,109.034305 C95.8185728,109.009284 95.7184751,125.873277 95.6684262,146.465363 C95.5933529,182.52028 95.5683284,183.971484 95.1178886,184.82219 C94.4672532,186.048207 93.9667644,186.548623 92.915738,187.099079 C92.114956,187.499411 91.4142717,187.574474 87.6355816,187.574474 L83.3063539,187.574474 L82.1552297,186.848872 C81.4044966,186.373477 80.8539589,185.747958 80.4785924,185.022356 L79.9530792,183.896422 L80.0031281,133.729796 L80.0782014,83.5381493 L80.8539589,82.5623397 C81.25435,82.0369037 82.1051808,81.3613431 82.7057674,81.0360732 C83.7317693,80.535658 84.1321603,80.4856165 88.4613881,80.4856165 C93.5663734,80.4856165 94.4172043,80.6857826 95.7434995,82.1369867 C96.1188661,82.5373189 110.007429,103.454675 126.623656,128.650581 C143.239883,153.846488 165.962072,188.250034 177.122972,205.139048 L197.392766,235.839522 L198.418768,235.163961 C207.502639,229.259062 217.112023,220.852086 224.719453,212.09482 C240.910264,193.504394 251.345455,170.835585 254.848876,146.665529 C255.874878,139.634696 256,137.557972 256,128.025062 C256,118.492153 255.874878,116.415429 254.848876,109.384595 C247.892082,61.3197135 213.683675,20.9362052 167.288368,5.97379012 C159.105376,3.32158945 150.396872,1.49507389 140.637341,0.394160408 C138.234995,0.143952798 121.693842,-0.131275573 119.616813,0.0688905149 L119.616813,0.0688905149 Z M172.017986,77.4831252 C173.219159,78.0836234 174.195112,79.2345784 174.545455,80.435575 C174.74565,81.0861148 174.795699,94.9976579 174.74565,126.348671 L174.670577,171.336 L166.73783,159.17591 L158.780059,147.01582 L158.780059,114.313685 C158.780059,93.1711423 158.880156,81.2862808 159.030303,80.7108033 C159.430694,79.3096407 160.306549,78.2087272 161.507722,77.5581875 C162.533724,77.0327515 162.909091,76.98271 166.837928,76.98271 C170.541544,76.98271 171.19218,77.0327515 172.017986,77.4831252 Z\" fill=\"#000000\"> </path> </g> </g></svg>"
+    },
+    {
+      "id": 1779114076398,
+      "skill": "Dart",
+      "category": "Programming Language",
+      "svg": "<svg viewBox=\"0 0 256 256\" version=\"1.1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" preserveAspectRatio=\"xMidYMid\" fill=\"#000000\"><g id=\"SVGRepo_bgCarrier\" stroke-width=\"0\"></g><g id=\"SVGRepo_tracerCarrier\" stroke-linecap=\"round\" stroke-linejoin=\"round\"></g><g id=\"SVGRepo_iconCarrier\"> <g> <path d=\"M70.534,69.696 L53.988,53.15 L54.058,172.75 L54.256,178.34 C54.338,180.97 54.826,183.938 55.64,187.014 L186.744,233.244 L219.516,218.724 L219.528,218.684 L70.534,69.696\" fill=\"#00D2B8\"> </path> <path d=\"M55.64,187.014 L55.648,187.022 C55.64,186.968 55.612,186.908 55.612,186.852 C55.612,186.908 55.62,186.96 55.64,187.014 L55.64,187.014 Z M219.516,218.724 L186.744,233.244 L55.648,187.022 C58.152,196.63 63.696,207.43 69.662,213.336 L112.446,255.876 L207.576,256 L219.528,218.684 L219.516,218.724 L219.516,218.724 Z\" fill=\"#55DDCA\"> </path> <path d=\"M3.034,130.116 C-1.202,134.638 0.902,143.966 7.722,150.838 L37.14,180.5 L55.64,187.014 C54.826,183.938 54.338,180.97 54.256,178.34 L54.058,172.75 L53.988,53.15 L3.034,130.116 Z\" fill=\"#0081C6\"> </path> <path d=\"M187.82,54.686 C184.744,53.9 181.794,53.414 179.12,53.33 L173.212,53.126 L53.988,53.142 L219.544,218.684 L219.558,218.684 L234.098,185.88 L187.82,54.686\" fill=\"#0079B3\"> </path> <path d=\"M187.67,54.654 C187.734,54.668 187.784,54.686 187.826,54.692 L187.82,54.686 C187.784,54.668 187.734,54.668 187.67,54.654 L187.67,54.654 Z M214.118,68.732 C208.11,62.674 197.452,57.168 187.826,54.692 L234.098,185.88 L219.558,218.684 L219.544,218.684 L255.076,207.336 L255.152,109.92 L214.118,68.732 L214.118,68.732 Z\" fill=\"#00A4E4\"> </path> <path d=\"M181.338,36.298 L151.684,6.862 C144.826,0.068 135.494,-2.046 130.984,2.178 L53.988,53.142 L173.212,53.126 L179.12,53.33 C181.794,53.414 184.744,53.9 187.82,54.686 L181.338,36.298 L181.338,36.298 Z\" fill=\"#00D2B8\"> </path> </g> </g></svg>"
+    },
+    {
+      "id": 1779119594162,
+      "skill": "PostgreSQL",
+      "category": "Database",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" x=\"0px\" y=\"0px\" width=\"100\" height=\"100\" viewBox=\"0 0 48 48\"> <path fill=\"#fff\" d=\"M44.083,29.79c-0.183-0.829-0.935-1.796-2.452-1.796c-0.31,0-0.649,0.039-1.035,0.119c-0.708,0.146-1.311,0.217-1.842,0.241c4.133-7.04,6.816-16.819,4.159-20.214c-3.501-4.473-8.214-5.141-10.711-5.141L31.967,3c-0.929,0.015-1.893,0.129-2.863,0.339l-3.583,0.774C25.033,4.052,24.536,4.009,24.018,4l-0.03,0l-0.016,0l-0.152-0.001c-1.593,0-3.046,0.338-4.341,0.973l-1.251-0.493c-1.72-0.678-4.308-1.485-6.868-1.485c-0.144,0-0.287,0.003-0.431,0.008C8.407,3.093,6.241,4.05,4.664,5.769C2.696,7.915,1.8,11.054,2.003,15.1C2.013,15.309,4.461,36,11.4,36h0.025l0.064-0.001c0.901-0.022,1.76-0.384,2.563-1.077c0.613,0.46,1.406,0.732,2.145,0.84c0.488,0.115,1.366,0.278,2.418,0.278c1.284,0,2.442-0.263,3.44-0.738c-0.001,0.88-0.006,1.994-0.016,3.418l-0.001,0.075l0.005,0.075c0.097,1.419,0.342,2.698,0.711,3.701c1.051,2.859,2.866,4.434,5.111,4.434c0.093,0,0.188-0.003,0.284-0.009c1.846-0.114,3.717-1.151,5.004-2.772c1.393-1.755,1.715-3.607,1.839-5.026L35,39.111v-0.088v-4.079l0.103,0.01l0.436,0.038l0.042,0.004l0.042,0.002c0.124,0.006,0.252,0.008,0.381,0.008c1.507,0,3.362-0.391,4.616-0.974C41.819,33.476,44.559,31.948,44.083,29.79z\"></path><path fill=\"#0277bd\" d=\"M33,34c0-0.205,0.012-0.376,0.018-0.565C33.008,33.184,33,33,33,33s0.012-0.009,0.032-0.022c0.149-2.673,0.886-3.703,1.675-4.29c-0.11-0.153-0.237-0.318-0.356-0.475c-0.333-0.437-0.748-0.979-1.192-1.674l-0.082-0.158c-0.067-0.164-0.229-0.447-0.435-0.819c-1.183-2.14-3.645-6.592-1.96-9.404c0.738-1.232,2.122-1.942,4.121-2.117C33.986,11.718,30.925,6.115,23.985,6c-0.002,0-0.004,0-0.006,0c-6.041-0.098-8.026,5.392-8.672,8.672c0.89-0.377,1.906-0.606,2.836-0.606c0.014,0,0.029,0,0.043,0c2.29,0.017,3.865,1.239,4.323,3.354c0.335,1.552,0.496,2.91,0.492,4.153c-0.01,2.719-0.558,4.149-1.042,5.411l-0.154,0.408c-0.124,0.334-0.255,0.645-0.379,0.937c-0.126,0.298-0.237,0.563-0.318,0.802c0.484,0.11,0.864,0.265,1.125,0.38l0.151,0.066c0.047,0.02,0.094,0.043,0.137,0.069c0.848,0.516,1.376,1.309,1.489,2.233c0.061,0.498,0.051,3.893,0.03,6.855c0.087,1.285,0.305,2.364,0.593,3.146c0.409,1.114,1.431,3.241,3.394,3.119c1.37-0.085,2.687-0.919,3.561-2.019c0.938-1.181,1.284-2.487,1.414-3.958V34z\"></path><path fill=\"#0277bd\" d=\"M15.114 28.917c-1.613-1.683-2.399-3.947-2.104-6.056.285-2.035.124-4.027.037-5.098-.029-.357-.048-.623-.047-.77 0-.008.002-.015.003-.023 0-.004-.002-.007-.002-.011.121-3.021 1.286-7.787 4.493-10.62C15.932 5.724 13.388 4.913 11 5 7.258 5.136 3.636 7.724 4 15c.137 2.73 3.222 19.103 7.44 19 .603-.015 1.229-.402 1.872-1.176 1.017-1.223 2.005-2.332 2.708-3.104C15.705 29.481 15.401 29.217 15.114 28.917zM37.023 14.731c.015.154.002.286-.022.408.031.92-.068 1.813-.169 2.677-.074.636-.15 1.293-.171 1.952-.021.645.07 1.282.166 1.956.225 1.578.459 3.359-.765 5.437.225.296.423.571.581.837 4.61-7.475 6.468-16.361 4.695-18.626C38.655 5.944 34.941 4.952 31.999 5c-.921.015-1.758.139-2.473.294C34.602 7.754 36.863 13.026 37.023 14.731zM41 30.071c-2.665.55-3.947.257-4.569-.126-.1.072-.2.133-.293.19-.372.225-.961.583-1.105 2.782.083.016.156.025.246.044L35.714 33c1.32.06 3.049-.31 4.063-.781C41.962 31.205 43.153 29.627 41 30.071zM22.023 32.119c-.037-.298-.198-.539-.492-.732l-.108-.047C21.062 31.181 20.653 31 20 31h-.004c-.127.01-.253.019-.38.019-.052 0-.103-.007-.155-.009-.474.365-1.148.647-2.816.99-2.98.759-1.221 1.655-.078 1.794 1.106.277 3.735.614 5.481-.809C22.043 32.537 22.035 32.229 22.023 32.119z\"></path><path fill=\"#0277bd\" d=\"M20.681 18.501c-.292.302-.753.566-1.262.484-.828-.134-1.463-1.133-1.417-1.508h0c.044-.374.751-.569 1.578-.435.287.047.548.128.768.228-.32-.688-.899-1.085-1.782-1.182-1.565-.174-3.226.644-3.56 1.097.007.11.02.251.033.417.093 1.147.265 3.284-.05 5.537-.208 1.485.393 3.169 1.567 4.395.757.79 1.641 1.29 2.513 1.438.111-.478.309-.944.513-1.425.113-.265.233-.547.346-.852l.162-.427c.443-1.155.9-2.35.909-4.703C21.003 20.66 20.892 19.627 20.681 18.501zM34.847 22.007c-.104-.729-.211-1.484-.185-2.303.023-.742.105-1.442.184-2.119.062-.533.11-1.045.138-1.55-1.289.107-2.145.479-2.551 1.108.168-.057.358-.102.568-.129.892-.116 1.543.141 1.618.637.055.363-.253.705-.388.836-.277.269-.626.442-.981.488-.064.008-.129.012-.192.012-.353 0-.69-.121-.949-.3.112 1.973 1.567 4.612 2.283 5.907.153.277.271.498.369.688C35.154 24.163 35.009 23.143 34.847 22.007z\"></path> </svg>"
+    },
+    {
+      "id": 1779364857776,
+      "skill": "Expo",
+      "svg": "<svg viewBox=\"0 0 32 32\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"#000000\"><g id=\"SVGRepo_bgCarrier\" stroke-width=\"0\"></g><g id=\"SVGRepo_tracerCarrier\" stroke-linecap=\"round\" stroke-linejoin=\"round\"></g><g id=\"SVGRepo_iconCarrier\"><title>file_type_expo</title><path d=\"M3.979,20.059,11.252,6.2l7.155-3.835,2.127,1.074L13.422,7.457l7.349,22.088L18.407,28.17l-5.5-12.677-7.22,5.479Z\" style=\"fill:#fff\"></path><ellipse cx=\"25.24\" cy=\"13.967\" rx=\"2.686\" ry=\"2.503\" style=\"fill:#fff\"></ellipse><path d=\"M27.2,12.85a2.433,2.433,0,0,0-4.158.3,2.19,2.19,0,0,0,.419,2.449A3.546,3.546,0,0,0,27.2,12.85ZM19.976,3.4l-1.547-.849L11.693,6.3l.537.29,1.02.537L15.1,6.1l4.878-2.718Zm.623-.258a.24.24,0,0,1,.172.161L23.027,9.96a.223.223,0,0,1-.108.29,4.361,4.361,0,0,0-2.105,4.985,4.607,4.607,0,0,0,4.92,3.244.284.284,0,0,1,.279.172l2.331,6.833a.275.275,0,0,1-.107.3l-7.166,4.189a.263.263,0,0,1-.107.022.285.285,0,0,1-.193-.032l-2.514-1.58a.253.253,0,0,1-.108-.107L13.24,16.986,5.762,21.24a.27.27,0,0,1-.053.022.258.258,0,0,1-.237-.011l-1.7-.967a.247.247,0,0,1-.108-.322L10.93,6.178a.255.255,0,0,1,.118-.107l7.241-4.039a.274.274,0,0,1,.258,0ZM11.617,6.844l-.354-.182-7,13.332,1.279.72,6.037-7.9a.3.3,0,0,1,.248-.108.3.3,0,0,1,.214.161l6.575,15.148L20.373,29.1,13.315,8.467l-.3-.86-1.407-.773Zm10.829,7.95a2.73,2.73,0,0,1,1.343-3.115,2.965,2.965,0,0,1,3.481.43,2.717,2.717,0,0,1,.078,3.843q-.037.039-.078.078a2.932,2.932,0,0,1-4.824-1.236Z\" style=\"fill:#4630eb\"></path></g></svg>"
+    }
+  ]
+}
