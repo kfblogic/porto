@@ -383,9 +383,6 @@ export default function GitHubStats({ githubUrl }) {
       {loading ? (
         /* PREMIUM FUTURISTIC LOADING PANEL */
         <div className="github-stats glass-card p-8 min-h-[440px] flex flex-col justify-center relative overflow-hidden rounded-xl border border-border-primary">
-          <div className="absolute -right-20 -top-20 w-60 h-60 bg-accent-primary/10 rounded-full blur-[80px] pointer-events-none" />
-          <div className="absolute -left-20 -bottom-20 w-60 h-60 bg-accent-secondary/10 rounded-full blur-[80px] pointer-events-none" />
-
           <div className="flex items-center justify-between mb-8 z-10">
             <div className="flex items-center gap-3">
               <div className="w-10 h-10 rounded-lg bg-accent-primary/10 flex items-center justify-center text-accent-secondary animate-spin-slow">
@@ -421,7 +418,7 @@ export default function GitHubStats({ githubUrl }) {
                       <div
                         key={dIndex}
                         className={`w-2.5 h-2.5 rounded-[2px] transition-all duration-300 ${isHighlighted
-                          ? 'bg-accent-primary shadow-[0_0_8px_var(--color-accent-primary)] scale-110'
+                          ? 'bg-accent-secondary scale-110'
                           : 'bg-surface-raised'
                           }`}
                       />
@@ -446,8 +443,6 @@ export default function GitHubStats({ githubUrl }) {
       ) : (
         /* MAIN DASHBOARD PANEL */
         <div className="github-stats glass-card p-6 md:p-8 rounded-xl border border-border-primary relative overflow-hidden">
-          <div className="absolute -right-20 -top-20 w-60 h-60 bg-accent-primary/5 rounded-full blur-[80px] pointer-events-none" />
-
           {/* Header & Year Selector */}
           <div className="flex flex-col md:flex-row md:items-center justify-between gap-6 mb-8 border-b border-border-primary pb-6">
             <div className="flex items-center gap-3">
@@ -478,7 +473,7 @@ export default function GitHubStats({ githubUrl }) {
                   key={year}
                   onClick={() => setSelectedYear(year)}
                   className={`px-4 py-1.5 rounded-full text-xs font-semibold font-mono tracking-wider transition-all duration-300 ${selectedYear === year
-                    ? 'bg-accent-primary text-white shadow-[0_0_12px_rgba(108,99,255,0.4)]'
+                    ? 'bg-accent-primary text-white'
                     : 'bg-surface-subtle border border-border-primary text-text-secondary hover:text-text-primary hover:border-accent-primary/50'
                     }`}
                 >
@@ -572,17 +567,17 @@ export default function GitHubStats({ githubUrl }) {
                             <div
                               key={dayIndex}
                               className={`w-3 h-3 rounded-[2px] transition-all duration-150 cursor-pointer hover:scale-125 hover:z-20 ${selectedDate && selectedDate.dateRaw === day.dateRaw
-                                ? 'ring-2 ring-accent-primary scale-115 z-30 shadow-[0_0_8px_rgba(108,99,255,0.8)]'
+                                ? 'ring-2 ring-accent-primary scale-115 z-30'
                                 : ''
                                 } ${day.level === 0
                                   ? 'bg-surface-subtle'
                                   : day.level === 1
-                                    ? 'bg-accent-primary/20 hover:shadow-[0_0_6px_rgba(108,99,255,0.4)]'
+                                    ? 'bg-accent-secondary/25'
                                     : day.level === 2
-                                      ? 'bg-accent-primary/45 hover:shadow-[0_0_8px_rgba(108,99,255,0.6)]'
+                                      ? 'bg-accent-secondary/50'
                                       : day.level === 3
-                                        ? 'bg-accent-primary/75 hover:shadow-[0_0_10px_rgba(108,99,255,0.8)]'
-                                        : 'bg-accent-primary hover:shadow-[0_0_12px_rgba(108,99,255,1)]'
+                                        ? 'bg-accent-secondary/75'
+                                        : 'bg-accent-secondary'
                                 }`}
                               onMouseEnter={(e) => handleCellMouseEnter(day, e)}
                               onMouseMove={handleCellMouseMove}
@@ -605,10 +600,10 @@ export default function GitHubStats({ githubUrl }) {
                 <div className="flex items-center gap-1.5">
                   <span>Less</span>
                   <div className="w-3 h-3 rounded-[2px] bg-surface-subtle" />
-                  <div className="w-3 h-3 rounded-[2px] bg-accent-primary/20" />
-                  <div className="w-3 h-3 rounded-[2px] bg-accent-primary/45" />
-                  <div className="w-3 h-3 rounded-[2px] bg-accent-primary/75" />
-                  <div className="w-3 h-3 rounded-[2px] bg-accent-primary" />
+                  <div className="w-3 h-3 rounded-[2px] bg-accent-secondary/25" />
+                  <div className="w-3 h-3 rounded-[2px] bg-accent-secondary/50" />
+                  <div className="w-3 h-3 rounded-[2px] bg-accent-secondary/75" />
+                  <div className="w-3 h-3 rounded-[2px] bg-accent-secondary" />
                   <span>More</span>
                 </div>
               </div>
@@ -783,7 +778,7 @@ export default function GitHubStats({ githubUrl }) {
       {/* Floating Tooltip following cursor */}
       {hoveredDay && (
         <div
-          className="fixed z-[3000] px-4 py-3 bg-bg-secondary/95 backdrop-blur-md border border-border-primary rounded-lg shadow-2xl text-xs w-[240px] pointer-events-none transition-all duration-75 font-mono border-l-4 border-l-accent-primary"
+          className="fixed z-[3000] px-4 py-3 bg-bg-secondary border border-border-primary rounded-lg text-xs w-[240px] pointer-events-none transition-all duration-75 font-mono"
           style={{
             left: `${mousePos.x + 15 + 240 > window.innerWidth ? mousePos.x - 255 : mousePos.x + 15}px`,
             top: `${mousePos.y + 15 + 125 > window.innerHeight ? mousePos.y - 140 : mousePos.y + 15}px`,
