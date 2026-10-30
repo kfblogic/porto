@@ -22,10 +22,10 @@
   "activities": [
     {
       "id": 1,
-      "heading": "MyCoach ID (Head Of Infrastructure)",
-      "heading_en": "MyCoach ID (Head of Infrastructure)",
-      "caption": "Sebagai Head Of Infrastructure di MyCoach ID, saya bertanggung jawab dalam pengembangan dan pemeliharaan aplikasi  dan website, menggunakan teknologi modern untuk menghasilkan solusi yang efektif dan scalable.",
-      "caption_en": "As Head of Infrastructure at MyCoach ID, I lead development and maintenance of apps and websites using modern technologies to deliver effective, scalable solutions."
+      "heading": "Wisesa Semesta Jaya (Programmer Internship)",
+      "heading_en": "Wisesa Semesta Jaya (Programmer Internship)",
+      "caption": "Sebagai Programmer Internship di Wisesa Semesta Jaya, saya bertanggung jawab mengembangkan aplikasi berbasis web untuk mengelola proses pengiriman logistik serta daftar job order bagi teknisi. Aplikasi ini membantu perusahaan memantau status pengiriman dan mendistribusikan pekerjaan kepada teknisi secara lebih terstruktur dan efisien.",
+      "caption_en": "As a Programmer Intern at Wisesa Semesta Jaya, I develop a web application for managing logistics deliveries and technician job orders. The application helps the company track delivery status and assign work to technicians in a more structured and efficient way."
     }
   ],
   "projects": [
@@ -229,6 +229,20 @@
       "location_type_label": "On-site",
       "description": "Mengembangkan aplikasi web perusahaan menggunakan PHP murni",
       "photo": "./assets/portfolio/experience/experience-1.jpg"
+    },
+    {
+      "id": 1793344290816,
+      "title": "Programmer",
+      "employment_type": "internship",
+      "employment_type_label": "Internship",
+      "company": "Wisesa Semesta Jaya",
+      "start_date": "2026-08-10",
+      "end_date": "2027-02-10",
+      "location": "Jl. Kemang Raya No.17, RT.10/RW.5, Bangka, Kec. Mampang Prpt., Kota Jakarta Selatan, Daerah Khusus Ibukota Jakarta 12730, Indonesia",
+      "location_type": "on_site",
+      "location_type_label": "On-site",
+      "description": "Mengembangkan aplikasi web untuk mengelola pengiriman logistik dan daftar job order teknisi. Aplikasi ini membantu perusahaan memantau status pengiriman dan membagi pekerjaan ke teknisi dengan lebih terstruktur",
+      "photo": "./assets/portfolio/experience/experience-1793344290816.png"
     }
   ],
   "certifications": [

@@ -119,9 +119,8 @@ export default function Navbar() {
     <nav className={navbarClass}>
       <div className="container navbar-inner">
         <Link to="/" className="navbar-logo" onClick={handleLogoClick}>
-          <span className="logo-bracket">&lt;</span>
+          <span className="logo-mark">KFB</span>
           <span className="logo-text">Portfolio</span>
-          <span className="logo-bracket">/&gt;</span>
         </Link>
 
         <div className={`navbar-links ${mobileOpen ? 'active' : ''}`}>

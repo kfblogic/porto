@@ -17,13 +17,9 @@ export default function Certifications({ certifications }) {
   }
 
   return (
-    <section id="certifications" className="section">
+    <section id="certifications" className="section desk-section">
       <div className="container" ref={ref}>
         <div className="section-header">
-          <span className="section-label">
-            <Award size={14} />
-            {t('sections.certifications.label')}
-          </span>
           <h2 className="section-title">{t('sections.certifications.title')}</h2>
           <p className="section-subtitle">{t('sections.certifications.subtitle')}</p>
         </div>
@@ -38,7 +34,7 @@ export default function Certifications({ certifications }) {
             const hasCover = isPdf && Boolean(coverPath)
 
             return (
-              <div key={cert.id} className="cert-card glass-card" style={{ animationDelay: `${index * 0.1}s` }}>
+              <div key={cert.id} className="cert-card" style={{ animationDelay: `${index * 0.1}s` }}>
                 <div className="cert-top">
                   {hasCover ? (
                     <a

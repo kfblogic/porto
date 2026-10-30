@@ -44,7 +44,7 @@ Porto/
 - Semua gaya ada di `src/index.css`:
   - `@import 'tailwindcss'`
   - `@theme` — token warna/font (mis. `bg-bg-primary`, `text-accent-secondary`)
-  - `@layer components` — kelas semantik (`glass-card`, `section-title`, `admin-nav-link`, dll.) memakai `@apply`
+  - `@layer components` — kelas semantik (`card`, `section-title`, `punch-grid`, `admin-nav-link`, dll.) memakai `@apply`
 - Komponen JSX memakai **nama kelas semantik** yang sudah didefinisikan di `index.css`, atau utility Tailwind langsung (`text-text-secondary`, `flex`, dll.).
 
 ### Menambah section baru

@@ -52,7 +52,7 @@ Saat mengubah script, tampilan, atau logika: perbarui [CONTEXT.md](./CONTEXT.md)
 
 - **Jangan** buat file `.css` per komponen.
 - Tambah gaya di `src/index.css` (`@theme` atau `@layer components`).
-- JSX memakai kelas semantik yang sudah ada (`glass-card`, `section-title`, …) atau utility Tailwind dari token `@theme`.
+- JSX memakai kelas semantik yang sudah ada (`card card--{red|yellow|blue|green|white}`, `section-title`, `record`, `field`, …) atau utility Tailwind dari token `@theme`.
 - Ikuti [DESIGN.md](./DESIGN.md) untuk warna, tipografi, dan pola UI.
 
 ### Data & aset

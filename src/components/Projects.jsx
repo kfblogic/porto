@@ -1,12 +1,14 @@
-﻿import { useState, useMemo } from 'react'
+import { useState, useMemo } from 'react'
 import { Link } from 'react-router-dom'
-import { FolderOpen, SearchX } from 'lucide-react'
+import { ArrowRight, FolderOpen, SearchX } from 'lucide-react'
 import { useScrollReveal } from '../hooks/useScrollReveal'
 import { getProjectImages, getProjectCoverSrc } from '../lib/projectImages'
 import { getProjectSlug } from '../lib/projectSlug'
 import { useAppSettings } from '../context/AppSettingsContext'
 
 const ALL_CATEGORY = 'All'
+// Warna strip kartu per kategori, seperti kartu berstrip pemisah jenis data.
+const STRIPES = ['#1f4fa3', '#2f7d5b', '#e9573f', '#f2c230']
 
 export default function Projects({ projects, categories }) {
   const { t } = useAppSettings()
@@ -30,13 +32,9 @@ export default function Projects({ projects, categories }) {
   const isEmpty = !filtered || filtered.length === 0
 
   return (
-    <section id="projects" className="section">
+    <section id="projects" className="section desk-section">
       <div className="container" ref={ref}>
         <div className="section-header">
-          <span className="section-label">
-            <FolderOpen size={14} />
-            {t('sections.projects.label')}
-          </span>
           <h2 className="section-title">{t('sections.projects.title')}</h2>
           <p className="section-subtitle">{t('sections.projects.subtitle')}</p>
         </div>
@@ -84,8 +82,9 @@ export default function Projects({ projects, categories }) {
                 <Link
                   key={project.id}
                   to={`/project/${projectSlug}`}
-                  className="project-card glass-card"
-                  style={{ animationDelay: `${index * 0.1}s` }}
+                  className="project-card"
+                  data-seq={`P${String(index + 1).padStart(3, '0')}`}
+                  style={{ '--stripe': STRIPES[Math.max(0, displayCategories.indexOf(project.category) - 1) % STRIPES.length] }}
                 >
                   <div className="project-image-container">
                     {cover ? (
@@ -100,18 +99,16 @@ export default function Projects({ projects, categories }) {
                         {imageCount} {t('sections.projects.photos')}
                       </span>
                     )}
-                    <div className="project-overlay">
-                      <span className="project-overlay-text">
-                        {t('sections.projects.viewDetail')}
-                      </span>
-                    </div>
                   </div>
                   <div className="project-info">
-                    <span className="project-category-tag">{project.category}</span>
                     <h3 className="project-name">{project.name}</h3>
                     {project.excerpt && (
                       <p className="project-excerpt">{project.excerpt}</p>
                     )}
+                    <div className="project-foot">
+                      <span className="project-more">{t('sections.projects.viewDetail')} <ArrowRight size={14} aria-hidden /></span>
+                      <span className="project-category-tag">{project.category}</span>
+                    </div>
                   </div>
                 </Link>
               )

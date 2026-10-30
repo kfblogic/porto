@@ -26,12 +26,8 @@ export default function Footer({ profile }) {
       <div className="container">
         <div className="footer-top">
           <div className="footer-brand">
-            <span className="footer-logo">
-              <span className="logo-bracket">&lt;</span>
-              <span className="logo-text">{profile?.name || 'Portfolio'}</span>
-              <span className="logo-bracket">/&gt;</span>
-            </span>
-            <p className="footer-tagline">Building digital experiences with passion.</p>
+            <span className="footer-logo">{profile?.name || 'Portfolio'}</span>
+            <p className="footer-tagline">{t('footer.tagline')}</p>
           </div>
 
           {socialLinks.length > 0 && (
@@ -51,8 +47,6 @@ export default function Footer({ profile }) {
             </div>
           )}
         </div>
-
-        <div className="footer-divider" />
 
         <div className="footer-bottom">
           <p className="footer-copyright">

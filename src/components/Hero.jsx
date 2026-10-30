@@ -1,6 +1,7 @@
-import { useState, useEffect } from 'react'
-import { ChevronDown, Mail, Eye } from 'lucide-react'
+import { useState } from 'react'
+import { Mail, Eye } from 'lucide-react'
 import CVModal from './CVModal'
+import PunchGrid from './PunchGrid'
 import { useAppSettings } from '../context/AppSettingsContext'
 
 const GithubIcon = () => (
@@ -18,38 +19,9 @@ const TwitterIcon = () => (
 
 export default function Hero({ profile }) {
   const { t } = useAppSettings()
-  const [currentHeadline, setCurrentHeadline] = useState(0)
-  const [displayText, setDisplayText] = useState('')
-  const [isDeleting, setIsDeleting] = useState(false)
   const [isCVModalOpen, setIsCVModalOpen] = useState(false)
 
-  const headlines = profile?.headlines || ['Developer']
-
-  useEffect(() => {
-    const current = headlines[currentHeadline]
-    let timeout
-
-    if (!isDeleting) {
-      if (displayText.length < current.length) {
-        timeout = setTimeout(() => {
-          setDisplayText(current.substring(0, displayText.length + 1))
-        }, 80)
-      } else {
-        timeout = setTimeout(() => setIsDeleting(true), 2000)
-      }
-    } else {
-      if (displayText.length > 0) {
-        timeout = setTimeout(() => {
-          setDisplayText(current.substring(0, displayText.length - 1))
-        }, 40)
-      } else {
-        setIsDeleting(false)
-        setCurrentHeadline((prev) => (prev + 1) % headlines.length)
-      }
-    }
-
-    return () => clearTimeout(timeout)
-  }, [displayText, isDeleting, currentHeadline, headlines])
+  const headlines = profile?.headlines?.length ? profile.headlines : ['Developer']
 
   const socialLinks = [
     { icon: GithubIcon, url: profile?.github_url, label: 'GitHub' },
@@ -58,90 +30,68 @@ export default function Hero({ profile }) {
     { icon: TwitterIcon, url: profile?.twitter_url, label: 'Twitter' },
   ].filter(s => s.url)
 
+  const punchText = [profile?.name, headlines[0]].filter(Boolean).join(' / ')
+
   return (
     <section id="home" className="hero">
-      <div className="hero-bg-orb hero-bg-orb-1" />
-      <div className="hero-bg-orb hero-bg-orb-2" />
-      <div className="hero-bg-orb hero-bg-orb-3" />
+      <div className="container">
+        <div className="card-wrap hero-feed">
+          <div className="card card--red hero-card" data-seq="KFB 0001">
+            <PunchGrid text={punchText} cols={80} className="hero-grid" />
 
-      <div className="container hero-container">
-        <div className="hero-content animate-fadeInUp">
-
-
-          <div className="hero-greeting">
-            <span className="greeting-line" />
-            <span className="greeting-text">{t('hero.greeting')}</span>
-          </div>
-
-          <h1 className="hero-name">{profile?.name || 'Developer'}</h1>
-
-          <div className="hero-headline">
-            <span className="headline-text">{displayText}</span>
-            <span className="headline-cursor">|</span>
-          </div>
-
-          <p className="hero-description">
-            {profile?.description || 'A passionate developer building amazing things.'}
-          </p>
-
-          <div className="hero-actions">
-            {profile?.cv_path && (
-              <button
-                onClick={() => setIsCVModalOpen(true)}
-                className="btn btn-primary"
-              >
-                <Eye size={18} />
-                {t('hero.viewCv')}
-              </button>
-            )}
-            {profile?.email && (
-              <a href={`mailto:${profile.email}`} className="btn btn-outline">
-                <Mail size={18} />
-                {t('hero.contact')}
-              </a>
-            )}
-          </div>
-
-          {socialLinks.length > 0 && (
-            <div className="hero-socials">
-              {socialLinks.map((social, i) => (
-                <a
-                  key={i}
-                  href={social.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="social-link"
-                  aria-label={social.label}
-                >
-                  <social.icon size={20} />
-                </a>
-              ))}
+            <div className="hero-main">
+              <h1 className="hero-name">{profile?.name || 'Developer'}</h1>
+              <p className="hero-headline">{headlines.join(' / ')}</p>
             </div>
-          )}
-        </div>
 
-        <div className="hero-visual animate-slideInRight delay-2">
-          <div className="hero-avatar-wrapper">
-            {profile?.photo ? (
-              <img src={profile.photo} alt={profile.name} className="hero-avatar" />
-            ) : (
-              <div className="hero-avatar-placeholder">
-                <span>{(profile?.name || 'D')[0]}</span>
+            <div className="hero-stub">
+              {profile?.photo ? (
+                <img src={profile.photo} alt={profile.name} className="hero-avatar" />
+              ) : (
+                <div className="hero-avatar hero-avatar-placeholder">
+                  <span>{(profile?.name || 'D')[0]}</span>
+                </div>
+              )}
+
+              <p className="hero-description">
+                {profile?.description || 'A passionate developer building amazing things.'}
+              </p>
+
+              <div className="hero-actions">
+                {profile?.cv_path && (
+                  <button type="button" onClick={() => setIsCVModalOpen(true)} className="btn btn-primary">
+                    <Eye size={18} aria-hidden />
+                    {t('hero.viewCv')}
+                  </button>
+                )}
+                {profile?.email && (
+                  <a href={`mailto:${profile.email}`} className="btn btn-outline">
+                    <Mail size={18} aria-hidden />
+                    {t('hero.contact')}
+                  </a>
+                )}
               </div>
-            )}
-            <div className="hero-avatar-ring" />
-            <div className="hero-avatar-dot" />
+
+              {socialLinks.length > 0 && (
+                <div className="hero-socials">
+                  {socialLinks.map((social) => (
+                    <a
+                      key={social.label}
+                      href={social.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="social-link"
+                      aria-label={social.label}
+                    >
+                      <social.icon />
+                    </a>
+                  ))}
+                </div>
+              )}
+            </div>
           </div>
         </div>
       </div>
-
-      <a href="#activities" className="hero-scroll-indicator" onClick={(e) => {
-        e.preventDefault()
-        document.querySelector('#activities')?.scrollIntoView({ behavior: 'smooth' })
-      }}>
-        <span className="scroll-text">{t('hero.scrollDown')}</span>
-        <ChevronDown size={18} className="scroll-icon" />
-      </a>
 
       <CVModal
         cvPath={profile?.cv_path}
