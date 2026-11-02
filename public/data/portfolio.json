@@ -223,12 +223,23 @@
       "employment_type_label": "Internship",
       "company": "PT CONTROL SYSTEM ARENA PARA NUSA",
       "start_date": "2020-01-01",
-      "end_date": "2024-03-01",
+      "end_date": "2020-03-01",
       "location": "Jakarta, Indonesia",
       "location_type": "on_site",
       "location_type_label": "On-site",
       "description": "Mengembangkan aplikasi web perusahaan menggunakan PHP murni",
       "photo": "./assets/portfolio/experience/experience-1.jpg"
+    },
+    {
+      "id": 1793344290815,
+      "title": "Head Of Infrastructure",
+      "company": "MyCoach ID",
+      "company_url": "https://mycoachid.com",
+      "start_date": "2025",
+      "end_date": "2026",
+      "description": "Membuat aplikasi MyCoach ID untuk Android dan iOS, serta merancang alur penggunaan aplikasi",
+      "description_en": "Built the MyCoach ID app for Android and iOS and designed the app's user flow",
+      "photo": ""
     },
     {
       "id": 1793344290816,
@@ -242,7 +253,7 @@
       "location_type": "on_site",
       "location_type_label": "On-site",
       "description": "Mengembangkan aplikasi web untuk mengelola pengiriman logistik dan daftar job order teknisi. Aplikasi ini membantu perusahaan memantau status pengiriman dan membagi pekerjaan ke teknisi dengan lebih terstruktur",
-      "photo": "./assets/portfolio/experience/experience-1793344290816.png"
+      "photo": "./assets/portfolio/experience/experience-1793344290816.jpg"
     }
   ],
   "certifications": [

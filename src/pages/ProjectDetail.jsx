@@ -147,8 +147,8 @@ export default function ProjectDetail() {
           )}
 
           <article className="project-detail-body">
-            <span className="project-category-tag">{project.category}</span>
             <h1 className="project-detail-title">{project.name}</h1>
+            <p className="project-category-tag project-detail-category">{project.category}</p>
             {project.excerpt && <p className="project-detail-excerpt">{project.excerpt}</p>}
 
             {artikelHtml && (

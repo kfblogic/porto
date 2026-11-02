@@ -39,6 +39,8 @@ export default function ExperienceEditor({ data, onChange }) {
               <input type="text" value={item.title} onChange={e => update(i, 'title', e.target.value)} /></div>
             <div className="form-group"><label>Company</label>
               <input type="text" value={item.company} onChange={e => update(i, 'company', e.target.value)} /></div>
+            <div className="form-group"><label>Company Website</label>
+              <input type="url" value={item.company_url || ''} onChange={e => update(i, 'company_url', e.target.value)} /></div>
             <div className="form-group"><label>Employment Type</label>
               <select value={item.employment_type} onChange={e => {
                 const t = empTypes.find(t => t.value === e.target.value)

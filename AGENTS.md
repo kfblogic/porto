@@ -4,7 +4,7 @@ Dokumen ini untuk **Cursor / Codex / agent lain**. Detail arsitektur & deploy ad
 
 ## Ringkasan
 
-Portfolio statis Kevin Febrian Bimantara: React 19 + Vite 8 + HashRouter + Tailwind v4. Data dari `public/data/portfolio.json`. Production di GitHub Pages **tanpa** admin bundle.
+Portfolio statis Kevin Febrian Bimantara: React 19 + Vite 8 + HashRouter + Tailwind v4 + three.js (papan flap hero). Data dari `public/data/portfolio.json`. Production di GitHub Pages **tanpa** admin bundle.
 
 ## Perintah
 
@@ -25,7 +25,7 @@ src/
   components/     # Section portfolio (Hero, Projects, …)
   pages/          # Home, ProjectDetail, Admin (dev only)
   admin/          # Editor per section — jangan impor ke komponen publik
-  lib/            # portfolioData, techIcons, upload, slug, crop, …
+  lib/            # portfolioData, techIcons, upload, slug, crop, flapBoard (three.js), …
   hooks/          # useScrollReveal
   index.css       # Satu-satunya sumber gaya (@theme + @layer components)
 public/data/portfolio.json
@@ -52,13 +52,14 @@ Saat mengubah script, tampilan, atau logika: perbarui [CONTEXT.md](./CONTEXT.md)
 
 - **Jangan** buat file `.css` per komponen.
 - Tambah gaya di `src/index.css` (`@theme` atau `@layer components`).
-- JSX memakai kelas semantik yang sudah ada (`card card--{red|yellow|blue|green|white}`, `section-title`, `record`, `field`, …) atau utility Tailwind dari token `@theme`.
+- JSX memakai kelas semantik yang sudah ada (`section-title`, `record`, `field`, `project-card`, `gh-board`, …) atau utility Tailwind dari token `@theme`.
 - Ikuti [DESIGN.md](./DESIGN.md) untuk warna, tipografi, dan pola UI.
 
 ### Data & aset
 
 - Sumber kebenaran konten: `public/data/portfolio.json`.
 - Path aset relatif: `./assets/portfolio/...` (cocok dengan `base: './'`).
+- `experiences`: `start_date`/`end_date` boleh tahun saja (`"2025"`) kalau bulannya tidak diketahui; `employment_type_label`, `location`, dan `company_url` opsional. Jangan mengarang nilai yang tidak ada di sumber.
 - Admin hanya alat lokal: edit → Download/Copy JSON → ganti `portfolio.json` → commit/deploy.
 
 ### Admin (dev only)
@@ -90,6 +91,13 @@ Saat mengubah script, tampilan, atau logika: perbarui [CONTEXT.md](./CONTEXT.md)
 - Functional components + hooks; tidak perlu abstraksi baru untuk satu pemakaian.
 - Jangan restore kode yang dihapus user tanpa konteks.
 - Jangan commit/deploy kecuali user setuju (deploy) atau meminta commit.
+
+### Papan flap hero (three.js)
+
+- Satu-satunya pemakaian three.js ada di `src/lib/flapBoard.js`, dimuat lewat `import()` dinamis dari `Hero.jsx` supaya tidak masuk chunk utama. Jangan impor three.js dari komponen lain.
+- Papan hanya render saat ada yang bergerak dan berhenti saat di luar layar. Pertahankan pola ini; jangan ganti ke loop `requestAnimationFrame` terus-menerus.
+- `h1` nama tetap di DOM (fallback saat WebGL gagal, terbaca screen reader). `prefers-reduced-motion` menampilkan papan statis.
+- Cek logika baris: `node scripts/check-flap-rows.mjs`.
 
 ## Menambah fitur
 

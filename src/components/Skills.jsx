@@ -11,32 +11,24 @@ export default function Skills({ skills }) {
   return (
     <section id="skills" className="section">
       <div className="container" ref={ref}>
-        <div className="card-wrap">
-          <div className="card card--yellow" data-seq="KFB 0002">
-            <div className="section-header">
-              <h2 className="section-title">{t('sections.skills.title')}</h2>
-              <p className="section-subtitle">{t('sections.skills.subtitle')}</p>
-            </div>
+        <div className="section-header">
+          <h2 className="section-title">{t('sections.skills.title')}</h2>
+          <p className="section-subtitle">{t('sections.skills.subtitle')}</p>
+        </div>
 
-            <div className="skills-flat-list">
-              {skills.map((item, idx) => {
-                const { svg: iconSvg, variant } = getSkillIconData(item.skill, item.svg)
-                return (
-                  <div 
-                    key={item.id} 
-                    className="skill-flat-badge" 
-                    style={{ '--i': idx }}
-                  >
-                    <span
-                      className={`skill-flat-icon skill-flat-icon--${variant}`}
-                      dangerouslySetInnerHTML={{ __html: iconSvg }}
-                    />
-                    <span className="skill-flat-name">{item.skill}</span>
-                  </div>
-                )
-              })}
-            </div>
-          </div>
+        <div className="skills-flat-list">
+          {skills.map((item) => {
+            const { svg: iconSvg, variant } = getSkillIconData(item.skill, item.svg)
+            return (
+              <div key={item.id} className="skill-flat-badge">
+                <span
+                  className={`skill-flat-icon skill-flat-icon--${variant}`}
+                  dangerouslySetInnerHTML={{ __html: iconSvg }}
+                />
+                <span className="skill-flat-name">{item.skill}</span>
+              </div>
+            )
+          })}
         </div>
       </div>
     </section>

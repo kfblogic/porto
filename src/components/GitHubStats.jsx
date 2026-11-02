@@ -1,6 +1,7 @@
-import { useState, useEffect, useMemo, useCallback } from 'react'
+import { useState, useEffect, useMemo, useCallback, useRef } from 'react'
 import { GitCommit, ExternalLink } from 'lucide-react'
 import { Octokit } from '@octokit/core'
+import { useScrollReveal } from '../hooks/useScrollReveal'
 import { useAppSettings } from '../context/AppSettingsContext'
 
 // Original Github Icon SVG
@@ -12,6 +13,8 @@ export default function GitHubStats({ githubUrl }) {
   const { t, locale } = useAppSettings()
   const [fetchingData, setFetchingData] = useState(true)
   const [stats, setStats] = useState(null)
+  const revealRef = useScrollReveal(!fetchingData && Boolean(stats))
+  const heatmapRef = useRef(null)
 
   // Year selector & loading state
   const [selectedYear, setSelectedYear] = useState('')
@@ -217,8 +220,7 @@ export default function GitHubStats({ githubUrl }) {
           languages = Object.entries(languageStats)
             .map(([name, bytes]) => ({
               name,
-              percentage: totalBytes > 0 ? Math.round((bytes / totalBytes) * 100) : 0,
-              color: getLanguageColor(name)
+              percentage: totalBytes > 0 ? Math.round((bytes / totalBytes) * 100) : 0
             }))
             .sort((a, b) => b.percentage - a.percentage)
             .slice(0, 5)
@@ -281,7 +283,7 @@ export default function GitHubStats({ githubUrl }) {
         if (monthLabels.length && index - monthLabels[monthLabels.length - 1].index < 3) monthLabels.pop()
         monthLabels.push({
           index,
-          label: new Date(week[0].dateRaw).toLocaleDateString(dateLocale, { month: 'short' })
+          label: new Date(`${week[0].dateRaw}T00:00:00`).toLocaleDateString(dateLocale, { month: 'short' })
         })
         lastMonth = month
       }
@@ -293,6 +295,20 @@ export default function GitHubStats({ githubUrl }) {
       monthLabels
     }
   }, [stats, selectedYear, locale])
+
+  // Di layar sempit matriks mulai dari aktivitas terakhir, bukan dari Januari yang kosong.
+  useEffect(() => {
+    const scroller = heatmapRef.current
+    if (!scroller) return
+    const active = scroller.querySelectorAll('.gh-hole--1, .gh-hole--2, .gh-hole--3, .gh-hole--4')
+    const latest = active[active.length - 1]
+    if (!latest) {
+      scroller.scrollLeft = 0
+      return
+    }
+    const offset = latest.getBoundingClientRect().left - scroller.getBoundingClientRect().left
+    scroller.scrollLeft += offset - scroller.clientWidth * 0.7
+  }, [calculatedData, fetchingData])
 
   // Years options list sorted descending
   const yearsOptions = useMemo(() => {
@@ -319,7 +335,7 @@ export default function GitHubStats({ githubUrl }) {
   }
 
   return (
-    <section id="github-activity" className="section"><div className="container"><div className="card-wrap"><div className="card card--white" data-seq="KFB 0004">
+    <section id="github-activity" className="section"><div className="container" ref={revealRef}>
       <div className="section-header">
         <h2 className="section-title">{t('sections.github.title')}</h2>
         <p className="section-subtitle">{t('sections.github.subtitle')}</p>
@@ -327,9 +343,9 @@ export default function GitHubStats({ githubUrl }) {
 
         <div className="github-stats relative overflow-hidden">
           {/* Header & Year Selector */}
-          <div className="flex flex-col md:flex-row md:items-center justify-between gap-6 mb-8 border-b border-border-primary pb-6">
+          <div className="flex flex-col md:flex-row md:items-center justify-between gap-6 mb-8">
             <div className="flex items-center gap-3">
-              <div className="w-10 h-10 bg-accent-primary/10 flex items-center justify-center text-accent-secondary">
+              <div className="w-10 h-10 bg-surface-subtle flex items-center justify-center text-text-primary">
                 <GithubIcon />
               </div>
               <div>
@@ -339,7 +355,7 @@ export default function GitHubStats({ githubUrl }) {
                     href={githubUrl}
                     target="_blank"
                     rel="noreferrer"
-                    className="text-xs text-accent-secondary hover:text-accent-primary flex items-center gap-0.5 transition-colors font-mono"
+                    className="text-xs text-text-secondary hover:text-text-primary flex items-center gap-0.5 transition-colors font-mono"
                   >
                     @{stats.username}
                     <ExternalLink size={10} />
@@ -356,8 +372,8 @@ export default function GitHubStats({ githubUrl }) {
                   key={year}
                   onClick={() => setSelectedYear(year)}
                   className={`px-4 py-1.5 text-xs font-semibold font-mono tracking-wider transition-all duration-300 ${selectedYear === year
-                    ? 'bg-accent-primary text-bg-primary'
-                    : 'bg-surface-subtle border border-border-primary text-text-secondary hover:text-text-primary hover:border-accent-primary/50'
+                    ? 'bg-[var(--signal)] text-[var(--signal-ink)]'
+                    : 'bg-surface-subtle border border-border-primary text-text-secondary hover:text-text-primary hover:border-text-primary'
                     }`}
                 >
                   {year} ({stats.total[year] || 0})
@@ -368,28 +384,38 @@ export default function GitHubStats({ githubUrl }) {
 
           {/* Stats Summary Cards Grid */}
           {calculatedData && (
-            <p className="gh-statline mb-8">
-              <span>{calculatedData.summary.total} {t('sections.github.total')}</span>
-              <span>{t('sections.github.streak')} {calculatedData.summary.longestStreak} {t('sections.github.days')}</span>
-              <span>{calculatedData.summary.activeDays} {t('sections.github.activeDays')}</span>
-              <span>{t('sections.github.maxDaily')} {calculatedData.summary.maxCount}</span>
-            </p>
+            <dl className="gh-stats mb-8">
+              {[
+                { label: t('sections.github.total'), value: calculatedData.summary.total },
+                { label: `${t('sections.github.streak')} (${t('sections.github.days')})`, value: calculatedData.summary.longestStreak },
+                { label: t('sections.github.activeDays'), value: calculatedData.summary.activeDays },
+                { label: t('sections.github.maxDaily'), value: calculatedData.summary.maxCount },
+              ].map(({ label, value }) => (
+                <div key={label} className="gh-stat">
+                  <dt>{label}</dt>
+                  <dd className="flap-digits">
+                    {[...String(value)].map((digit, i) => <span key={i} className="flap-digit">{digit}</span>)}
+                  </dd>
+                </div>
+              ))}
+            </dl>
           )}
 
           {/* Heatmap Contribution Matrix */}
           {calculatedData && (
-            <div className="border-t border-border-primary pt-6 mb-8">
+            <div className="mb-8">
               <h4 className="text-sm font-bold text-text-secondary mb-4">{t('sections.github.matrix')}</h4>
 
-              <div className="overflow-x-auto pb-4 custom-scrollbar">
+              <div className="gh-board">
+              <div className="overflow-x-auto pb-4 custom-scrollbar" ref={heatmapRef}>
                 <div className="relative flex flex-col min-w-max">
                   {/* Month Headers */}
-                  <div className="flex text-[9px] text-text-tertiary mb-2 ml-7 h-4 relative select-none font-mono">
+                  <div className="flex text-[11px] text-text-tertiary mb-2 ml-9 h-4 relative select-none font-mono">
                     {calculatedData.monthLabels.map((m, i) => (
                       <span
                         key={i}
                         className="absolute"
-                        style={{ left: `${m.index * 15}px` }} // lubang 10px + gap 5px = 15px
+                        style={{ left: `calc(${m.index} * (var(--hole-w) + var(--hole-gap)))` }}
                       >
                         {m.label}
                       </span>
@@ -397,8 +423,8 @@ export default function GitHubStats({ githubUrl }) {
                   </div>
 
                   {/* Grid layout with weekday labels */}
-                  <div className="flex gap-2">
-                    <div className="flex flex-col justify-between text-[9px] text-text-tertiary h-[116px] py-[2px] w-7 pr-1 select-none font-mono">
+                  <div className="flex">
+                    <div className="flex flex-col justify-between text-[11px] text-text-tertiary gh-days py-[2px] select-none font-mono">
                       <span></span>
                       <span>{t('sections.github.mon')}</span>
                       <span></span>
@@ -408,7 +434,7 @@ export default function GitHubStats({ githubUrl }) {
                       <span></span>
                     </div>
 
-                    <div className="flex gap-[5px]">
+                    <div className="gh-weeks">
                       {calculatedData.weeks.map((week, weekIndex) => (
                         <div key={weekIndex} className="flex flex-col gap-[3px]">
                           {week.map((day, dayIndex) => (
@@ -430,12 +456,14 @@ export default function GitHubStats({ githubUrl }) {
 
               {/* Legend & Details footer */}
               <div className="flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-text-secondary mt-4 font-mono select-none">
-                <span />
+                <span className="lg:hidden">{t('sections.github.scrollHint')}</span>
+                <span className="hidden lg:block" />
                 <div className="flex items-center gap-1.5">
                   <span>{t('sections.github.less')}</span>
                   {[0, 1, 2, 3, 4].map((lv) => <div key={lv} className={`gh-hole gh-hole--${lv}`} />)}
                   <span>{t('sections.github.more')}</span>
                 </div>
+              </div>
               </div>
 
               {/* Commit Details Panel */}
@@ -462,12 +490,10 @@ export default function GitHubStats({ githubUrl }) {
                   <div className="bg-surface-faint border border-border-primary p-5 animate-fade-in">
                     <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 mb-4">
                       <div>
-                        <span className="text-xs font-mono text-accent-secondary font-bold uppercase tracking-wider">
-                          {selectedDate.date}
-                        </span>
-                        <h5 className="text-base font-bold text-text-primary mt-0.5">
+                        <h5 className="text-base font-bold text-text-primary">
                           {t('sections.github.recorded', { count: selectedDate.count })}
                         </h5>
+                        <p className="text-xs text-text-secondary mt-0.5">{selectedDate.date}</p>
                       </div>
 
                       {selectedDate.count > 0 && username && (
@@ -475,7 +501,7 @@ export default function GitHubStats({ githubUrl }) {
                           href={`https://github.com/${username}?tab=overview&from=${selectedDate.dateRaw}&to=${selectedDate.dateRaw}`}
                           target="_blank"
                           rel="noreferrer"
-                          className="text-xs font-semibold px-3 py-1.5 bg-surface-raised hover:bg-accent-primary/20 border border-border-primary hover:border-accent-primary/40 text-text-secondary hover:text-text-primary inline-flex items-center gap-1.5 transition-all self-start sm:self-center"
+                          className="text-xs font-semibold px-3 py-1.5 bg-surface-raised border border-border-primary hover:border-text-primary text-text-secondary hover:text-text-primary inline-flex items-center gap-1.5 transition-all self-start sm:self-center"
                         >
                           <span>{t('sections.github.viewOnGithub')}</span>
                           <ExternalLink size={12} />
@@ -484,9 +510,9 @@ export default function GitHubStats({ githubUrl }) {
                     </div>
 
                     {selectedDate.count > 0 ? (
-                      <div className="space-y-3">
+                      <div>
                         {loadingCommits ? (
-                          <div className="flex flex-col items-center justify-center p-8 bg-bg-primary/30 border border-border-primary/40">
+                          <div className="flex flex-col items-center justify-center p-8 border-t border-border-primary">
                             <div className="w-8 h-8 border-2 border-accent-secondary border-t-transparent animate-spin mb-3" />
                             <span className="text-xs text-text-secondary font-mono animate-pulse">{t('sections.github.loadingCommits')}</span>
                           </div>
@@ -494,10 +520,10 @@ export default function GitHubStats({ githubUrl }) {
                           getCommitsForDate(selectedDate.dateRaw).map((commit, idx) => (
                             <div
                               key={commit.sha || idx}
-                              className="flex items-start justify-between gap-4 p-3 bg-bg-primary/50 border border-border-primary/50 hover:border-accent-primary/20 transition-colors"
+                              className="flex items-start justify-between gap-4 py-3 border-t border-border-primary"
                             >
                               <div className="flex items-start gap-2.5">
-                                <div className="mt-0.5 shrink-0 text-accent-secondary">
+                                <div className="mt-0.5 shrink-0 text-text-secondary">
                                   <GitCommit size={16} />
                                 </div>
                                 <div>
@@ -506,7 +532,7 @@ export default function GitHubStats({ githubUrl }) {
                                       href={commit.url}
                                       target="_blank"
                                       rel="noreferrer"
-                                      className="text-sm font-medium text-text-primary hover:text-accent-secondary transition-colors break-words"
+                                      className="text-sm font-medium text-text-primary underline-offset-4 hover:underline break-words"
                                     >
                                       {commit.message}
                                     </a>
@@ -516,7 +542,7 @@ export default function GitHubStats({ githubUrl }) {
                                     </p>
                                   )}
                                   <div className="flex flex-wrap items-center gap-x-3 gap-y-1 text-xs text-text-tertiary mt-1.5 font-mono">
-                                    <span className="text-accent-secondary font-semibold">
+                                    <span className="text-text-secondary font-semibold">
                                       {commit.repo}
                                     </span>
                                     {commit.sha && (
@@ -535,7 +561,7 @@ export default function GitHubStats({ githubUrl }) {
                             </div>
                           ))
                         ) : (
-                          <div className="text-xs text-text-secondary leading-relaxed p-4 bg-bg-primary/30 border border-border-primary/40">
+                          <div className="text-xs text-text-secondary leading-relaxed py-4 border-t border-border-primary">
                             <p>
                               {t('sections.github.notAvailable')}
                             </p>
@@ -568,12 +594,11 @@ export default function GitHubStats({ githubUrl }) {
                   key={index}
                   style={{
                     width: `${lang.percentage}%`,
-                    backgroundColor: lang.color,
-                    opacity: hoveredLang === null || hoveredLang === index ? 1 : 0.4,
-                    transform: hoveredLang === index ? 'scaleY(1.25)' : 'none',
+                    backgroundColor: hoveredLang === index ? 'var(--signal)' : 'var(--color-text-primary)',
+                    opacity: hoveredLang === index ? 1 : Math.max(0.2, 0.9 - index * 0.14),
                     zIndex: hoveredLang === index ? 10 : 1
                   }}
-                  className="h-full transition-all duration-300 cursor-pointer origin-center"
+                  className="h-full transition-colors duration-150 cursor-pointer"
                   onMouseEnter={() => setHoveredLang(index)}
                   onMouseLeave={() => setHoveredLang(null)}
                   title={`${lang.name}: ${lang.percentage}%`}
@@ -593,7 +618,13 @@ export default function GitHubStats({ githubUrl }) {
                   onMouseEnter={() => setHoveredLang(index)}
                   onMouseLeave={() => setHoveredLang(null)}
                 >
-                  <span className="w-2.5 h-2.5 flex-shrink-0" style={{ backgroundColor: lang.color }} />
+                  <span
+                    className="w-2.5 h-2.5 flex-shrink-0"
+                    style={{
+                      backgroundColor: hoveredLang === index ? 'var(--signal)' : 'var(--color-text-primary)',
+                      opacity: hoveredLang === index ? 1 : Math.max(0.2, 0.9 - index * 0.14),
+                    }}
+                  />
                   <span>{lang.name}</span>
                   <span className="text-text-tertiary">({lang.percentage}%)</span>
                 </div>
@@ -614,11 +645,11 @@ export default function GitHubStats({ githubUrl }) {
         >
           <p className="font-bold text-text-primary mb-1 text-[11px]">{hoveredDay.date}</p>
           <p className="text-text-secondary text-[11px] mt-1">
-            <span className="text-accent-secondary font-bold text-sm">{hoveredDay.count}</span> {t('sections.github.contributions')}
+            <span className="text-text-primary font-bold text-sm">{hoveredDay.count}</span> {t('sections.github.contributions')}
           </p>
         </div>
       )}
-    </div></div></div></section>
+    </div></section>
   )
 }
 
@@ -648,7 +679,12 @@ function generateContributionGridForYear(contributions, year, dateLocale) {
 
   const currentDate = new Date(startDate)
   while (currentDate <= endDate) {
-    const dateStr = currentDate.toISOString().split('T')[0]
+    // Local date parts: toISOString() would shift a day back east of UTC (e.g. WIB).
+    const dateStr = [
+      currentDate.getFullYear(),
+      String(currentDate.getMonth() + 1).padStart(2, '0'),
+      String(currentDate.getDate()).padStart(2, '0'),
+    ].join('-')
     const dayData = contribMap.get(dateStr) || { count: 0, level: 0 }
 
     currentWeek.push({
@@ -705,37 +741,6 @@ function calculateYearlyStats(yearContributions) {
     longestStreak,
     maxCount
   }
-}
-
-function getLanguageColor(language) {
-  const colors = {
-    JavaScript: '#f7df1e',
-    TypeScript: '#3178c6',
-    Python: '#3776ab',
-    Java: '#b07219',
-    'C++': '#f34b7d',
-    C: '#555555',
-    'C#': '#239120',
-    PHP: '#4f5d95',
-    Ruby: '#701516',
-    Go: '#00add8',
-    Rust: '#dea584',
-    Swift: '#f05138',
-    Kotlin: '#a97bff',
-    Dart: '#0175c2',
-    HTML: '#e34c26',
-    CSS: '#563d7c',
-    Shell: '#89e051',
-    Vue: '#41b883',
-    React: '#61dafb',
-    Laravel: '#ff2d20',
-    Node: '#339933',
-    SQL: '#cc2927',
-    PostgreSQL: '#336791',
-    MongoDB: '#47a248',
-    Docker: '#2496ed',
-  }
-  return colors[language] || '#8b949e'
 }
 
 function GitHubStatsSkeleton() {

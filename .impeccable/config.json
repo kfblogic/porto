@@ -1,0 +1,62 @@
+{
+  "detector": {
+    "ignoreRules": [],
+    "ignoreFiles": [],
+    "ignoreValues": [
+      {
+        "rule": "side-tab",
+        "value": "border-l-4",
+        "files": [
+          "src/index.css"
+        ],
+        "createdAt": "2026-08-26T14:01:57.874Z",
+        "reason": "blockquote quote-style left border (.modal-article, .rich-text-content [&_blockquote]) — semantic quote convention, not a card side-tab; pre-existing pattern kept as-is"
+      },
+      {
+        "rule": "design-system-color",
+        "value": "#f7df1e",
+        "files": [
+          "src/components/GitHubStats.jsx"
+        ],
+        "createdAt": "2026-08-26T14:02:05.722Z",
+        "reason": "GitHub linguist/brand color for JS in Top Languages legend, not site palette"
+      },
+      {
+        "rule": "design-system-color",
+        "value": "#3178c6",
+        "files": [
+          "src/components/GitHubStats.jsx"
+        ],
+        "createdAt": "2026-08-26T14:02:05.785Z",
+        "reason": "GitHub linguist/brand color for TypeScript in Top Languages legend, not site palette"
+      },
+      {
+        "rule": "design-system-color",
+        "value": "#61dafb",
+        "files": [
+          "src/components/GitHubStats.jsx"
+        ],
+        "createdAt": "2026-08-26T14:02:05.849Z",
+        "reason": "GitHub linguist/brand color for React/JSX in Top Languages legend, not site palette"
+      },
+      {
+        "rule": "design-system-color",
+        "value": "#339933",
+        "files": [
+          "src/components/GitHubStats.jsx"
+        ],
+        "createdAt": "2026-08-26T14:02:05.910Z",
+        "reason": "GitHub linguist/brand color for Node/JS runtime in Top Languages legend, not site palette"
+      },
+      {
+        "rule": "design-system-color",
+        "value": "#e34c26",
+        "files": [
+          "src/components/GitHubStats.jsx"
+        ],
+        "createdAt": "2026-08-26T14:02:05.971Z",
+        "reason": "GitHub linguist/brand color for HTML in Top Languages legend, not site palette"
+      }
+    ]
+  }
+}

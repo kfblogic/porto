@@ -1,33 +1,26 @@
-import { useEffect, useRef, useState } from 'react'
+import { useEffect, useRef } from 'react'
 
-export function useScrollReveal(threshold = 0.15) {
+// Menandai section saat tiba di layar; CSS menjatuhkan judulnya sekali seperti flap.
+export function useScrollReveal(ready = true) {
   const ref = useRef(null)
-  const [isVisible, setIsVisible] = useState(false)
 
   useEffect(() => {
+    const el = ref.current
+    if (!el || !ready) return undefined
+
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
-          setIsVisible(true)
-          observer.unobserve(entry.target)
+          el.classList.add('has-arrived')
+          observer.disconnect()
         }
       },
-      { threshold }
+      { rootMargin: '0px 0px -8% 0px' },
     )
 
-    const current = ref.current
-    if (current) observer.observe(current)
-
-    return () => {
-      if (current) observer.unobserve(current)
-    }
-  }, [threshold])
-
-  useEffect(() => {
-    if (isVisible && ref.current) {
-      ref.current.classList.add('animate-fadeInUp')
-    }
-  }, [isVisible])
+    observer.observe(el)
+    return () => observer.disconnect()
+  }, [ready])
 
   return ref
 }

@@ -12,7 +12,7 @@ Dokumen ini menjelaskan struktur proyek, cara styling, admin panel, dan deploy k
 
 | Item | Detail |
 |------|--------|
-| Stack | React 19, Vite 8, React Router 7 (HashRouter), Tailwind CSS v4 |
+| Stack | React 19, Vite 8, React Router 7 (HashRouter), Tailwind CSS v4, three.js (hero saja) |
 | Data | `public/data/portfolio.json` |
 | Dev | `npm run dev` → http://localhost:5173 |
 | Admin (dev only) | http://localhost:5173/#/admin |
@@ -44,7 +44,7 @@ Porto/
 - Semua gaya ada di `src/index.css`:
   - `@import 'tailwindcss'`
   - `@theme` — token warna/font (mis. `bg-bg-primary`, `text-accent-secondary`)
-  - `@layer components` — kelas semantik (`card`, `section-title`, `punch-grid`, `admin-nav-link`, dll.) memakai `@apply`
+  - `@layer components` — kelas semantik (`section-title`, `hero-board`, `project-card`, `admin-nav-link`, dll.) memakai `@apply`
 - Komponen JSX memakai **nama kelas semantik** yang sudah didefinisikan di `index.css`, atau utility Tailwind langsung (`text-text-secondary`, `flex`, dll.).
 
 ### Menambah section baru
@@ -171,12 +171,12 @@ git remote add origin https://github.com/kfblogic/kfblogic.github.io.git
 
 ### 1. Tech Stack (Skills) & Desain Flat Premium
 - **Reorganisasi Section**: Bagian **Skills & Technologies** telah dipindahkan ke posisi atas (tepat di bawah Hero dan di atas Activities) untuk alur visual yang lebih premium.
-- **Flat Layout & Custom SVG**: Pengelompokan berdasarkan kategori (Frontend/Backend dll) telah dihapus sepenuhnya di halaman portfolio maupun halaman Admin. Seluruh skill kini dirender sebagai grid/flex badge kaca datar (`skill-flat-badge`) yang bersih, modern, didukung animasi scale-up dan rotasi micro-hover yang dinamis.
+- **Flat Layout & Custom SVG**: Pengelompokan berdasarkan kategori (Frontend/Backend dll) telah dihapus sepenuhnya di halaman portfolio maupun halaman Admin. Seluruh skill dirender sebagai blok tile flap rapat (`skill-flat-badge`); ikon abu-abu dan berwarna saat hover.
 - **Deteksi Icon Otomatis & Custom Input**: Sistem mencocokkan nama skill secara case-insensitive dengan koleksi SVG beresolusi tinggi di `src/lib/techIcons.js`. Jika tidak ada, pengguna bisa memasukkan SVG kustom via Skills Editor di admin panel.
 - **Kontras ikon (dark & light mode)**: `getSkillIconData()` di `techIcons.js` menganalisis warna `fill`/`style:fill` pada SVG, lalu memilih plate: `on-dark` (logo putih, mis. Next.js), `on-light` (logo hitam), atau `color` (multi-warna, mis. Expo/Java/Haskell). Warna asli SVG **tidak** ditimpa; kontras lewat `--skill-icon-well-*` di `index.css`.
 
 ### 2. Floating Scroll-to-Top
-- Tombol scroll-to-top diposisikan melayang (fixed floating) di pojok kanan bawah (`bottom: 80px`, `right: 32px`).
+- Tombol scroll-to-top diposisikan melayang (fixed floating) di pojok kanan bawah (`bottom: 32px`, `right: 32px`).
 - Tombol ini tersembunyi (fade-out) saat berada di bagian paling atas halaman, dan secara dinamis muncul (fade-in) ketika discroll ke bawah.
 
 ### 3. Detail Commit & Integrasi GitHub REST API (PAT)
@@ -184,6 +184,14 @@ git remote add origin https://github.com/kfblogic/kfblogic.github.io.git
 - **Pengamanan dengan Token & Fallback Otomatis**: Request API dikirimkan dengan header `'X-GitHub-Api-Version': '2026-03-10'`. Jika personal token yang disediakan di component invalid/expired (menyebabkan error 401), sistem secara cerdas mendeteksi error tersebut, beralih ke mode anonymous fallback, dan langsung mengulangi pencarian tanpa mengunci status cache activity.
 - **Interaksi Klik Sel**: Mengklik kotak/sel kontribusi pada diagram aktivitas tahunan akan memicu query pencarian untuk menampilkan pesan commit riil, nama repositori, tautan commit SHA, dan waktu detail commit pada tanggal tersebut.
 - **Fallback URL**: Jika commit stream tidak tersedia atau bersifat privat, tombol dialihkan otomatis ke GitHub overview aktivitas user pada rentang tanggal tersebut (`https://github.com/username?tab=overview&from=YYYY-MM-DD&to=YYYY-MM-DD`).
+
+### 4. Papan Split-Flap (three.js)
+- **Hero**: `src/lib/flapBoard.js` menggambar papan flap 3D dari `profile.name` dan `profile.headlines`. Flap jatuh sekali saat halaman dibuka; setelah itu hanya baris headline yang berganti tiap 6 detik. Ada parallax pointer halus di perangkat ber-hover.
+- **Performa**: three.js ada di chunk terpisah (`flapBoard-*.js`, sekitar 134 kB gzip), dimuat setelah halaman tampil. Render berhenti saat idle atau di luar layar.
+- **Fallback**: tanpa WebGL, nama HTML tetap tampil. Dengan `prefers-reduced-motion`, papan statis tanpa flip.
+
+### 5. Gambar preview link (OG)
+- `public/og-image.png` adalah screenshot papan hero asli, dibuat oleh `scripts/og-image.mjs` (lihat komentar di file untuk cara pakai). Jalankan ulang kalau nama atau headline berubah.
 
 ## Deploy setelah selesai
 

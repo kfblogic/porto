@@ -17,87 +17,80 @@ export default function Certifications({ certifications }) {
   }
 
   return (
-    <section id="certifications" className="section desk-section">
+    <section id="certifications" className="section">
       <div className="container" ref={ref}>
         <div className="section-header">
           <h2 className="section-title">{t('sections.certifications.title')}</h2>
           <p className="section-subtitle">{t('sections.certifications.subtitle')}</p>
         </div>
 
-        <div className="certifications-grid">
-          {certifications.map((cert, index) => {
+        <div className="records">
+          {certifications.map((cert) => {
             const assetPath = cert.image || ''
-            const coverPath = cert.cover || ''
             const fileSrc = assetUrl(assetPath)
-            const coverSrc = assetUrl(coverPath)
             const isPdf = isPdfCert(assetPath)
-            const hasCover = isPdf && Boolean(coverPath)
+            const thumbSrc = isPdf ? (cert.cover ? assetUrl(cert.cover) : '') : fileSrc
+            const thumb = thumbSrc ? (
+              <img src={thumbSrc} alt={cert.name} className="cert-image" loading="lazy" />
+            ) : assetPath && isPdf ? (
+              <FileText size={28} strokeWidth={1.5} aria-hidden />
+            ) : (
+              <Award size={28} strokeWidth={1.5} aria-hidden />
+            )
 
             return (
-              <div key={cert.id} className="cert-card" style={{ animationDelay: `${index * 0.1}s` }}>
-                <div className="cert-top">
-                  {hasCover ? (
-                    <a
-                      href={fileSrc}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="cert-cover-link"
-                      aria-label={`Buka PDF sertifikat ${cert.name}`}
-                    >
-                      <img src={coverSrc} alt={cert.name} className="cert-image" />
-                      <span className="cert-cover-badge">
-                        <FileText size={14} />
-                        PDF
-                      </span>
-                    </a>
-                  ) : assetPath && isPdf ? (
-                    <a
-                      href={fileSrc}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="cert-pdf-preview"
-                      aria-label={`Buka PDF sertifikat ${cert.name}`}
-                    >
-                      <FileText size={40} strokeWidth={1.5} />
-                      <span>Lihat sertifikat (PDF)</span>
-                    </a>
-                  ) : assetPath ? (
-                    <img src={fileSrc} alt={cert.name} className="cert-image" />
-                  ) : (
-                    <div className="cert-image-placeholder">
-                      <Award size={28} />
-                    </div>
-                  )}
-                </div>
-                <div className="cert-info">
-                  <h3 className="cert-name">{cert.name}</h3>
-                  <p className="cert-issuer">{cert.issuer}</p>
-                  <p className="cert-date">
-                    Issued: {formatDate(cert.issued_at)}
-                    {cert.expires_at && ` · Expires: ${formatDate(cert.expires_at)}`}
+              <article key={cert.id} className="record">
+                <div>
+                  <p className="record-period">{formatDate(cert.issued_at)}</p>
+                  <p className="cert-validity">
+                    {t('sections.certifications.issued')}
+                    {cert.expires_at && (
+                      <> · {t('sections.certifications.validUntil')} <span className="nowrap">{formatDate(cert.expires_at)}</span></>
+                    )}
                   </p>
+                </div>
+                <div className="record-main">
+                  <div className="record-head">
+                    {assetPath && isPdf ? (
+                      <a
+                        href={fileSrc}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="cert-thumb"
+                        aria-label={`${t('sections.certifications.openPdf')}: ${cert.name}`}
+                      >
+                        {thumb}
+                      </a>
+                    ) : (
+                      <div className="cert-thumb">{thumb}</div>
+                    )}
+                    <div>
+                      <h3 className="record-title">{cert.name}</h3>
+                      <p className="record-sub">{cert.issuer}</p>
+                    </div>
+                  </div>
+                </div>
+                <div className="record-fields">
                   {cert.credential_id && (
-                    <p className="cert-credential">ID: {cert.credential_id}</p>
+                    <dl className="field">
+                      <dt>ID</dt>
+                      <dd className="cert-credential">{cert.credential_id}</dd>
+                    </dl>
                   )}
                   {assetPath && isPdf && (
-                    <a
-                      href={fileSrc}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="cert-link"
-                    >
-                      <FileText size={14} />
-                      Buka PDF
+                    <a href={fileSrc} target="_blank" rel="noopener noreferrer" className="cert-link">
+                      <FileText size={15} aria-hidden />
+                      {t('sections.certifications.openPdf')}
                     </a>
                   )}
                   {cert.credential_url && (
                     <a href={cert.credential_url} target="_blank" rel="noopener noreferrer" className="cert-link">
-                      <ExternalLink size={14} />
+                      <ExternalLink size={15} aria-hidden />
                       {t('sections.certifications.viewCredential')}
                     </a>
                   )}
                 </div>
-              </div>
+              </article>
             )
           })}
         </div>

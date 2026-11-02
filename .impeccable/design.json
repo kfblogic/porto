@@ -1,0 +1,858 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-11-02T05:00:24.730Z",
+  "title": "Design System: Porto — Papan Split-Flap",
+  "extensions": {
+    "colorMeta": {
+      "signal": {
+        "role": "primary",
+        "displayName": "Lampu Sinyal",
+        "canonical": "#f0b429",
+        "oklch": "oklch(80.4% 0.156 82.5)",
+        "tonalRamp": [
+          "oklch(15% 0.156 82.5)",
+          "oklch(26% 0.156 82.5)",
+          "oklch(37% 0.156 82.5)",
+          "oklch(48% 0.156 82.5)",
+          "oklch(59% 0.156 82.5)",
+          "oklch(70% 0.156 82.5)",
+          "oklch(82% 0.156 82.5)",
+          "oklch(95% 0.156 82.5)"
+        ]
+      },
+      "signal-hover": {
+        "role": "primary",
+        "displayName": "Lampu Sinyal Hover",
+        "canonical": "#f7c64c",
+        "oklch": "oklch(84.9% 0.146 86.5)",
+        "tonalRamp": [
+          "oklch(15% 0.146 86.5)",
+          "oklch(26% 0.146 86.5)",
+          "oklch(37% 0.146 86.5)",
+          "oklch(48% 0.146 86.5)",
+          "oklch(59% 0.146 86.5)",
+          "oklch(70% 0.146 86.5)",
+          "oklch(82% 0.146 86.5)",
+          "oklch(95% 0.146 86.5)"
+        ]
+      },
+      "signal-ink": {
+        "role": "primary",
+        "displayName": "Tinta Sinyal",
+        "canonical": "#161410",
+        "oklch": "oklch(19.2% 0.008 84.6)",
+        "tonalRamp": [
+          "oklch(15% 0.008 84.6)",
+          "oklch(26% 0.008 84.6)",
+          "oklch(37% 0.008 84.6)",
+          "oklch(48% 0.008 84.6)",
+          "oklch(59% 0.008 84.6)",
+          "oklch(70% 0.008 84.6)",
+          "oklch(82% 0.008 84.6)",
+          "oklch(95% 0.008 84.6)"
+        ]
+      },
+      "floor-accent": {
+        "role": "primary",
+        "displayName": "Aksen Lantai",
+        "canonical": "#f0b429",
+        "oklch": "oklch(80.4% 0.156 82.5)",
+        "tonalRamp": [
+          "oklch(15% 0.156 82.5)",
+          "oklch(26% 0.156 82.5)",
+          "oklch(37% 0.156 82.5)",
+          "oklch(48% 0.156 82.5)",
+          "oklch(59% 0.156 82.5)",
+          "oklch(70% 0.156 82.5)",
+          "oklch(82% 0.156 82.5)",
+          "oklch(95% 0.156 82.5)"
+        ]
+      },
+      "floor-accent-light": {
+        "role": "primary",
+        "displayName": "Aksen Lantai Terang",
+        "canonical": "#7f5300",
+        "oklch": "oklch(47.9% 0.102 73.8)",
+        "tonalRamp": [
+          "oklch(15% 0.102 73.8)",
+          "oklch(26% 0.102 73.8)",
+          "oklch(37% 0.102 73.8)",
+          "oklch(48% 0.102 73.8)",
+          "oklch(59% 0.102 73.8)",
+          "oklch(70% 0.102 73.8)",
+          "oklch(82% 0.102 73.8)",
+          "oklch(95% 0.102 73.8)"
+        ]
+      },
+      "housing": {
+        "role": "neutral",
+        "displayName": "Rumah Papan",
+        "canonical": "#111210",
+        "oklch": "oklch(18.0% 0.004 128.7)",
+        "tonalRamp": [
+          "oklch(15% 0.004 128.7)",
+          "oklch(26% 0.004 128.7)",
+          "oklch(37% 0.004 128.7)",
+          "oklch(48% 0.004 128.7)",
+          "oklch(59% 0.004 128.7)",
+          "oklch(70% 0.004 128.7)",
+          "oklch(82% 0.004 128.7)",
+          "oklch(95% 0.004 128.7)"
+        ]
+      },
+      "flap": {
+        "role": "neutral",
+        "displayName": "Flap Matte",
+        "canonical": "#1c1d1a",
+        "oklch": "oklch(22.9% 0.006 121.9)",
+        "tonalRamp": [
+          "oklch(15% 0.006 121.9)",
+          "oklch(26% 0.006 121.9)",
+          "oklch(37% 0.006 121.9)",
+          "oklch(48% 0.006 121.9)",
+          "oklch(59% 0.006 121.9)",
+          "oklch(70% 0.006 121.9)",
+          "oklch(82% 0.006 121.9)",
+          "oklch(95% 0.006 121.9)"
+        ]
+      },
+      "flap-hover": {
+        "role": "neutral",
+        "displayName": "Flap Hover",
+        "canonical": "#2a2b26",
+        "oklch": "oklch(28.6% 0.009 116.2)",
+        "tonalRamp": [
+          "oklch(15% 0.009 116.2)",
+          "oklch(26% 0.009 116.2)",
+          "oklch(37% 0.009 116.2)",
+          "oklch(48% 0.009 116.2)",
+          "oklch(59% 0.009 116.2)",
+          "oklch(70% 0.009 116.2)",
+          "oklch(82% 0.009 116.2)",
+          "oklch(95% 0.009 116.2)"
+        ]
+      },
+      "flap-crease": {
+        "role": "neutral",
+        "displayName": "Garis Lipatan",
+        "canonical": "#080807",
+        "oklch": "oklch(13.4% 0.003 106.7)",
+        "tonalRamp": [
+          "oklch(15% 0.003 106.7)",
+          "oklch(26% 0.003 106.7)",
+          "oklch(37% 0.003 106.7)",
+          "oklch(48% 0.003 106.7)",
+          "oklch(59% 0.003 106.7)",
+          "oklch(70% 0.003 106.7)",
+          "oklch(82% 0.003 106.7)",
+          "oklch(95% 0.003 106.7)"
+        ]
+      },
+      "flap-ink": {
+        "role": "neutral",
+        "displayName": "Tinta Krem",
+        "canonical": "#ece8dc",
+        "oklch": "oklch(93.1% 0.017 91.6)",
+        "tonalRamp": [
+          "oklch(15% 0.017 91.6)",
+          "oklch(26% 0.017 91.6)",
+          "oklch(37% 0.017 91.6)",
+          "oklch(48% 0.017 91.6)",
+          "oklch(59% 0.017 91.6)",
+          "oklch(70% 0.017 91.6)",
+          "oklch(82% 0.017 91.6)",
+          "oklch(95% 0.017 91.6)"
+        ]
+      },
+      "flap-ink-2": {
+        "role": "neutral",
+        "displayName": "Tinta Krem Sekunder",
+        "canonical": "#b5b1a5",
+        "oklch": "oklch(76.0% 0.017 91.6)",
+        "tonalRamp": [
+          "oklch(15% 0.017 91.6)",
+          "oklch(26% 0.017 91.6)",
+          "oklch(37% 0.017 91.6)",
+          "oklch(48% 0.017 91.6)",
+          "oklch(59% 0.017 91.6)",
+          "oklch(70% 0.017 91.6)",
+          "oklch(82% 0.017 91.6)",
+          "oklch(95% 0.017 91.6)"
+        ]
+      },
+      "heat-empty": {
+        "role": "neutral",
+        "displayName": "Sel Kosong",
+        "canonical": "#24251f",
+        "oklch": "oklch(26.1% 0.011 114.8)",
+        "tonalRamp": [
+          "oklch(15% 0.011 114.8)",
+          "oklch(26% 0.011 114.8)",
+          "oklch(37% 0.011 114.8)",
+          "oklch(48% 0.011 114.8)",
+          "oklch(59% 0.011 114.8)",
+          "oklch(70% 0.011 114.8)",
+          "oklch(82% 0.011 114.8)",
+          "oklch(95% 0.011 114.8)"
+        ]
+      },
+      "logo-plate": {
+        "role": "neutral",
+        "displayName": "Pelat Logo",
+        "canonical": "#ffffff",
+        "oklch": "oklch(100.0% 0 0)",
+        "tonalRamp": [
+          "oklch(15% 0 0)",
+          "oklch(26% 0 0)",
+          "oklch(37% 0 0)",
+          "oklch(48% 0 0)",
+          "oklch(59% 0 0)",
+          "oklch(70% 0 0)",
+          "oklch(82% 0 0)",
+          "oklch(95% 0 0)"
+        ]
+      },
+      "logo-plate-ink": {
+        "role": "neutral",
+        "displayName": "Ikon Pelat Logo",
+        "canonical": "#161614",
+        "oklch": "oklch(19.9% 0.004 106.7)",
+        "tonalRamp": [
+          "oklch(15% 0.004 106.7)",
+          "oklch(26% 0.004 106.7)",
+          "oklch(37% 0.004 106.7)",
+          "oklch(48% 0.004 106.7)",
+          "oklch(59% 0.004 106.7)",
+          "oklch(70% 0.004 106.7)",
+          "oklch(82% 0.004 106.7)",
+          "oklch(95% 0.004 106.7)"
+        ]
+      },
+      "floor": {
+        "role": "neutral",
+        "displayName": "Lantai",
+        "canonical": "#111210",
+        "oklch": "oklch(18.0% 0.004 128.7)",
+        "tonalRamp": [
+          "oklch(15% 0.004 128.7)",
+          "oklch(26% 0.004 128.7)",
+          "oklch(37% 0.004 128.7)",
+          "oklch(48% 0.004 128.7)",
+          "oklch(59% 0.004 128.7)",
+          "oklch(70% 0.004 128.7)",
+          "oklch(82% 0.004 128.7)",
+          "oklch(95% 0.004 128.7)"
+        ]
+      },
+      "floor-deep": {
+        "role": "neutral",
+        "displayName": "Lantai Dalam",
+        "canonical": "#0b0c0a",
+        "oklch": "oklch(15.2% 0.004 128.8)",
+        "tonalRamp": [
+          "oklch(15% 0.004 128.8)",
+          "oklch(26% 0.004 128.8)",
+          "oklch(37% 0.004 128.8)",
+          "oklch(48% 0.004 128.8)",
+          "oklch(59% 0.004 128.8)",
+          "oklch(70% 0.004 128.8)",
+          "oklch(82% 0.004 128.8)",
+          "oklch(95% 0.004 128.8)"
+        ]
+      },
+      "floor-panel": {
+        "role": "neutral",
+        "displayName": "Panel Lantai",
+        "canonical": "#1c1d1a",
+        "oklch": "oklch(22.9% 0.006 121.9)",
+        "tonalRamp": [
+          "oklch(15% 0.006 121.9)",
+          "oklch(26% 0.006 121.9)",
+          "oklch(37% 0.006 121.9)",
+          "oklch(48% 0.006 121.9)",
+          "oklch(59% 0.006 121.9)",
+          "oklch(70% 0.006 121.9)",
+          "oklch(82% 0.006 121.9)",
+          "oklch(95% 0.006 121.9)"
+        ]
+      },
+      "floor-panel-hover": {
+        "role": "neutral",
+        "displayName": "Panel Lantai Hover",
+        "canonical": "#262723",
+        "oklch": "oklch(27.0% 0.007 118.3)",
+        "tonalRamp": [
+          "oklch(15% 0.007 118.3)",
+          "oklch(26% 0.007 118.3)",
+          "oklch(37% 0.007 118.3)",
+          "oklch(48% 0.007 118.3)",
+          "oklch(59% 0.007 118.3)",
+          "oklch(70% 0.007 118.3)",
+          "oklch(82% 0.007 118.3)",
+          "oklch(95% 0.007 118.3)"
+        ]
+      },
+      "floor-light": {
+        "role": "neutral",
+        "displayName": "Lantai Beton",
+        "canonical": "#e4e2da",
+        "oklch": "oklch(91.2% 0.011 95.2)",
+        "tonalRamp": [
+          "oklch(15% 0.011 95.2)",
+          "oklch(26% 0.011 95.2)",
+          "oklch(37% 0.011 95.2)",
+          "oklch(48% 0.011 95.2)",
+          "oklch(59% 0.011 95.2)",
+          "oklch(70% 0.011 95.2)",
+          "oklch(82% 0.011 95.2)",
+          "oklch(95% 0.011 95.2)"
+        ]
+      },
+      "floor-deep-light": {
+        "role": "neutral",
+        "displayName": "Lantai Beton Dalam",
+        "canonical": "#d8d6cd",
+        "oklch": "oklch(87.5% 0.012 96.4)",
+        "tonalRamp": [
+          "oklch(15% 0.012 96.4)",
+          "oklch(26% 0.012 96.4)",
+          "oklch(37% 0.012 96.4)",
+          "oklch(48% 0.012 96.4)",
+          "oklch(59% 0.012 96.4)",
+          "oklch(70% 0.012 96.4)",
+          "oklch(82% 0.012 96.4)",
+          "oklch(95% 0.012 96.4)"
+        ]
+      },
+      "floor-panel-light": {
+        "role": "neutral",
+        "displayName": "Panel Beton",
+        "canonical": "#f0eee7",
+        "oklch": "oklch(94.9% 0.01 93.6)",
+        "tonalRamp": [
+          "oklch(15% 0.01 93.6)",
+          "oklch(26% 0.01 93.6)",
+          "oklch(37% 0.01 93.6)",
+          "oklch(48% 0.01 93.6)",
+          "oklch(59% 0.01 93.6)",
+          "oklch(70% 0.01 93.6)",
+          "oklch(82% 0.01 93.6)",
+          "oklch(95% 0.01 93.6)"
+        ]
+      },
+      "floor-panel-hover-light": {
+        "role": "neutral",
+        "displayName": "Panel Beton Hover",
+        "canonical": "#e8e6de",
+        "oklch": "oklch(92.4% 0.011 95.2)",
+        "tonalRamp": [
+          "oklch(15% 0.011 95.2)",
+          "oklch(26% 0.011 95.2)",
+          "oklch(37% 0.011 95.2)",
+          "oklch(48% 0.011 95.2)",
+          "oklch(59% 0.011 95.2)",
+          "oklch(70% 0.011 95.2)",
+          "oklch(82% 0.011 95.2)",
+          "oklch(95% 0.011 95.2)"
+        ]
+      },
+      "text-primary": {
+        "role": "neutral",
+        "displayName": "Teks Lantai Primer",
+        "canonical": "#ece8dc",
+        "oklch": "oklch(93.1% 0.017 91.6)",
+        "tonalRamp": [
+          "oklch(15% 0.017 91.6)",
+          "oklch(26% 0.017 91.6)",
+          "oklch(37% 0.017 91.6)",
+          "oklch(48% 0.017 91.6)",
+          "oklch(59% 0.017 91.6)",
+          "oklch(70% 0.017 91.6)",
+          "oklch(82% 0.017 91.6)",
+          "oklch(95% 0.017 91.6)"
+        ]
+      },
+      "text-secondary": {
+        "role": "neutral",
+        "displayName": "Teks Lantai Sekunder",
+        "canonical": "#b5b1a5",
+        "oklch": "oklch(76.0% 0.017 91.6)",
+        "tonalRamp": [
+          "oklch(15% 0.017 91.6)",
+          "oklch(26% 0.017 91.6)",
+          "oklch(37% 0.017 91.6)",
+          "oklch(48% 0.017 91.6)",
+          "oklch(59% 0.017 91.6)",
+          "oklch(70% 0.017 91.6)",
+          "oklch(82% 0.017 91.6)",
+          "oklch(95% 0.017 91.6)"
+        ]
+      },
+      "text-tertiary": {
+        "role": "neutral",
+        "displayName": "Teks Lantai Tersier",
+        "canonical": "#979488",
+        "oklch": "oklch(66.6% 0.018 95.3)",
+        "tonalRamp": [
+          "oklch(15% 0.018 95.3)",
+          "oklch(26% 0.018 95.3)",
+          "oklch(37% 0.018 95.3)",
+          "oklch(48% 0.018 95.3)",
+          "oklch(59% 0.018 95.3)",
+          "oklch(70% 0.018 95.3)",
+          "oklch(82% 0.018 95.3)",
+          "oklch(95% 0.018 95.3)"
+        ]
+      },
+      "text-primary-light": {
+        "role": "neutral",
+        "displayName": "Teks Beton Primer",
+        "canonical": "#161614",
+        "oklch": "oklch(19.9% 0.004 106.7)",
+        "tonalRamp": [
+          "oklch(15% 0.004 106.7)",
+          "oklch(26% 0.004 106.7)",
+          "oklch(37% 0.004 106.7)",
+          "oklch(48% 0.004 106.7)",
+          "oklch(59% 0.004 106.7)",
+          "oklch(70% 0.004 106.7)",
+          "oklch(82% 0.004 106.7)",
+          "oklch(95% 0.004 106.7)"
+        ]
+      },
+      "text-secondary-light": {
+        "role": "neutral",
+        "displayName": "Teks Beton Sekunder",
+        "canonical": "#45443d",
+        "oklch": "oklch(38.5% 0.012 100.3)",
+        "tonalRamp": [
+          "oklch(15% 0.012 100.3)",
+          "oklch(26% 0.012 100.3)",
+          "oklch(37% 0.012 100.3)",
+          "oklch(48% 0.012 100.3)",
+          "oklch(59% 0.012 100.3)",
+          "oklch(70% 0.012 100.3)",
+          "oklch(82% 0.012 100.3)",
+          "oklch(95% 0.012 100.3)"
+        ]
+      },
+      "text-tertiary-light": {
+        "role": "neutral",
+        "displayName": "Teks Beton Tersier",
+        "canonical": "#5c5b52",
+        "oklch": "oklch(46.9% 0.014 101.8)",
+        "tonalRamp": [
+          "oklch(15% 0.014 101.8)",
+          "oklch(26% 0.014 101.8)",
+          "oklch(37% 0.014 101.8)",
+          "oklch(48% 0.014 101.8)",
+          "oklch(59% 0.014 101.8)",
+          "oklch(70% 0.014 101.8)",
+          "oklch(82% 0.014 101.8)",
+          "oklch(95% 0.014 101.8)"
+        ]
+      },
+      "border-hairline": {
+        "role": "neutral",
+        "displayName": "Hairline",
+        "canonical": "rgba(236, 232, 220, 0.16)",
+        "oklch": "oklch(93.1% 0.017 91.6 / 0.16)",
+        "tonalRamp": [
+          "oklch(15% 0.017 91.6 / 0.16)",
+          "oklch(26% 0.017 91.6 / 0.16)",
+          "oklch(37% 0.017 91.6 / 0.16)",
+          "oklch(48% 0.017 91.6 / 0.16)",
+          "oklch(59% 0.017 91.6 / 0.16)",
+          "oklch(70% 0.017 91.6 / 0.16)",
+          "oklch(82% 0.017 91.6 / 0.16)",
+          "oklch(95% 0.017 91.6 / 0.16)"
+        ]
+      },
+      "border-hairline-light": {
+        "role": "neutral",
+        "displayName": "Hairline Beton",
+        "canonical": "rgba(22, 22, 20, 0.22)",
+        "oklch": "oklch(19.9% 0.004 106.7 / 0.22)",
+        "tonalRamp": [
+          "oklch(15% 0.004 106.7 / 0.22)",
+          "oklch(26% 0.004 106.7 / 0.22)",
+          "oklch(37% 0.004 106.7 / 0.22)",
+          "oklch(48% 0.004 106.7 / 0.22)",
+          "oklch(59% 0.004 106.7 / 0.22)",
+          "oklch(70% 0.004 106.7 / 0.22)",
+          "oklch(82% 0.004 106.7 / 0.22)",
+          "oklch(95% 0.004 106.7 / 0.22)"
+        ]
+      },
+      "surface-faint": {
+        "role": "neutral",
+        "displayName": "Surface Tipis",
+        "canonical": "rgba(236, 232, 220, 0.04)",
+        "oklch": "oklch(93.1% 0.017 91.6 / 0.04)",
+        "tonalRamp": [
+          "oklch(15% 0.017 91.6 / 0.04)",
+          "oklch(26% 0.017 91.6 / 0.04)",
+          "oklch(37% 0.017 91.6 / 0.04)",
+          "oklch(48% 0.017 91.6 / 0.04)",
+          "oklch(59% 0.017 91.6 / 0.04)",
+          "oklch(70% 0.017 91.6 / 0.04)",
+          "oklch(82% 0.017 91.6 / 0.04)",
+          "oklch(95% 0.017 91.6 / 0.04)"
+        ]
+      },
+      "surface-faint-light": {
+        "role": "neutral",
+        "displayName": "Surface Tipis Beton",
+        "canonical": "rgba(22, 22, 20, 0.04)",
+        "oklch": "oklch(19.9% 0.004 106.7 / 0.04)",
+        "tonalRamp": [
+          "oklch(15% 0.004 106.7 / 0.04)",
+          "oklch(26% 0.004 106.7 / 0.04)",
+          "oklch(37% 0.004 106.7 / 0.04)",
+          "oklch(48% 0.004 106.7 / 0.04)",
+          "oklch(59% 0.004 106.7 / 0.04)",
+          "oklch(70% 0.004 106.7 / 0.04)",
+          "oklch(82% 0.004 106.7 / 0.04)",
+          "oklch(95% 0.004 106.7 / 0.04)"
+        ]
+      },
+      "surface-subtle": {
+        "role": "neutral",
+        "displayName": "Surface Halus",
+        "canonical": "rgba(236, 232, 220, 0.08)",
+        "oklch": "oklch(93.1% 0.017 91.6 / 0.08)",
+        "tonalRamp": [
+          "oklch(15% 0.017 91.6 / 0.08)",
+          "oklch(26% 0.017 91.6 / 0.08)",
+          "oklch(37% 0.017 91.6 / 0.08)",
+          "oklch(48% 0.017 91.6 / 0.08)",
+          "oklch(59% 0.017 91.6 / 0.08)",
+          "oklch(70% 0.017 91.6 / 0.08)",
+          "oklch(82% 0.017 91.6 / 0.08)",
+          "oklch(95% 0.017 91.6 / 0.08)"
+        ]
+      },
+      "surface-subtle-light": {
+        "role": "neutral",
+        "displayName": "Surface Halus Beton",
+        "canonical": "rgba(22, 22, 20, 0.08)",
+        "oklch": "oklch(19.9% 0.004 106.7 / 0.08)",
+        "tonalRamp": [
+          "oklch(15% 0.004 106.7 / 0.08)",
+          "oklch(26% 0.004 106.7 / 0.08)",
+          "oklch(37% 0.004 106.7 / 0.08)",
+          "oklch(48% 0.004 106.7 / 0.08)",
+          "oklch(59% 0.004 106.7 / 0.08)",
+          "oklch(70% 0.004 106.7 / 0.08)",
+          "oklch(82% 0.004 106.7 / 0.08)",
+          "oklch(95% 0.004 106.7 / 0.08)"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display",
+        "purpose": "Judul section; satu fragmen paling keras per section."
+      },
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "Nama proyek di baris proyek."
+      },
+      "title": {
+        "displayName": "Title",
+        "purpose": "Judul baris jadwal dan aktivitas."
+      },
+      "period": {
+        "displayName": "Period",
+        "purpose": "Rentang tanggal di kolom kiri baris jadwal."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Deskripsi dan prosa."
+      },
+      "button": {
+        "displayName": "Button",
+        "purpose": "Tombol dan tautan aksi."
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "Nav, filter, kontrol, tag kategori, statistik."
+      },
+      "field-label": {
+        "displayName": "Field Label",
+        "purpose": "Nama field baca-saja di baris jadwal."
+      }
+    },
+    "shadows": [],
+    "motion": [
+      {
+        "name": "flap-fall",
+        "value": "560ms cubic-bezier(0.16, 1, 0.3, 1)",
+        "purpose": "Judul section jatuh sekali dari engsel atas saat tiba di layar."
+      },
+      {
+        "name": "state-color",
+        "value": "150ms",
+        "purpose": "Transisi warna hover dan aktif pada kontrol."
+      },
+      {
+        "name": "overlay-fade",
+        "value": "0.3s ease-out",
+        "purpose": "Overlay dan panel detail commit muncul sebagai jawaban atas klik."
+      },
+      {
+        "name": "modal-rise",
+        "value": "0.5s cubic-bezier(0.16, 1, 0.3, 1)",
+        "purpose": "Modal CV naik 16px saat dibuka."
+      },
+      {
+        "name": "board-flip",
+        "value": "130ms",
+        "purpose": "Flip antara flap papan hero, kurva gravitasi kuadrat."
+      },
+      {
+        "name": "board-flip-last",
+        "value": "210ms",
+        "purpose": "Flip terakhir sebelum sel berhenti di huruf akhir."
+      },
+      {
+        "name": "board-stagger",
+        "value": "26ms",
+        "purpose": "Jeda antar-sel papan hero."
+      },
+      {
+        "name": "board-headline",
+        "value": "6000ms",
+        "purpose": "Interval pergantian baris headline; dilewati di luar layar, saat tab tersembunyi, dan pada reduced motion."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "sm",
+        "value": "640px"
+      },
+      {
+        "name": "phone-board",
+        "value": "720px"
+      },
+      {
+        "name": "md",
+        "value": "768px"
+      },
+      {
+        "name": "record-stack",
+        "value": "900px"
+      },
+      {
+        "name": "lg",
+        "value": "1024px"
+      },
+      {
+        "name": "hero-rail",
+        "value": "1040px"
+      },
+      {
+        "name": "xl",
+        "value": "1280px"
+      },
+      {
+        "name": "2xl",
+        "value": "1536px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Tombol Primer",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Aksi utama halaman. Isi lampu sinyal.",
+      "html": "<button class=\"ds-btn-primary\">Lihat CV</button>",
+      "css": ".ds-btn-primary{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:46px;padding:10px 20px;font:700 1.02rem/1 var(--font-label);letter-spacing:.06em;text-transform:uppercase;border-radius:2px;cursor:pointer;transition:background-color 150ms,border-color 150ms;background:var(--signal);color:var(--signal-ink);border:1.5px solid var(--signal);}.ds-btn-primary:hover{background:#f7c64c;border-color:#f7c64c;}.ds-btn-primary:focus-visible{outline:2px solid var(--color-accent-primary);outline-offset:3px;}"
+    },
+    {
+      "name": "Tombol Outline",
+      "kind": "button",
+      "refersTo": "button-outline",
+      "description": "Aksi sekunder di lantai.",
+      "html": "<button class=\"ds-btn-outline\">Hubungi saya</button>",
+      "css": ".ds-btn-outline{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:46px;padding:10px 20px;font:700 1.02rem/1 var(--font-label);letter-spacing:.06em;text-transform:uppercase;border-radius:2px;cursor:pointer;transition:background-color 150ms,border-color 150ms;background:transparent;color:var(--color-text-primary);border:1.5px solid var(--color-border-primary);}.ds-btn-outline:hover{border-color:var(--color-text-primary);background:var(--surface-subtle);}.ds-btn-outline:focus-visible{outline:2px solid var(--color-accent-primary);outline-offset:3px;}"
+    },
+    {
+      "name": "Filter Proyek",
+      "kind": "chip",
+      "refersTo": "filter-chip",
+      "description": "Pemilih kategori; yang aktif diisi sinyal.",
+      "html": "<div class=\"ds-chips\"><button class=\"ds-chip is-active\">Semua</button><button class=\"ds-chip\">Website Fullstack</button></div>",
+      "css": ".ds-chips{display:flex;flex-wrap:wrap;gap:6px;}.ds-chip{min-height:40px;padding:8px 16px;border:1px solid var(--color-border-primary);border-radius:2px;background:transparent;color:var(--color-text-secondary);font:600 .98rem/1 var(--font-label);letter-spacing:.06em;text-transform:uppercase;cursor:pointer;transition:color 150ms,border-color 150ms,background-color 150ms;}.ds-chip:hover{color:var(--color-text-primary);border-color:var(--color-text-primary);}.ds-chip.is-active{border-color:var(--signal);background:var(--signal);color:var(--signal-ink);}.ds-chip:focus-visible{outline:2px solid var(--color-accent-primary);outline-offset:3px;}"
+    },
+    {
+      "name": "Rel Navigasi",
+      "kind": "nav",
+      "refersTo": "nav-rail",
+      "description": "Rel fixed 64px, logo mark tile flap, link aktif diisi sinyal.",
+      "html": "<nav class=\"ds-nav\"><span class=\"ds-tile ds-mark\">KFB</span><a class=\"ds-link is-active\" href=\"#\">Home</a><a class=\"ds-link\" href=\"#\">Skills</a><a class=\"ds-link\" href=\"#\">Project</a></nav>",
+      "css": ".ds-nav{display:flex;align-items:center;gap:4px;height:64px;padding-inline:16px;background:var(--color-bg-primary);border-bottom:1px solid var(--color-border-primary);}.ds-tile{position:relative;background:var(--flap);color:var(--flap-ink);border-radius:2px;}.ds-tile::after{content:'';position:absolute;inset-inline:0;top:50%;height:1px;background:var(--flap-crease);pointer-events:none;}.ds-mark{isolation:isolate;margin-right:12px;padding:6px 8px 5px;font:800 1.15rem/1 var(--font-display);letter-spacing:.04em;}.ds-mark::after{z-index:-1;}.ds-link{padding:8px 12px;font:600 .98rem/1 var(--font-label);letter-spacing:.06em;text-transform:uppercase;color:var(--color-text-secondary);border-radius:2px;text-decoration:none;transition:color 150ms,background-color 150ms;}.ds-link:hover{color:var(--color-text-primary);background:var(--surface-subtle);}.ds-link.is-active{background:var(--signal);color:var(--signal-ink);}.ds-link:focus-visible{outline:2px solid var(--color-accent-primary);outline-offset:3px;}"
+    },
+    {
+      "name": "Tile Skill",
+      "kind": "card",
+      "refersTo": "skill-tile",
+      "description": "Blok flap rapat; lipatan hanya takik di dua tepi supaya label terbaca.",
+      "html": "<div class=\"ds-skill\"><span class=\"ds-well\"><svg viewBox=\"0 0 24 24\" width=\"24\" height=\"24\" fill=\"#161614\" aria-hidden=\"true\"><path d=\"M4 4h16v16H4z\"/></svg></span><span class=\"ds-skill-name\">React</span></div>",
+      "css": ".ds-skill{position:relative;display:flex;align-items:center;gap:12px;min-height:72px;max-width:220px;padding:12px 14px;border-radius:2px;background:var(--flap);color:var(--flap-ink);transition:background-color 150ms;}.ds-skill::after{content:'';position:absolute;inset-inline:0;top:50%;height:1px;background:linear-gradient(90deg,var(--flap-crease) 7px,transparent 7px calc(100% - 7px),var(--flap-crease) calc(100% - 7px));pointer-events:none;}.ds-skill:hover{background:#2a2b26;}.ds-well{display:flex;width:36px;height:36px;flex-shrink:0;align-items:center;justify-content:center;padding:6px;border-radius:2px;background:var(--skill-icon-well-light);filter:grayscale(1);transition:filter 150ms;}.ds-skill:hover .ds-well{filter:none;}.ds-skill-name{position:relative;z-index:1;font:700 1.15rem/1.1 var(--font-label);letter-spacing:.02em;}"
+    },
+    {
+      "name": "Angka Flap",
+      "kind": "custom",
+      "description": "Nilai statistik sebagai tile per digit, proporsi 1 : 1.62.",
+      "html": "<div class=\"ds-digits\"><span class=\"ds-tile ds-digit\">3</span><span class=\"ds-tile ds-digit\">1</span></div>",
+      "css": ".ds-digits{display:flex;gap:3px;}.ds-tile{position:relative;background:var(--flap);color:var(--flap-ink);border-radius:2px;}.ds-tile::after{content:'';position:absolute;inset-inline:0;top:50%;height:1px;background:var(--flap-crease);pointer-events:none;}.ds-digit{display:grid;place-items:center;width:clamp(38px,4.4vw,56px);aspect-ratio:1/1.62;font:800 clamp(2.1rem,3.6vw,3.1rem)/1 var(--font-display);}"
+    },
+    {
+      "name": "Baris Jadwal",
+      "kind": "custom",
+      "refersTo": "logo-plate",
+      "description": "Periode, isi, field untuk Pendidikan, Pengalaman, dan Sertifikasi; logo di atas pelat putih di dua tema.",
+      "html": "<article class=\"ds-record\"><p class=\"ds-period\">Agu 2026 – Feb 2027</p><div class=\"ds-head\"><span class=\"ds-plate\"><svg width=\"20\" height=\"20\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" aria-hidden=\"true\"><path d=\"M3 21h18M6 21V5h12v16M10 9h4M10 13h4\"/></svg></span><div><h3 class=\"ds-rtitle\">Programmer</h3><p class=\"ds-sub\">Wisesa Semesta Jaya</p></div></div><dl class=\"ds-field\"><dt>Tipe</dt><dd>Internship</dd></dl></article>",
+      "css": ".ds-record{display:grid;grid-template-columns:minmax(150px,2fr) minmax(0,7fr) minmax(170px,3fr);gap:16px clamp(20px,3vw,40px);padding-block:clamp(22px,2.6vw,32px);border-top:2px solid var(--color-text-primary);border-bottom:1px solid var(--color-border-primary);color:var(--color-text-primary);}.ds-period{margin:0;font:700 clamp(1.25rem,1.9vw,1.6rem)/1.15 var(--font-display);text-transform:uppercase;}.ds-head{display:flex;align-items:center;gap:14px;}.ds-plate{display:grid;place-items:center;width:76px;height:76px;flex-shrink:0;padding:4px;background:#fff;color:#161614;border-radius:2px;box-sizing:border-box;}.ds-rtitle{margin:0;font:700 clamp(1.8rem,3vw,2.6rem)/1.02 var(--font-display);text-transform:uppercase;}.ds-sub{margin:6px 0 0;font-size:1.05rem;font-weight:600;color:var(--color-text-secondary);}.ds-field{margin:0;}.ds-field dt{font:600 .92rem/1.1 var(--font-label);letter-spacing:.08em;text-transform:uppercase;color:var(--color-text-tertiary);}.ds-field dd{margin:4px 0 0;font-size:1rem;font-weight:600;}"
+    },
+    {
+      "name": "Baris Proyek",
+      "kind": "card",
+      "description": "Satu tautan penuh lebar: gambar 16:10 di atas flap, nama besar, ringkasan, kaki.",
+      "html": "<a class=\"ds-project\" href=\"#\"><span class=\"ds-pimg\"></span><span class=\"ds-pinfo\"><span class=\"ds-pname\">Website Squad Laundry</span><span class=\"ds-pdesc\">Website UMKM laundry dengan framework Laravel.</span><span class=\"ds-pmore\">Lihat detail <svg width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" aria-hidden=\"true\"><path d=\"M5 12h14M13 6l6 6-6 6\"/></svg></span></span></a>",
+      "css": ".ds-project{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:16px clamp(24px,4vw,56px);align-items:center;padding-block:clamp(20px,2.4vw,32px);border-bottom:1px solid var(--color-border-primary);color:var(--color-text-primary);text-decoration:none;}.ds-pimg{display:block;aspect-ratio:16/10;background:var(--flap);border-radius:2px;}.ds-pinfo{display:flex;flex-direction:column;align-items:flex-start;gap:10px;}.ds-pname{font:800 clamp(2rem,4.2vw,3.5rem)/.98 var(--font-display);text-transform:uppercase;}.ds-project:hover .ds-pname{text-decoration:underline;text-decoration-thickness:.05em;text-underline-offset:.1em;}.ds-pdesc{font-size:1.05rem;line-height:1.55;color:var(--color-text-secondary);}.ds-pmore{display:inline-flex;align-items:center;gap:6px;font:700 1rem/1 var(--font-label);letter-spacing:.06em;text-transform:uppercase;}.ds-pmore svg{transition:transform 200ms cubic-bezier(.16,1,.3,1);}.ds-project:hover .ds-pmore svg{transform:translateX(5px);}.ds-project:focus-visible{outline:2px solid var(--color-accent-primary);outline-offset:3px;}"
+    },
+    {
+      "name": "Heatmap Papan",
+      "kind": "custom",
+      "refersTo": "board-panel",
+      "description": "Panel rumah papan; tiap hari satu flap kecil, monokrom, hover dan terpilih bergaris sinyal.",
+      "html": "<div class=\"ds-board\"><div class=\"ds-cell\"></div><div class=\"ds-cell ds-l1\"></div><div class=\"ds-cell ds-l2\"></div><div class=\"ds-cell ds-l3\"></div><div class=\"ds-cell ds-l4\"></div><div class=\"ds-cell ds-l2 is-selected\"></div></div>",
+      "css": ".ds-board{display:flex;gap:5px;width:fit-content;padding:clamp(14px,2vw,24px);background:var(--housing);}.ds-cell{width:16px;height:22px;background:#24251f;cursor:pointer;}.ds-l1{background:color-mix(in srgb,var(--flap-ink) 32%,var(--flap));}.ds-l2{background:color-mix(in srgb,var(--flap-ink) 55%,var(--flap));}.ds-l3{background:color-mix(in srgb,var(--flap-ink) 78%,var(--flap));}.ds-l4{background:var(--flap-ink);}.ds-cell:hover,.ds-cell.is-selected{outline:2px solid var(--signal);outline-offset:1px;}"
+    },
+    {
+      "name": "Papan Hero (tampilan statis)",
+      "kind": "custom",
+      "description": "Tampilan akhir papan tanpa three.js: flap huruf proporsi 1 : 1.62 di atas rumah papan. Implementasi asli di src/lib/flapBoard.js.",
+      "html": "<div class=\"ds-hero\" aria-label=\"Kevin\"><span class=\"ds-tile ds-ch\">K</span><span class=\"ds-tile ds-ch\">E</span><span class=\"ds-tile ds-ch\">V</span><span class=\"ds-tile ds-ch\">I</span><span class=\"ds-tile ds-ch\">N</span></div>",
+      "css": ".ds-hero{display:flex;gap:5px;width:fit-content;padding:8px;background:var(--housing);}.ds-tile{position:relative;background:var(--flap);color:var(--flap-ink);border-radius:2px;}.ds-tile::after{content:'';position:absolute;inset-inline:0;top:50%;height:1px;background:var(--flap-crease);pointer-events:none;}.ds-ch{display:grid;place-items:center;width:56px;aspect-ratio:1/1.62;font:800 4.4rem/1 var(--font-display);}"
+    }
+  ],
+  "narrative": {
+    "northStar": "Papan Keberangkatan Split-Flap",
+    "overview": "**Creative North Star: \"Papan Keberangkatan Split-Flap\"**\n\nHalaman adalah aula stasiun; kontennya adalah papan keberangkatan mekanis. Di bawah rel navigasi, papan three.js selebar layar menjatuhkan nama kandidat ke tempatnya flap demi flap, lalu hanya baris headline yang sesekali berganti. Semua yang di bawahnya meneruskan logika papan: skill berupa blok flap rapat, statistik GitHub berupa angka flap, proyek dan riwayat berupa baris penuh lebar yang bisa dipindai sekali lihat oleh recruiter.\n\nKarakternya tenang, gelap, dan bersuara rambu. Warnanya hampir tanpa warna: hitam matte, krem huruf, dan satu kuning lampu sinyal yang hanya menyala untuk aksi dan status. Hierarki datang dari kontras skala, bukan dari dekorasi. Dunia ini flat di luar hero, dengan sudut hampir tajam dan tanpa bayangan; kedalaman nyata hanya ada di flap 3D dan digambarkan di tempat lain sebagai satu garis lipatan.\n\nDua tema tidak mengganti papan. Tema terang hanya mengganti lantai aula jadi beton pucat dan teks lantainya; papan, flap, tinta, dan lampu tetap benda fisik yang sama, sehingga di tema terang papan hero dan footer tetap hitam.",
+    "keyCharacteristics": [
+      "Flap hitam matte dengan garis lipatan di tengah sebagai material pembawa identitas.",
+      "Satu warna sinyal, hanya untuk aksi utama dan status aktif.",
+      "Konten sebagai baris penuh lebar dengan garis pemisah; blok flap hanya untuk nilai pendek.",
+      "Tiga suara huruf: rambu kondensed, label kondensed tracked, prosa Barlow; angka tabular di seluruh halaman.",
+      "Radius maksimal 3px, nol bayangan di permukaan publik, tanpa gradien warna, tanpa glow.",
+      "Gerak sedikit dan bermakna: satu jatuhan di hero, satu baris headline tiap 6 detik, judul section jatuh sekali."
+    ],
+    "rules": [
+      {
+        "name": "The Same Object Rule",
+        "body": "`--flap`, `--flap-crease`, `--flap-ink`, `--flap-ink-2`, `--housing`, `--signal`, dan `--signal-ink` tidak pernah di-override di `[data-theme='light']`. Tema hanya mengganti lantai aula dan teks lantai. Kalau sebuah komponen berubah warna saat tema diganti, ia bukan benda papan.",
+        "section": "colors"
+      },
+      {
+        "name": "The Signal Lamp Rule",
+        "body": "Kuning sinyal hanya untuk aksi utama dan status aktif, selalu sebagai isi atau garis dengan tinta `signal-ink`, tidak pernah sebagai warna teks, hiasan, atau pembeda kategori. Penanda persegi di judul aktivitas lolos karena memang berarti \"sedang berjalan\"; di tema terang ia diberi outline 1px warna flap supaya terlihat di beton.",
+        "section": "colors"
+      },
+      {
+        "name": "The Floor Accent Rule",
+        "body": "`--color-accent-primary` adalah nilai untuk lantai, bukan untuk papan. Teks dan focus di atas lantai memakai token ini; isi tombol dan status memakai `--signal`. Keduanya sama di tema gelap, jadi kesalahan pilih token baru terlihat di tema terang.",
+        "section": "colors"
+      },
+      {
+        "name": "The White Plate Rule",
+        "body": "Logo perusahaan selalu duduk di atas pelat putih di dua tema, berwarna penuh. Logo transparan bertinta gelap hilang di atas latar gelap, jadi pelat ini pengecualian palet yang disengaja untuk isi buatan pihak lain, bukan warna permukaan baru.",
+        "section": "colors"
+      },
+      {
+        "name": "The Scoped Ink Rule",
+        "body": "Setiap panel berlatar rumah papan di luar hero mendeklarasikan ulang `--color-text-*` ke tinta flap di dalam cakupannya, seperti panel heatmap dan footer. Tanpa itu teks lantai tema terang yang gelap jatuh di atas papan hitam.",
+        "section": "colors"
+      },
+      {
+        "name": "The One Loud Fragment Rule",
+        "body": "Tiap section punya satu fragmen paling keras, yaitu judulnya. Hierarki turun lewat skala, bukan lewat warna atau ornamen. Subjudul berada di kolom kanan rata bawah, bukan di atas judul.",
+        "section": "typography"
+      },
+      {
+        "name": "The Readable Label Rule",
+        "body": "Label kondensed tidak turun di bawah 0.9rem; huruf kondensed kecil cepat hilang keterbacaannya.",
+        "section": "typography"
+      },
+      {
+        "name": "The Readable Row Rule",
+        "body": "Proyek dan riwayat selalu baris penuh lebar, bukan grid kartu. Blok flap hanya untuk nilai pendek yang secara alami masuk satu tile: nama skill dan angka.",
+        "section": "layout"
+      },
+      {
+        "name": "The Crease Is Enough Rule",
+        "body": "Tile flap memberi kesan berengsel lewat satu garis 1px `flap-crease` di tengah, bukan bayangan. Di tile skill garis ini hanya takik 7px di dua tepi supaya label langsung terbaca; di logo mark garisnya lewat di belakang huruf. Hard-stop untuk takik dan bayangan lipatan hitam-transparan di tekstur flap 3D menggambar lipatan, bukan gradien warna.",
+        "section": "elevation"
+      },
+      {
+        "name": "The 3px Ceiling Rule",
+        "body": "Tidak ada radius di atas 3px. Kebulatan bukan bagian dari benda ini; flap adalah pelat logam yang dipotong.",
+        "section": "shapes"
+      },
+      {
+        "name": "The Grayscale At Rest Rule",
+        "body": "Foto profil, ikon skill, dan gambar sertifikat grayscale saat diam dan mendapat warna asli saat hover, supaya halaman tetap tidak warna-warni. Logo perusahaan dan gambar proyek berwarna penuh karena mereka bukti yang harus dikenali.",
+        "section": "shapes"
+      },
+      {
+        "name": "The Render On Demand Rule",
+        "body": "Papan hanya merender saat ada yang bergerak, berhenti saat idle atau di luar layar, pixel ratio maksimal 2, dan rotasi headline dilewati saat tab tersembunyi. Papan idle tidak memakai GPU.",
+        "section": "components"
+      },
+      {
+        "name": "The Token Light Rule",
+        "body": "Cahaya scene dikalibrasi supaya flap dan tinta yang dirender sama dengan `flap` dan `flap-ink`. Mengubah cahaya atau token tanpa mengkalibrasi ulang keduanya merusak sambungan papan dengan halaman.",
+        "section": "components"
+      },
+      {
+        "name": "The Three Stops Here Rule",
+        "body": "Three.js tidak keluar dari hero dan tidak diimpor statis di mana pun.",
+        "section": "components"
+      },
+      {
+        "name": "The One Drop Rule",
+        "body": "Satu-satunya gerak saat scroll adalah judul section yang jatuh sekali. Isi section, baris, dan tile tidak punya animasi masuk. Hero menjatuhkan flap sekali, lalu diam kecuali baris headline.",
+        "section": "components"
+      }
+    ],
+    "dos": [
+      "Do pakai `--flap`, `--housing`, dan tinta flap untuk apa pun yang secara fiksi adalah bagian papan, dan biarkan warnanya sama di dua tema.",
+      "Do pakai `--signal` dengan `--signal-ink` hanya untuk aksi utama dan status aktif.",
+      "Do pakai `--color-accent-primary` untuk teks, ikon, dan focus di atas lantai.",
+      "Do deklarasikan ulang `--color-text-*` ke tinta flap di setiap panel rumah papan baru.",
+      "Do taruh riwayat baru di baris jadwal yang sudah ada (periode, isi, field), bukan pola baru.",
+      "Do taruh logo perusahaan di atas pelat putih 76px, di dua tema.",
+      "Do beri tile flap proporsi 1 : 1.62 kalau ia berisi satu karakter, dengan lipatan 1px di tengah.",
+      "Do biarkan judul section baru jatuh sekali lewat hook scroll yang sudah ada.",
+      "Do sinkronkan konstanta warna di `src/lib/flapBoard.js` dan kalibrasi cahayanya saat token flap, tinta, atau rumah berubah.",
+      "Do pertahankan `h1` HTML di hero sebagai fallback dan untuk screen reader."
+    ],
+    "donts": [
+      "Don't override token papan atau sinyal di `[data-theme='light']`.",
+      "Don't pakai kuning sinyal sebagai warna teks, hiasan, atau pembeda kategori.",
+      "Don't pakai `--color-accent-primary` di atas rumah papan; di tema terang nilainya terlalu gelap untuk latar hitam.",
+      "Don't terapkan grayscale ke logo perusahaan atau mengganti pelat putihnya jadi warna palet.",
+      "Don't impor three.js di luar `src/lib/flapBoard.js`, atau menjalankan render loop terus-menerus.",
+      "Don't tambah animasi masuk pada isi section, stagger baris, atau fade saat scroll.",
+      "Don't pakai radius di atas 3px, `box-shadow` di permukaan publik, glow, glassmorphism, atau gradien warna.",
+      "Don't taruh eyebrow atau kicker di atas judul; tag kategori dan subjudul berada di bawah atau di samping judul.",
+      "Don't susun proyek atau riwayat sebagai grid kartu.",
+      "Don't pakai warna hijau atau warna-warni di heatmap dan bar bahasa.",
+      "Don't anggap `--font-mono` sebagai monospace, atau memakai token sisa yang tidak dipakai komponen mana pun (`--color-accent-glow`, `--glass-*`).",
+      "Don't bawa merah, border putus-putus, atau bayangan admin ke permukaan publik."
+    ]
+  }
+}

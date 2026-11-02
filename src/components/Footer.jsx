@@ -30,6 +30,12 @@ export default function Footer({ profile }) {
             <p className="footer-tagline">{t('footer.tagline')}</p>
           </div>
 
+          {profile?.email && (
+            <a href={`mailto:${profile.email}`} className="btn btn-primary">
+              {t('hero.contact')}
+            </a>
+          )}
+
           {socialLinks.length > 0 && (
             <div className="footer-socials">
               {socialLinks.map((social, i) => (

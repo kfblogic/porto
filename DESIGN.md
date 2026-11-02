@@ -1,288 +1,374 @@
 ---
-name: Porto — Dek Kartu Punch
-description: Portfolio Kevin Febrian Bimantara sebagai satu dek kartu punch 80-kolom berwarna di atas meja; nama dipunch beneran dalam kode Hollerith.
+name: Porto — Papan Split-Flap
+description: Portfolio Kevin Febrian Bimantara sebagai satu papan keberangkatan split-flap mekanis di aula stasiun; nama jatuh ke tempatnya, tiap konten satu baris yang langsung terbaca.
 colors:
-  desk: "#161714"
-  desk-deep: "#0e0f0d"
-  desk-panel: "#1f201d"
-  desk-panel-hover: "#282925"
-  desk-light: "#d7dad3"
-  desk-deep-light: "#c9ccc4"
-  desk-panel-light: "#eceee8"
-  desk-accent: "#ef6a4f"
-  desk-accent-light: "#b8361f"
-  desk-signal: "#f2c230"
-  desk-signal-light: "#1f4fa3"
-  text-primary: "#f1f0ea"
-  text-secondary: "#b3b2a9"
-  text-tertiary: "#8a8980"
-  text-primary-light: "#161714"
-  text-secondary-light: "#45463f"
-  text-tertiary-light: "#5d5e56"
-  border-hairline: "rgba(241, 240, 234, 0.14)"
-  border-hairline-light: "rgba(22, 23, 20, 0.2)"
-  stock-red: "#e9573f"
-  ink-red: "#1a0f0b"
-  stock-yellow: "#f2c230"
-  ink-yellow: "#1d1704"
-  stock-blue: "#1f4fa3"
-  ink-blue: "#f4f6fb"
-  stock-green: "#2f7d5b"
-  ink-green: "#f3f7f2"
-  stock-white: "#f6f6f3"
-  ink-white: "#161714"
+  signal: "#f0b429"
+  signal-hover: "#f7c64c"
+  signal-ink: "#161410"
+  floor-accent: "#f0b429"
+  floor-accent-light: "#7f5300"
+  housing: "#111210"
+  flap: "#1c1d1a"
+  flap-hover: "#2a2b26"
+  flap-crease: "#080807"
+  flap-ink: "#ece8dc"
+  flap-ink-2: "#b5b1a5"
+  heat-empty: "#24251f"
+  logo-plate: "#ffffff"
+  logo-plate-ink: "#161614"
+  floor: "#111210"
+  floor-deep: "#0b0c0a"
+  floor-panel: "#1c1d1a"
+  floor-panel-hover: "#262723"
+  floor-light: "#e4e2da"
+  floor-deep-light: "#d8d6cd"
+  floor-panel-light: "#f0eee7"
+  floor-panel-hover-light: "#e8e6de"
+  text-primary: "#ece8dc"
+  text-secondary: "#b5b1a5"
+  text-tertiary: "#979488"
+  text-primary-light: "#161614"
+  text-secondary-light: "#45443d"
+  text-tertiary-light: "#5c5b52"
+  border-hairline: "rgba(236, 232, 220, 0.16)"
+  border-hairline-light: "rgba(22, 22, 20, 0.22)"
+  surface-faint: "rgba(236, 232, 220, 0.04)"
+  surface-faint-light: "rgba(22, 22, 20, 0.04)"
+  surface-subtle: "rgba(236, 232, 220, 0.08)"
+  surface-subtle-light: "rgba(22, 22, 20, 0.08)"
 typography:
   display:
-    fontFamily: "Archivo, system-ui, sans-serif"
-    fontSize: "clamp(2.4rem, 4.9vw, 4.6rem)"
-    fontWeight: 900
-    lineHeight: 0.9
-    letterSpacing: "-0.02em"
-    fontVariation: "'wdth' 118"
+    fontFamily: "Big Shoulders Display, Barlow Condensed, sans-serif"
+    fontSize: "clamp(3rem, 7.4vw, 6rem)"
+    fontWeight: 800
+    lineHeight: 0.92
   headline:
-    fontFamily: "Archivo, system-ui, sans-serif"
-    fontSize: "clamp(2.1rem, 4.6vw, 4rem)"
-    fontWeight: 850
-    lineHeight: 0.95
-    letterSpacing: "-0.015em"
-    fontVariation: "'wdth' 125"
+    fontFamily: "Big Shoulders Display, Barlow Condensed, sans-serif"
+    fontSize: "clamp(2rem, 4.2vw, 3.5rem)"
+    fontWeight: 800
+    lineHeight: 0.98
   title:
-    fontFamily: "Archivo, system-ui, sans-serif"
-    fontSize: "clamp(1.4rem, 2.6vw, 2.1rem)"
-    fontWeight: 800
-    lineHeight: 1.1
-    fontVariation: "'wdth' 112"
+    fontFamily: "Big Shoulders Display, Barlow Condensed, sans-serif"
+    fontSize: "clamp(1.8rem, 3vw, 2.6rem)"
+    fontWeight: 700
+    lineHeight: 1.02
+  period:
+    fontFamily: "Big Shoulders Display, Barlow Condensed, sans-serif"
+    fontSize: "clamp(1.25rem, 1.9vw, 1.6rem)"
+    fontWeight: 700
+    lineHeight: 1.15
   body:
-    fontFamily: "Archivo, system-ui, sans-serif"
-    fontSize: "1rem"
+    fontFamily: "Barlow, system-ui, sans-serif"
+    fontSize: "1.05rem"
     fontWeight: 400
-    lineHeight: 1.65
-  label:
-    fontFamily: "Archivo, system-ui, sans-serif"
-    fontSize: "0.78rem"
-    fontWeight: 750
-    letterSpacing: "0.07em"
-    fontVariation: "'wdth' 87"
-  dot:
-    fontFamily: "Doto, Archivo, monospace"
-    fontSize: "0.72rem"
-    fontWeight: 800
+    lineHeight: 1.55
+  button:
+    fontFamily: "Barlow Condensed, Barlow, sans-serif"
+    fontSize: "1.02rem"
+    fontWeight: 700
     lineHeight: 1
+    letterSpacing: "0.06em"
+  label:
+    fontFamily: "Barlow Condensed, Barlow, sans-serif"
+    fontSize: "0.98rem"
+    fontWeight: 600
+    lineHeight: 1
+    letterSpacing: "0.06em"
+  field-label:
+    fontFamily: "Barlow Condensed, Barlow, sans-serif"
+    fontSize: "0.92rem"
+    fontWeight: 600
+    lineHeight: 1.1
     letterSpacing: "0.08em"
 rounded:
-  none: "0px"
+  sm: "2px"
+  md: "2px"
+  lg: "3px"
+  xl: "3px"
+  2xl: "3px"
+  full: "3px"
 spacing:
-  container: "1240px"
+  container-xl: "1280px"
+  container-2xl: "1536px"
   gutter: "24px"
-  gutter-mobile: "12px"
-  section-y: "24px"
-  card-pad: "clamp(28px, 4.5vw, 64px)"
-  card-pad-x: "clamp(20px, 4.5vw, 64px)"
-  card-cut: "clamp(22px, 3vw, 40px)"
-  grid-gap: "22px"
+  gutter-mobile: "16px"
+  rail-height: "64px"
+  section-y: "clamp(56px, 8vw, 112px)"
+  section-header-gap: "clamp(28px, 4vw, 48px)"
+  record-y: "clamp(22px, 2.6vw, 32px)"
+  project-y: "clamp(20px, 2.4vw, 32px)"
+  board-pad: "clamp(14px, 2vw, 24px)"
+  tile-gap: "4px"
+  digit-gap: "3px"
 components:
   button-primary:
-    backgroundColor: "{colors.desk-accent}"
-    textColor: "{colors.desk}"
-    rounded: "{rounded.none}"
-    padding: "12px 20px"
-    typography: "{typography.label}"
-  button-primary-on-card:
-    backgroundColor: "{colors.ink-red}"
-    textColor: "{colors.stock-red}"
-    rounded: "{rounded.none}"
-    padding: "12px 20px"
+    backgroundColor: "{colors.signal}"
+    textColor: "{colors.signal-ink}"
+    typography: "{typography.button}"
+    rounded: "{rounded.sm}"
+    padding: "10px 20px"
+    height: "46px"
+  button-primary-hover:
+    backgroundColor: "{colors.signal-hover}"
+    textColor: "{colors.signal-ink}"
   button-outline:
     backgroundColor: "transparent"
     textColor: "{colors.text-primary}"
-    rounded: "{rounded.none}"
-    padding: "12px 20px"
-    typography: "{typography.label}"
+    typography: "{typography.button}"
+    rounded: "{rounded.sm}"
+    padding: "10px 20px"
+    height: "46px"
+  button-outline-hover:
+    backgroundColor: "{colors.surface-subtle}"
+    textColor: "{colors.text-primary}"
   filter-chip:
     backgroundColor: "transparent"
     textColor: "{colors.text-secondary}"
-    rounded: "{rounded.none}"
-    padding: "9px 16px 8px"
     typography: "{typography.label}"
+    rounded: "{rounded.sm}"
+    padding: "8px 16px"
+    height: "40px"
   filter-chip-active:
-    backgroundColor: "{colors.desk-accent}"
-    textColor: "{colors.desk}"
-    rounded: "{rounded.none}"
-    padding: "9px 16px 8px"
+    backgroundColor: "{colors.signal}"
+    textColor: "{colors.signal-ink}"
+  nav-rail:
+    backgroundColor: "{colors.floor}"
+    textColor: "{colors.text-secondary}"
+    height: "{spacing.rail-height}"
+  nav-link:
+    backgroundColor: "transparent"
+    textColor: "{colors.text-secondary}"
+    typography: "{typography.label}"
+    rounded: "{rounded.sm}"
+    padding: "8px 12px"
   nav-link-active:
-    backgroundColor: "{colors.desk-accent}"
-    textColor: "{colors.desk}"
-    rounded: "{rounded.none}"
-    padding: "8px 12px 7px"
-  card-section:
-    backgroundColor: "{colors.stock-yellow}"
-    textColor: "{colors.ink-yellow}"
-    rounded: "{rounded.none}"
-    padding: "clamp(28px, 4.5vw, 64px) clamp(20px, 4.5vw, 64px) clamp(52px, 5.5vw, 76px)"
-  card-project:
-    backgroundColor: "{colors.stock-white}"
-    textColor: "{colors.ink-white}"
-    rounded: "{rounded.none}"
-    padding: "34px 22px 20px"
+    backgroundColor: "{colors.signal}"
+    textColor: "{colors.signal-ink}"
+  skill-tile:
+    backgroundColor: "{colors.flap}"
+    textColor: "{colors.flap-ink}"
+    rounded: "{rounded.sm}"
+    padding: "12px 14px"
+    height: "72px"
+  skill-tile-hover:
+    backgroundColor: "{colors.flap-hover}"
+    textColor: "{colors.flap-ink}"
+  logo-plate:
+    backgroundColor: "{colors.logo-plate}"
+    textColor: "{colors.logo-plate-ink}"
+    rounded: "{rounded.sm}"
+    padding: "4px"
+    size: "76px"
+  board-panel:
+    backgroundColor: "{colors.housing}"
+    textColor: "{colors.flap-ink}"
+    padding: "{spacing.board-pad}"
 ---
 
-# Design System: Porto — Dek Kartu Punch
+# Design System: Porto — Papan Split-Flap
 
 ## Overview
 
-**Creative North Star: "Dek Kartu Punch 80-Kolom"**
+**Creative North Star: "Papan Keberangkatan Split-Flap"**
 
-Halaman adalah meja; tiap section adalah satu kartu punch IBM berwarna yang diletakkan di atasnya. Kartu (salmon, kuning, kobalt, hijau, putih) menguasai region penuh, bukan jadi aksen kecil di atas latar gelap. Hero adalah kartu raksasa yang benar-benar dipunch: nama dan headline di-encode ke kode Hollerith 12-baris, lubangnya tembus ke warna meja, dan hover tiap kolom menampilkan karakter + kode lubangnya. Bahasa visual diambil dari benda aslinya: pojok kiri-atas terpotong, baris tick 80-kolom di tepi bawah, nomor urut kartu di pojok kanan bawah, baris interpretasi dot-matrix, sobekan stub bergaris putus-putus.
+Halaman adalah aula stasiun; kontennya adalah papan keberangkatan mekanis. Di bawah rel navigasi, papan three.js selebar layar menjatuhkan nama kandidat ke tempatnya flap demi flap, lalu hanya baris headline yang sesekali berganti. Semua yang di bawahnya meneruskan logika papan: skill berupa blok flap rapat, statistik GitHub berupa angka flap, proyek dan riwayat berupa baris penuh lebar yang bisa dipindai sekali lihat oleh recruiter.
 
-Hierarki dibangun dari ukuran dan lebar huruf, bukan dari label tambahan. Archivo variabel dipakai super-lebar dan super-tebal untuk judul, menyempit dan uppercase-tracked untuk label tercetak; Doto (dot-matrix) cuma untuk string yang "dicetak mesin". Dunia ini flat: tanpa radius bulat, tanpa glass, tanpa glow, tanpa gradient warna. Satu-satunya kedalaman adalah bayangan lembut kartu di atas meja.
+Karakternya tenang, gelap, dan bersuara rambu. Warnanya hampir tanpa warna: hitam matte, krem huruf, dan satu kuning lampu sinyal yang hanya menyala untuk aksi dan status. Hierarki datang dari kontras skala, bukan dari dekorasi. Dunia ini flat di luar hero, dengan sudut hampir tajam dan tanpa bayangan; kedalaman nyata hanya ada di flap 3D dan digambarkan di tempat lain sebagai satu garis lipatan.
 
-Sistem dua tema mengganti warna meja saja (gelap `desk` / terang `desk-light`); warna kartu identik di dua tema, karena kartu adalah benda fisik yang sama.
+Dua tema tidak mengganti papan. Tema terang hanya mengganti lantai aula jadi beton pucat dan teks lantainya; papan, flap, tinta, dan lampu tetap benda fisik yang sama, sehingga di tema terang papan hero dan footer tetap hitam.
 
 **Key Characteristics:**
-- Kartu berwarna penuh sebagai material utama; meja sebagai satu-satunya latar.
-- Pojok kiri-atas terpotong (clip-path) di setiap kartu dan elemen bertanda, nol radius di mana pun di permukaan publik.
-- Lubang punch = persegi tegak berwarna meja; dipakai di grid Hollerith, penanda skill, dan heatmap GitHub.
-- Solid = terpilih/primer, putus-putus = belum terpilih/sekunder, konsisten di tombol, filter, kontrol nav, dan tautan sosial footer.
-- Archivo variabel (lebar 87%–125%) untuk semua teks; Doto khusus string mesin.
-- Nomor urut kartu (`KFB 0001`…, `P001`…) di tepi, seperti kolom 73-80.
+- Flap hitam matte dengan garis lipatan di tengah sebagai material pembawa identitas.
+- Satu warna sinyal, hanya untuk aksi utama dan status aktif.
+- Konten sebagai baris penuh lebar dengan garis pemisah; blok flap hanya untuk nilai pendek.
+- Tiga suara huruf: rambu kondensed, label kondensed tracked, prosa Barlow; angka tabular di seluruh halaman.
+- Radius maksimal 3px, nol bayangan di permukaan publik, tanpa gradien warna, tanpa glow.
+- Gerak sedikit dan bermakna: satu jatuhan di hero, satu baris headline tiap 6 detik, judul section jatuh sekali.
 
 ## Colors
 
-Meja netral hangat yang hampir hitam (atau abu-hijau pucat di tema terang) dengan lima card stock jenuh yang masing-masing membawa ink-nya sendiri.
+Netral hangat hampir hitam dengan tinta krem dan satu kuning lampu sinyal; tema terang hanya menukar lantai.
 
 ### Primary
-- **Salmon Card Stock** (`stock-red`): kartu hero dan kartu loading; warna pertama yang dilihat recruiter. Ink-nya `ink-red`, cokelat-hitam hangat.
-- **Desk Salmon** (`desk-accent` / `desk-accent-light`): aksen di level meja, di luar kartu. Tombol primer, nav link aktif, filter aktif, logo mark, scrollbar thumb, focus ring 2px. Di tema terang menggelap jadi merah bata agar kontras di meja terang.
-
-### Secondary
-- **Mustard Card Stock** (`stock-yellow`): kartu Skills dan Experience; juga warna `::selection` di seluruh situs. Ink `ink-yellow`.
-- **Desk Signal** (`desk-signal` / `desk-signal-light`): sinyal kedua di level meja (kuning di gelap, kobalt di terang). Outline hover/terpilih pada lubang heatmap, tautan kecil GitHub.
-
-### Tertiary
-- **Cobalt Card Stock** (`stock-blue`): kartu Activities, strip default kartu proyek, strip sertifikat. Ink terang `ink-blue`.
-- **Ledger Green Card Stock** (`stock-green`): kartu Education, strip sertifikat pertama. Ink terang `ink-green`.
+- **Lampu Sinyal** (`signal`, tinta `signal-ink`, hover `signal-hover`): tombol primer, nav link aktif, filter dan tahun terpilih, thumbnail galeri aktif, titik galeri aktif, sel heatmap terpilih, penanda aktivitas yang sedang berjalan, serta `::selection`. Tombol kontrol di atas gambar dan tombol ke atas menyala sinyal saat hover karena itu aksi.
+- **Aksen Lantai** (`floor-accent` / `floor-accent-light`, token `--color-accent-primary` dan aliasnya `--color-accent-secondary`): nilai untuk teks, ikon, dan focus ring yang duduk di lantai, termasuk tautan artikel dan garis blockquote. Di tema gelap nilainya sama persis dengan sinyal; di tema terang menggelap jadi cokelat amber (5.16:1 di atas lantai terang) karena sinyal sendiri hanya 1.44:1 di sana.
 
 ### Neutral
-- **Desk** (`desk` / `desk-light`): latar halaman, dan warna yang terlihat lewat setiap lubang punch.
-- **Deep Desk** (`desk-deep` / `desk-deep-light`): footer, scrollbar track; meja yang sedikit lebih dalam.
-- **Desk Panel** (`desk-panel`, hover `desk-panel-hover`): permukaan sekunder di meja (skeleton, panel admin).
-- **Manila White Card Stock** (`stock-white`, ink `ink-white`): kartu GitHub, kartu proyek, kartu sertifikat. Di dalam kartu putih, `desk-signal` dipaksa jadi kobalt.
-- **Teks meja** (`text-primary` / `text-secondary` / `text-tertiary`, versi `-light` untuk tema terang): hanya dipakai untuk teks yang duduk langsung di meja (judul section Projects/Certifications, footer, nav).
-- **Hairline** (`border-hairline`): garis 1-1.5px untuk pemisah di meja.
+
+**Benda papan, identik di dua tema:**
+- **Rumah Papan** (`housing`): latar kanvas hero, panel heatmap, footer, galeri proyek, bingkai thumbnail sertifikat.
+- **Flap Matte** (`flap`, hover `flap-hover`): tile skill, angka flap, logo mark, flap loading, badge jumlah foto, bingkai gambar proyek, tombol ke atas.
+- **Garis Lipatan** (`flap-crease`): garis 1px di tengah tiap tile flap.
+- **Tinta Krem** (`flap-ink`, sekunder `flap-ink-2`): huruf di atas flap dan rumah papan.
+- **Sel Kosong** (`heat-empty`): hari tanpa kontribusi di heatmap, sedikit lebih terang dari flap.
+- **Pelat Logo** (`logo-plate`, ikon fallback `logo-plate-ink`): pengecualian palet, lihat The White Plate Rule.
+
+**Lantai aula, berubah per tema (`-light` untuk tema terang):**
+- **Lantai** (`floor`): latar halaman dan rel navigasi. Di tema gelap sewarna rumah papan, sehingga papan menyatu dengan aula; di tema terang papan berdiri sebagai benda hitam di atas beton.
+- **Lantai Dalam** (`floor-deep`): modal CV, tooltip heatmap, track scrollbar, sidebar admin.
+- **Panel Lantai** (`floor-panel`, hover `floor-panel-hover`): skeleton dan kartu admin. Nilai gelapnya kebetulan sama dengan flap, tapi ini token berbeda yang ikut tema; jangan dipakai untuk benda papan.
+- **Teks Lantai** (`text-primary` / `text-secondary` / `text-tertiary`): teks yang duduk langsung di lantai.
+- **Hairline** (`border-hairline`, surface hover `surface-subtle`): pemisah baris 1px, garis kontrol, dan isi hover halus.
 
 ### Named Rules
-**The Stock Owns Its Ink Rule.** Di dalam kartu, semua warna turunan (teks sekunder 80%, tersier 70%, garis 24%, surface 5-10%, tombol primer) diturunkan dengan `color-mix` dari `--ink` dan `--stock` kartu itu. Jangan pakai token warna meja di dalam kartu; kartu baru cukup mendeklarasikan pasangan stock + ink.
+**The Same Object Rule.** `--flap`, `--flap-crease`, `--flap-ink`, `--flap-ink-2`, `--housing`, `--signal`, dan `--signal-ink` tidak pernah di-override di `[data-theme='light']`. Tema hanya mengganti lantai aula dan teks lantai. Kalau sebuah komponen berubah warna saat tema diganti, ia bukan benda papan.
 
-**The Holes Show The Desk Rule.** Lubang punch selalu diisi warna meja (`--desk`), bukan hitam atau warna aksen. Lubang adalah tembusan, bukan cat.
+**The Signal Lamp Rule.** Kuning sinyal hanya untuk aksi utama dan status aktif, selalu sebagai isi atau garis dengan tinta `signal-ink`, tidak pernah sebagai warna teks, hiasan, atau pembeda kategori. Penanda persegi di judul aktivitas lolos karena memang berarti "sedang berjalan"; di tema terang ia diberi outline 1px warna flap supaya terlihat di beton.
 
-**The Same Deck Both Themes Rule.** Tema terang hanya mengganti meja, teks meja, dan aksen meja. Warna kartu dan ink tidak pernah berubah per tema.
+**The Floor Accent Rule.** `--color-accent-primary` adalah nilai untuk lantai, bukan untuk papan. Teks dan focus di atas lantai memakai token ini; isi tombol dan status memakai `--signal`. Keduanya sama di tema gelap, jadi kesalahan pilih token baru terlihat di tema terang.
+
+**The White Plate Rule.** Logo perusahaan selalu duduk di atas pelat putih di dua tema, berwarna penuh. Logo transparan bertinta gelap hilang di atas latar gelap, jadi pelat ini pengecualian palet yang disengaja untuk isi buatan pihak lain, bukan warna permukaan baru.
+
+**The Scoped Ink Rule.** Setiap panel berlatar rumah papan di luar hero mendeklarasikan ulang `--color-text-*` ke tinta flap di dalam cakupannya, seperti panel heatmap dan footer. Tanpa itu teks lantai tema terang yang gelap jatuh di atas papan hitam.
 
 ## Typography
 
-**Display Font:** Archivo variabel (`wdth` 62–125, `wght` 100–900), fallback system-ui
-**Body Font:** Archivo (sama)
-**Label/Mono Font:** Doto (dot-matrix, 500/800), fallback Archivo, monospace. Token `--font-mono` adalah alias ke Archivo, bukan monospace.
+**Display Font:** Big Shoulders Display (600–800), fallback Barlow Condensed, sans-serif
+**Body Font:** Barlow (400–700), fallback system-ui, sans-serif
+**Label/Mono Font:** Barlow Condensed (500–700), fallback Barlow. Token `--font-mono` adalah alias ke Barlow, bukan monospace.
 
-**Character:** Satu keluarga grotesk yang direntang ke dua ekstrem: lebar-ekstra-tebal untuk judul yang terasa dicetak di kartu, sempit-uppercase-tracked untuk label field. Doto meniru printer interpretasi mesin punch dan hanya muncul di string yang "dicetak mesin". Angka memakai `tabular-nums` di seluruh body.
+**Character:** Big Shoulders Display kondensed dan tebal terbaca seperti rambu stasiun dan juga huruf yang dicetak ke flap 3D; Barlow Condensed uppercase tracked menjadi label papan; Barlow membawa prosa dengan tenang. Seluruh body memakai `tabular-nums` supaya angka berbaris seperti di papan jadwal.
 
 ### Hierarchy
-- **Display** (900, lebar 118%, `clamp(2.4rem, 4.9vw, 4.6rem)`, 0.9, uppercase, max 9ch): nama di hero. Footer logo memakai resep yang sama di skala `clamp(1.8rem, 4vw, 3rem)`.
-- **Headline** (850, lebar 125%, `clamp(2.1rem, 4.6vw, 4rem)`, 0.95, uppercase, balance): judul section. Subjudul di kolom kanan, rata kanan, 1.05rem, maks 42ch.
-- **Title** (800, lebar 108–112%, `clamp(1.4rem, 2.6vw, 2.1rem)`, 1.1): judul record pendidikan/pengalaman, heading aktivitas; nama proyek di 1.35rem lebar 108%.
-- **Body** (400, 1rem–1.05rem, 1.55–1.7): prosa deskripsi, maks 46–62ch.
-- **Label** (700–750, lebar 87%, 0.68–0.8rem, tracking 0.06–0.09em, uppercase): tombol, filter, nav link, `dt` field, tag kategori, copyright.
-- **Dot** (Doto 800, 0.68–1.25rem, tracking 0.03–0.08em, uppercase): baris interpretasi grid punch, nomor urut kartu, strip headline hero (ink box), baris statistik GitHub, badge hitungan foto/sertifikat, logo mark.
+- **Display** (800, `{typography.display}`, uppercase, balance): judul section, satu-satunya fragmen paling keras per section. Suara yang sama dipakai di footer (`clamp(3rem, 8.4vw, 6rem)`), fallback nama hero (`clamp(3rem, 9vw, 6rem)`), judul detail proyek (`clamp(2.5rem, 6vw, 4.5rem)`), dan angka flap loading (`clamp(3.6rem, 8.6vw, 6rem)`).
+- **Headline** (800, `{typography.headline}`, uppercase): nama proyek di baris proyek.
+- **Title** (700, `{typography.title}`, uppercase): judul baris jadwal; judul aktivitas memakai `clamp(1.8rem, 3vw, 2.5rem)`.
+- **Period** (700, `{typography.period}`, uppercase, tabular): rentang tanggal di kolom kiri baris jadwal.
+- **Body** (400, 1.02–1.1rem, 1.5–1.65): deskripsi dan subjudul, maks 46–68ch. Artikel proyek 1rem dengan line-height 1.8.
+- **Button** (700, 1.02rem, tracking 0.06em, uppercase): tombol dan tautan aksi.
+- **Label** (600, 0.9–1.05rem, tracking 0.05–0.08em, uppercase): nav, filter, kontrol, tag kategori, `dt` field, statistik, copyright. Di mobile nav link naik ke 1.5rem.
 
 ### Named Rules
-**The Width Is Hierarchy Rule.** Peringkat dibedakan oleh ukuran dan `font-stretch`, bukan oleh warna atau label pengantar: 125% judul section, 118% nama, 108–112% judul item, 100% prosa, 87% label.
+**The One Loud Fragment Rule.** Tiap section punya satu fragmen paling keras, yaitu judulnya. Hierarki turun lewat skala, bukan lewat warna atau ornamen. Subjudul berada di kolom kanan rata bawah, bukan di atas judul.
 
-**The Machine Print Rule.** Doto hanya untuk string yang secara fiksi dicetak mesin (interpretasi, nomor urut, hitungan, statistik). Prosa dan judul tidak pernah memakai Doto.
+**The Readable Label Rule.** Label kondensed tidak turun di bawah 0.9rem; huruf kondensed kecil cepat hilang keterbacaannya.
 
 ## Layout
 
-Container maks 1240px dengan gutter 24px (12px di bawah 768px). Section vertikal rapat (24px, 12px di mobile) karena jarak antar-kartu dibawa oleh bayangan kartu dan perbedaan warna stock, bukan whitespace. Section bertipe kartu tunggal (Skills, Activities, GitHub, Education, Experience) membungkus seluruh isi dalam satu kartu dengan padding `clamp(28px, 4.5vw, 64px)` dan padding bawah ekstra (52–76px) untuk strip tick + nomor urut. Section dek (Projects, Certifications) duduk langsung di meja dan menyusun banyak kartu kecil.
+Aula dibagi jadi baris-baris selebar container, dipisah garis. Hero board full-bleed; semua isi lain mengikuti container. Container yang benar-benar dirender berjenjang mengikuti utilitas container Tailwind (640, 768, 1024, `{spacing.container-xl}`, `{spacing.container-2xl}`), dengan gutter `{spacing.gutter}` dan `{spacing.gutter-mobile}` di bawah 768px. Di viewport 1440px lebar isinya 1232px.
 
-Header section adalah grid dua kolom 1.4fr / 1fr: judul kiri, subjudul kanan rata kanan, sejajar baseline bawah; satu kolom di bawah 768px. Isi kartu memakai grid "field tercetak": sel bergaris 1.5px kiri-atas + kanan-bawah yang membentuk tabel tanpa garis dobel (skills auto-fill min 150px, field record auto-fit min 140px). Record dan aktivitas dua kolom (kiri judul/deskripsi, kanan fields), ditumpuk di bawah 768px.
+Urutan halaman: hero, Skills, Aktivitas Sekarang, GitHub, Project, Pendidikan, Pengalaman, Sertifikasi, footer. Tiap section dipisah hairline dan padding `{spacing.section-y}`. Header section dua kolom 1.5fr / 1fr (judul kiri, subjudul kanan, rata bawah), satu kolom di bawah 768px.
 
-Hero: kartu raksasa dua kolom (konten / stub minimal 300px 33%) setinggi `min(100svh - 112px, 700px)`. Band atas adalah grid Hollerith 80 kolom × (1 baris interpretasi + 12 baris lubang), tinggi `clamp(240px, 26vw, 370px)`; nama besar di bawahnya. Stub kanan dipisah garis putus-putus 2px. Di bawah 900px stub pindah ke bawah dengan perforasi horizontal; di bawah 720px grid dipotong ke 24 kolom pertama.
+**First viewport.** Rel navigasi fixed `{spacing.rail-height}`, lalu papan, lalu rel info. Tinggi papan `clamp(300px, 100svh - 260px, 62vw)` sengaja menyisakan ruang supaya tombol primer terlihat tanpa scroll; di bawah 1040px jadi `clamp(280px, 100svh - 354px, 62vw)` dan di bawah 720px 74vw. Rel info tiga kolom (foto 124px, deskripsi, aksi + sosial). Di bawah 1040px aksi turun ke baris penuh. Di bawah 720px aksi naik ke urutan pertama, foto 84px, deskripsi terakhir.
 
-Proyek: 2 kolom (1 kolom di bawah 900px), gap 22px; tiap kartu 42% gambar / info, ditumpuk di bawah 560px. Sertifikat: auto-fill min 210px, gap 16px.
+**Baris.** Aktivitas 1fr / 1.2fr. Proyek 5fr / 7fr (gambar kiri 16:10, info kanan). Jadwal 2fr / 7fr / 3fr (periode, isi, field). Aktivitas dan proyek menumpuk di bawah 768px, jadwal di bawah 900px. Kumpulan baris dibuka garis 2px warna teks primer, tiap baris ditutup hairline 1px. Skills auto-fill minimal 200px dengan gap `{spacing.tile-gap}`. Statistik GitHub empat kolom, dua di bawah 768px.
 
-Breakpoint yang dipakai: 560px, 720px, 768px (Tailwind `md`), 900px.
+Breakpoint yang dipakai: 640, 720, 768, 900, 1024 (nav jadi overlay), 1040, 1280 (sel heatmap membesar). Admin menambah 600px untuk sidebar.
+
+### Named Rules
+**The Readable Row Rule.** Proyek dan riwayat selalu baris penuh lebar, bukan grid kartu. Blok flap hanya untuk nilai pendek yang secara alami masuk satu tile: nama skill dan angka.
 
 ## Elevation & Depth
 
-Sistem flat dengan satu lapisan fisik: kartu terletak di atas meja. Kedalaman kartu datang dari `filter: drop-shadow` lembut berwarna `--desk-shadow` (hitam 45% di gelap, abu-hijau 28% di terang), dipakai lewat pembungkus kartu agar bayangan mengikuti siluet pojok terpotong. Tidak ada shadow lain di permukaan publik. Lubang punch memberi kedalaman negatif: tembusan ke meja.
-
-### Shadow Vocabulary
-- **Card on Desk** (`filter: drop-shadow(0 14px 22px var(--desk-shadow))`): pembungkus setiap kartu section dan hero.
+Permukaan publik sepenuhnya flat: tidak ada `box-shadow`, `drop-shadow`, blur, atau glow. Kedalaman datang dari tonal layering (lantai, flap, rumah papan) dan dari geometri 3D sungguhan di hero. Di luar hero, kedalaman flap digambarkan hanya oleh garis lipatan. Satu-satunya bayangan di codebase ada di modal crop foto admin, dan tidak dibawa ke permukaan publik.
 
 ### Named Rules
-**The One Layer Rule.** Hanya kartu yang terangkat dari meja, dan hanya dengan bayangan Card on Desk. Hover menggeser (translateY -2px tombol, -4px kartu proyek), tidak menambah bayangan atau glow.
+**The Crease Is Enough Rule.** Tile flap memberi kesan berengsel lewat satu garis 1px `flap-crease` di tengah, bukan bayangan. Di tile skill garis ini hanya takik 7px di dua tepi supaya label langsung terbaca; di logo mark garisnya lewat di belakang huruf. Hard-stop untuk takik dan bayangan lipatan hitam-transparan di tekstur flap 3D menggambar lipatan, bukan gradien warna.
 
 ## Shapes
 
-Nol radius di seluruh permukaan publik. Bentuk khas sistem ini adalah **pojok kiri-atas terpotong** 45°, `clip-path: polygon(cut 0, 100% 0, 100% 100%, 0 100%, 0 cut)`, diskalakan per ukuran benda: kartu section `clamp(22px, 3vw, 40px)`, kartu proyek 26px, kartu sertifikat 20px, tombol scroll-to-top 10px, nav link 7px, logo mark 6px. Lubang punch persegi tegak (lebar 60% × tinggi 52% sel; heatmap 10×14px; penanda skill 7×16px). Garis terbagi dua bahasa: solid 1.5px untuk struktur (grid field, pemisah record) dan putus-putus 1.5–2px untuk perforasi/sobekan (stub hero, kaki kartu proyek, baris statistik) serta state belum-terpilih.
+Sudut hampir tajam: 2px di hampir semua komponen, 3px batas atasnya. Skala radius di `@theme` dipatok, sehingga `rounded-full` pun hanya 3px dan tidak ada pill atau lingkaran, termasuk di admin yang mewarisinya. Penanda aktivitas persegi 1px.
 
-Kartu proyek dan sertifikat membawa **strip warna atas** (12px proyek, 8px sertifikat) dari keempat card stock, seperti kartu berstrip pemisah jenis data. Tepi bawah setiap kartu section membawa **strip tick 80-kolom** (1px tiap 1.25%, tinggi 7px, opasitas 0.3).
+Proporsi flap selalu 1 : 1.62, sama antara sel 3D, angka statistik, dan flap loading. Pemisah adalah garis solid: 1px hairline untuk baris dan kontrol, 2px teks primer untuk pembuka kumpulan baris. Bentuk bingkai gambar mengikuti isi: gambar proyek `contain` di atas flap, thumbnail sertifikat `contain` di atas rumah papan, foto profil `cover`.
+
+### Named Rules
+**The 3px Ceiling Rule.** Tidak ada radius di atas 3px. Kebulatan bukan bagian dari benda ini; flap adalah pelat logam yang dipotong.
+
+**The Grayscale At Rest Rule.** Foto profil, ikon skill, dan gambar sertifikat grayscale saat diam dan mendapat warna asli saat hover, supaya halaman tetap tidak warna-warni. Logo perusahaan dan gambar proyek berwarna penuh karena mereka bukti yang harus dikenali.
 
 ## Components
 
 ### Buttons
-Label tercetak di kartu: tegas, kotak, tanpa dekorasi.
-- **Shape:** sudut tajam (`{rounded.none}`), border 2px.
-- **Primary:** latar `--btn-bg`, teks `--btn-fg`, padding 12px 20px, Label type (0.8rem, 750, lebar 87%, uppercase, 0.07em). Di meja: `desk-accent` dengan teks `desk` (putih di tema terang). Di dalam kartu: ink kartu dengan teks stock kartu, otomatis.
-- **Hover / Focus:** primer naik `translateY(-2px)` dalam 150ms. Focus global: outline 2px `desk-accent`, offset 3px.
-- **Outline:** latar transparan, border 2px putus-putus `currentColor`; hover menjadi solid + surface 10%.
+Tegas dan bersuara label papan.
+- **Shape:** sudut 2px, tinggi minimum 46px, border 1.5px.
+- **Primary:** latar sinyal, tinta sinyal, ikon opsional 18px di depan teks. Hanya untuk aksi utama: Lihat CV, Hubungi saya di footer, dan tautan proyek di halaman detail.
+- **Hover / Focus:** primer pindah ke `signal-hover`, tanpa geser. Focus global outline 2px `--color-accent-primary`, offset 3px. Transisi warna 150ms.
+- **Outline:** transparan, border hairline, teks primer; hover border teks primer + `surface-subtle`.
 
 ### Chips (filter proyek)
-- **Style:** Label type 0.78rem, padding 9px 16px 8px, border 2px putus-putus hairline, teks sekunder.
-- **State:** hover menebalkan border ke warna teks primer; aktif = border solid + latar `--btn-bg`, teks `--btn-fg`. Persis aturan sorter: kolom terpilih dipunch solid, sisanya putus-putus.
+- **Style:** border hairline 1px, teks sekunder, label uppercase, tinggi minimum 40px, gap 6px.
+- **State:** hover menaikkan teks dan border ke teks primer. Aktif diisi sinyal dengan tinta sinyal. Pemilih tahun GitHub mengikuti state aktif yang sama.
 
 ### Cards / Containers
-- **Corner Style:** pojok kiri-atas terpotong, sisanya tajam.
-- **Background:** satu card stock penuh (`card--red/yellow/blue/green/white`), ink pasangannya untuk semua teks dan garis.
-- **Shadow Strategy:** Card on Desk lewat pembungkus (lihat Elevation & Depth).
-- **Border:** tidak ada border luar; kartu proyek/sertifikat memakai strip warna atas.
-- **Internal Padding:** `clamp(28px, 4.5vw, 64px)` atas, `clamp(20px, 4.5vw, 64px)` sisi, `clamp(52px, 5.5vw, 76px)` bawah.
-- **Signature edge:** strip tick 80-kolom di bawah + nomor urut Doto (`data-seq`) di kanan bawah. Kartu proyek menaruh nomor urut (`P001`) di kanan atas dan kaki dengan garis putus-putus berisi "lihat detail" + tag kategori.
+Tidak ada kartu generik. Dua panel yang ada:
+- **Panel Papan (heatmap, footer):** latar rumah papan, tanpa border dan radius, padding `{spacing.board-pad}`, mengikuti The Scoped Ink Rule.
+- **Panel Detail Commit:** `surface-faint` + hairline 1px, muncul setelah sel heatmap dipilih.
+
+### Inputs / Fields
+Permukaan publik tidak punya input; input hanya ada di admin, lihat Admin. Field baca-saja di baris jadwal memakai `dt` label tersier dan `dd` 1rem 600; varian nilai besar (IPK) memakai display 2.6rem.
 
 ### Navigation
-- **Style:** bar fixed, transparan di atas hero, menjadi latar meja + hairline bawah saat di-scroll. Logo mark Doto di kotak terpotong 6px berwarna `--btn-bg`, nama logo 800 lebar 112% uppercase.
-- **Links:** Label type 0.76rem, teks sekunder, bentuk tab indeks terpotong 7px. Hover: teks primer + surface 8%. Aktif: tab solid `--btn-bg` / `--btn-fg`.
-- **Kontrol bahasa/tema:** 36px tinggi, border 1.5px putus-putus, Label 0.72rem; hover menjadi solid.
-- **Mobile (<768px):** overlay layar penuh berlatar meja, link 1.1rem, kontrol di bawah.
+- **Style:** rel fixed setinggi `{spacing.rail-height}`, latar lantai solid dan hairline bawah, selalu solid sejak awal. Logo mark adalah tile flap kecil berisi KFB dengan lipatan di belakang huruf, plus teks PORTFOLIO.
+- **Links:** Label, teks sekunder, padding 8px 12px. Hover teks primer + `surface-subtle`. Aktif diisi sinyal.
+- **Kontrol bahasa/tema:** tinggi 36px, border hairline; label teks disembunyikan di bawah 640px, hanya ikon.
+- **Mobile (<1024px):** overlay layar penuh berlatar lantai, link 1.5rem, kontrol di atas link, toggle ikon di rel.
 
-### Hollerith Punch Grid (signature)
-Grid N kolom (80 di hero, 40 di loading, 24 di hero mobile), tiap kolom: baris interpretasi Doto + 12 posisi (12, 11, 0–9). Angka baris tercetak di ink 38% dengan lebar 75%; posisi berlubang menjadi persegi berwarna meja yang "dipunch" (`scaleY` 0→1, 160ms, berurutan 18ms per kolom setelah 650ms). Hover kolom: latar ink 12%, lubang berubah ink, tooltip Doto `kolom · kode`. Encoding mengikuti tabel Hollerith IBM asli (`src/lib/hollerith.js`); teks dari data profil, bukan hiasan acak. Grid `aria-hidden`; nama asli tetap dirender sebagai `h1`.
+### Papan Hero (signature)
+Satu-satunya three.js di situs, seluruhnya di `src/lib/flapBoard.js`, dimuat lewat dynamic import sebagai chunk terpisah.
+- **Struktur:** baris nama selebar 13 kolom (dua baris di desktop), di bawah 720px selebar kata terpanjang (tiga baris), lalu satu baris headline yang diskalakan maksimal 0.72 supaya muat tanpa wrap. Kolom terpisah 1.05 unit, rel logam tipis di antara baris nama, latar belakang hampir hitam di belakang flap.
+- **Masuk:** tiap sel berputar 2–4 huruf acak lalu berhenti di huruf akhir, flip 130ms dan 210ms untuk flip terakhir, stagger 26ms, kurva gravitasi (kuadrat) sampai flap menepuk flap di bawahnya.
+- **Setelah masuk:** hanya baris headline yang berganti tiap 6 detik kalau headline lebih dari satu. Parallax pointer maksimal 0.035 / 0.022 radian, hanya di perangkat `hover: hover`.
+- **Warna:** cahaya ambient 2.45 + directional 1 dari arah (-5, 8, 9) menghasilkan total iradiansi Lambert ≈ 1 pada flap menghadap depan, sehingga warna rendernya sama dengan token. WebGL tidak bisa membaca CSS, jadi nilai rumah, flap, dan tinta disalin sebagai konstanta di file itu.
+- **Fallback:** `h1` nama dan headline HTML tampil sampai papan siap atau kalau WebGL gagal, lalu disembunyikan visual tapi tetap dibaca screen reader. Kanvas `aria-hidden`.
 
-### Hero Stub
-Kolom kanan kartu hero, latar stock +9% putih, dipisah perforasi 2px putus-putus ink 45%. Berisi foto ID persegi 112px berbingkai ink 2px, deskripsi, tombol primer + outline, ikon sosial kotak 40px (border ink 40%, hover terisi ink).
+**The Render On Demand Rule.** Papan hanya merender saat ada yang bergerak, berhenti saat idle atau di luar layar, pixel ratio maksimal 2, dan rotasi headline dilewati saat tab tersembunyi. Papan idle tidak memakai GPU.
 
-### Printed Field Grid
-Tabel sel bergaris 1.5px (garis kiri-atas di wadah, kanan-bawah di sel). `dt` = Label 0.68rem tersier; `dd` = 1rem 650. Varian angka besar 2.2rem 850 lebar 112%. Dipakai di skills (tiap sel diawali lubang 7×16px berwarna meja) dan fields record.
+**The Token Light Rule.** Cahaya scene dikalibrasi supaya flap dan tinta yang dirender sama dengan `flap` dan `flap-ink`. Mengubah cahaya atau token tanpa mengkalibrasi ulang keduanya merusak sambungan papan dengan halaman.
 
-### GitHub Heatmap Holes
-Tiap hari satu posisi lubang 10×14px. Level 0 = outline ink 22%; level 1–4 = isi warna meja 35% / 60% / 82% / 100% (makin penuh makin dipunch). Hover/terpilih: outline 2px `desk-signal`. Di kartu putih tema terang, meja lubang dipaksa `#161714` agar terbaca. Statistik ringkas = satu baris Doto uppercase di antara dua garis putus-putus, bukan grid kartu stat.
+**The Three Stops Here Rule.** Three.js tidak keluar dari hero dan tidak diimpor statis di mana pun.
+
+### Tile Flap
+Latar flap, tinta flap, sudut 2px, garis lipatan di tengah. Varian: tile skill (tinggi minimum 72px, ikon 36px dalam well, nama Label 700 1.15rem, hover `flap-hover`), angka statistik GitHub (per digit, gap `{spacing.digit-gap}`), logo mark, dan flap loading (tiga digit persentase). Well ikon skill memakai rumah papan untuk logo dominan putih dan tinta krem untuk sisanya, sama di dua tema.
+
+### Baris Jadwal
+Pendidikan, Pengalaman, dan Sertifikasi memakai baris yang sama: periode, isi, field. Isi memuat kepala (logo atau thumbnail + judul + sub) dan deskripsi. Logo perusahaan 76px di atas pelat putih, dengan ikon fallback `logo-plate-ink`. Thumbnail sertifikat 112×84px di atas rumah papan. Tautan sertifikat Label 700 bergaris bawah, menebal saat hover. Pendidikan menampilkan nilai sebagai field besar.
+
+### Baris Proyek
+Seluruh baris adalah satu tautan. Gambar 16:10 `contain` di atas flap dengan badge jumlah foto, nama Headline, ringkasan 3 baris, lalu kaki berisi "lihat detail" + tag kategori. Hover: gambar skala 1.025 (400ms), nama bergaris bawah, panah geser 5px. Halaman detail mengulang dunia yang sama: galeri di atas rumah papan dengan thumbnail bergaris sinyal saat aktif, judul display, tag kategori di bawah judul, artikel maks 800px, tombol primer.
+
+### Heatmap GitHub
+Data live di panel papan. Tiap hari satu sel flap tegak 10×14px (16×22px mulai 1280px), gap 5px. Level 0 memakai `heat-empty`, level 1–4 mencampur tinta ke flap 32%, 55%, 78%, 100%, jadi monokrom tanpa hijau. Hover dan terpilih outline 2px sinyal. Label hari sticky saat matriks digeser. Bar bahasa juga monokrom turunan teks primer, segmen yang di-hover menyala sinyal.
+
+### Overlay
+Modal CV dan lightbox di atas hitam 90–92%. Tombol kontrol gambar persegi semi-transparan, jadi sinyal saat hover. Thumbnail aktif dan titik galeri aktif memakai sinyal; titik aktif melebar jadi 24px.
+
+### Footer
+Rumah papan di dua tema: nama besar display, tagline, tombol primer, tautan sosial 40px berborder, dan copyright Label di atas hairline.
+
+### Admin
+Admin dev-only mewarisi token dan skala radius, tidak di-restyle ke dunia papan. Judulnya sentence case, aksen memakai `--color-accent-primary`, border putus-putus pada kontrol upload, merah pada aksi hapus dan error, dan satu bayangan di modal crop. Semua itu tetap milik admin dan tidak menjadi preseden untuk permukaan publik.
 
 ### Motion
-Kartu hero masuk sekali dari kanan seperti card reader (`translateX(14vw)` → 0, 0.9s `cubic-bezier(0.16, 1, 0.3, 1)`), lalu lubang dipunch kolom demi kolom. Semua animasi dimatikan pada `prefers-reduced-motion`.
+- **Judul section:** jatuh sekali dari engsel atas saat section tiba di layar, `rotateX(-68deg)` ke 0 dengan perspective 900px, 560ms `cubic-bezier(0.16, 1, 0.3, 1)`.
+- **Respons state:** warna 150ms; overlay dan panel detail commit fade 0.3s (modal CV 0.5s naik 16px) karena muncul sebagai jawaban atas klik.
+- **Reduced motion:** semua animasi dan transisi CSS jadi 0.01ms; papan langsung tampil statis tanpa flip, rotasi headline, dan parallax.
+
+**The One Drop Rule.** Satu-satunya gerak saat scroll adalah judul section yang jatuh sekali. Isi section, baris, dan tile tidak punya animasi masuk. Hero menjatuhkan flap sekali, lalu diam kecuali baris headline.
 
 ## Do's and Don'ts
 
 ### Do:
-- **Do** bungkus section baru dalam satu kartu stock (`card--*` + `data-seq` berikutnya) atau letakkan dek kartu kecil langsung di meja; pilih stock yang belum dipakai section tetangga.
-- **Do** turunkan semua warna di dalam kartu dari `--ink` / `--stock` lewat `color-mix`.
-- **Do** pakai pojok kiri-atas terpotong untuk setiap benda berbentuk kartu atau tab, dengan ukuran cut yang sebanding dengan bendanya.
-- **Do** tandai state: solid = terpilih/primer, putus-putus = belum terpilih/sekunder.
-- **Do** isi setiap lubang dengan warna meja (`--desk`).
-- **Do** bangun hierarki lewat ukuran + `font-stretch` Archivo; Doto hanya untuk string mesin.
-- **Do** pakai `repeating-linear-gradient` 1px hanya untuk menggambar tick/garis cetak kartu; itu goresan cetak, bukan gradien warna.
+- **Do** pakai `--flap`, `--housing`, dan tinta flap untuk apa pun yang secara fiksi adalah bagian papan, dan biarkan warnanya sama di dua tema.
+- **Do** pakai `--signal` dengan `--signal-ink` hanya untuk aksi utama dan status aktif.
+- **Do** pakai `--color-accent-primary` untuk teks, ikon, dan focus di atas lantai.
+- **Do** deklarasikan ulang `--color-text-*` ke tinta flap di setiap panel rumah papan baru.
+- **Do** taruh riwayat baru di baris jadwal yang sudah ada (periode, isi, field), bukan pola baru.
+- **Do** taruh logo perusahaan di atas pelat putih 76px, di dua tema.
+- **Do** beri tile flap proporsi 1 : 1.62 kalau ia berisi satu karakter, dengan lipatan 1px di tengah.
+- **Do** biarkan judul section baru jatuh sekali lewat hook scroll yang sudah ada.
+- **Do** sinkronkan konstanta warna di `src/lib/flapBoard.js` dan kalibrasi cahayanya saat token flap, tinta, atau rumah berubah.
+- **Do** pertahankan `h1` HTML di hero sebagai fallback dan untuk screen reader.
 
 ### Don't:
-- **Don't** pakai `border-radius` di permukaan publik, termasuk pill, lingkaran, atau squircle.
-- **Don't** pakai gradien warna, glassmorphism, backdrop-blur, atau glow berwarna; satu-satunya bayangan adalah Card on Desk.
-- **Don't** taruh eyebrow/kicker/label kecil di atas judul; judul membawa bobotnya sendiri lewat ukuran dan lebar.
-- **Don't** ubah warna card stock per tema; yang berubah hanya meja.
-- **Don't** pakai Doto untuk prosa atau judul, dan jangan anggap `--font-mono` sebagai monospace sungguhan.
-- **Don't** pakai punch grid sebagai pola hiasan acak; lubang selalu meng-encode teks nyata.
+- **Don't** override token papan atau sinyal di `[data-theme='light']`.
+- **Don't** pakai kuning sinyal sebagai warna teks, hiasan, atau pembeda kategori.
+- **Don't** pakai `--color-accent-primary` di atas rumah papan; di tema terang nilainya terlalu gelap untuk latar hitam.
+- **Don't** terapkan grayscale ke logo perusahaan atau mengganti pelat putihnya jadi warna palet.
+- **Don't** impor three.js di luar `src/lib/flapBoard.js`, atau menjalankan render loop terus-menerus.
+- **Don't** tambah animasi masuk pada isi section, stagger baris, atau fade saat scroll.
+- **Don't** pakai radius di atas 3px, `box-shadow` di permukaan publik, glow, glassmorphism, atau gradien warna.
+- **Don't** taruh eyebrow atau kicker di atas judul; tag kategori dan subjudul berada di bawah atau di samping judul.
+- **Don't** susun proyek atau riwayat sebagai grid kartu.
+- **Don't** pakai warna hijau atau warna-warni di heatmap dan bar bahasa.
+- **Don't** anggap `--font-mono` sebagai monospace, atau memakai token sisa yang tidak dipakai komponen mana pun (`--color-accent-glow`, `--glass-*`).
+- **Don't** bawa merah, border putus-putus, atau bayangan admin ke permukaan publik.

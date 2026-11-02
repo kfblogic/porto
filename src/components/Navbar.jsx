@@ -10,6 +10,7 @@ const navLinkIds = [
   { key: 'nav.projects', id: 'projects' },
   { key: 'nav.education', id: 'education' },
   { key: 'nav.experience', id: 'experience' },
+  { key: 'nav.certifications', id: 'certifications' },
 ]
 
 function isHomePath(pathname) {

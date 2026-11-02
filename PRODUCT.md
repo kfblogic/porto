@@ -34,7 +34,7 @@ Breadth teknis: full-stack, banyak stack/skill sekaligus. Daftar skill flat (tan
 
 ## Brand Commitments
 
-Nama: Kevin Febrian Bimantara. Visual identity 2026-10: "Kartu Punch 80-Kolom" world — portfolio sebagai dek kartu IBM/Hollerith berwarna; nama Kevin dipunch beneran dalam kode Hollerith di hero, tiap section satu kartu. Tema jurusan Teknik Informatika diminta user. Menggantikan "Commit Log" (2026-08) dan dark-glassmorphism/ungu-lavender sebelumnya (dianggap user "AI slop" default). Lihat DESIGN.md untuk token & komponen.
+Nama: Kevin Febrian Bimantara. Visual identity 2026-11: "Papan Split-Flap" world — portfolio sebagai papan keberangkatan mekanis; nama jatuh ke tempatnya di papan flap three.js di hero, tiap konten satu baris terbaca. Menggantikan "Kartu Punch 80-Kolom" (2026-10), "Commit Log" (2026-08), dan dark-glassmorphism/ungu-lavender sebelumnya (dianggap user "AI slop" default). User minta animasi tidak ramai dan tidak terlalu warna-warni. Lihat DESIGN.md untuk token & komponen.
 
 ## Evidence on Hand
 

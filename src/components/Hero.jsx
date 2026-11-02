@@ -1,7 +1,6 @@
-import { useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { Mail, Eye } from 'lucide-react'
 import CVModal from './CVModal'
-import PunchGrid from './PunchGrid'
 import { useAppSettings } from '../context/AppSettingsContext'
 
 const GithubIcon = () => (
@@ -20,8 +19,12 @@ const TwitterIcon = () => (
 export default function Hero({ profile }) {
   const { t } = useAppSettings()
   const [isCVModalOpen, setIsCVModalOpen] = useState(false)
+  const [boardLive, setBoardLive] = useState(false)
+  const boardRef = useRef(null)
 
+  const name = profile?.name || 'Developer'
   const headlines = profile?.headlines?.length ? profile.headlines : ['Developer']
+  const headlinesKey = headlines.join('|')
 
   const socialLinks = [
     { icon: GithubIcon, url: profile?.github_url, label: 'GitHub' },
@@ -30,66 +33,84 @@ export default function Hero({ profile }) {
     { icon: TwitterIcon, url: profile?.twitter_url, label: 'Twitter' },
   ].filter(s => s.url)
 
-  const punchText = [profile?.name, headlines[0]].filter(Boolean).join(' / ')
+  // three.js dimuat terpisah; kalau WebGL gagal, nama HTML di bawah tetap tampil.
+  useEffect(() => {
+    let cancelled = false
+    let dispose
+    import('../lib/flapBoard')
+      .then(({ createFlapBoard }) =>
+        createFlapBoard(boardRef.current, { name, headlines: headlinesKey.split('|') }),
+      )
+      .then((destroy) => {
+        if (cancelled) destroy()
+        else {
+          dispose = destroy
+          setBoardLive(true)
+        }
+      })
+      .catch((err) => console.warn('Flap board unavailable', err))
+
+    return () => {
+      cancelled = true
+      dispose?.()
+      setBoardLive(false)
+    }
+  }, [name, headlinesKey])
 
   return (
     <section id="home" className="hero">
-      <div className="container">
-        <div className="card-wrap hero-feed">
-          <div className="card card--red hero-card" data-seq="KFB 0001">
-            <PunchGrid text={punchText} cols={80} className="hero-grid" />
+      <div className="hero-board" ref={boardRef}>
+        <div className={`hero-fallback ${boardLive ? 'is-live' : ''}`}>
+          <h1 className="hero-name">{name}</h1>
+          <p className="hero-headline">{headlines.join(' / ')}</p>
+        </div>
+      </div>
 
-            <div className="hero-main">
-              <h1 className="hero-name">{profile?.name || 'Developer'}</h1>
-              <p className="hero-headline">{headlines.join(' / ')}</p>
-            </div>
-
-            <div className="hero-stub">
-              {profile?.photo ? (
-                <img src={profile.photo} alt={profile.name} className="hero-avatar" />
-              ) : (
-                <div className="hero-avatar hero-avatar-placeholder">
-                  <span>{(profile?.name || 'D')[0]}</span>
-                </div>
-              )}
-
-              <p className="hero-description">
-                {profile?.description || 'A passionate developer building amazing things.'}
-              </p>
-
-              <div className="hero-actions">
-                {profile?.cv_path && (
-                  <button type="button" onClick={() => setIsCVModalOpen(true)} className="btn btn-primary">
-                    <Eye size={18} aria-hidden />
-                    {t('hero.viewCv')}
-                  </button>
-                )}
-                {profile?.email && (
-                  <a href={`mailto:${profile.email}`} className="btn btn-outline">
-                    <Mail size={18} aria-hidden />
-                    {t('hero.contact')}
-                  </a>
-                )}
-              </div>
-
-              {socialLinks.length > 0 && (
-                <div className="hero-socials">
-                  {socialLinks.map((social) => (
-                    <a
-                      key={social.label}
-                      href={social.url}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="social-link"
-                      aria-label={social.label}
-                    >
-                      <social.icon />
-                    </a>
-                  ))}
-                </div>
-              )}
-            </div>
+      <div className="container hero-rail">
+        {profile?.photo ? (
+          <img src={profile.photo} alt={profile.name} className="hero-avatar" />
+        ) : (
+          <div className="hero-avatar hero-avatar-placeholder">
+            <span>{name[0]}</span>
           </div>
+        )}
+
+        <p className="hero-description">
+          {profile?.description || 'A passionate developer building amazing things.'}
+        </p>
+
+        <div className="hero-cta">
+          <div className="hero-actions">
+            {profile?.cv_path && (
+              <button type="button" onClick={() => setIsCVModalOpen(true)} className="btn btn-primary">
+                <Eye size={18} aria-hidden />
+                {t('hero.viewCv')}
+              </button>
+            )}
+            {profile?.email && (
+              <a href={`mailto:${profile.email}`} className="btn btn-outline">
+                <Mail size={18} aria-hidden />
+                {t('hero.contact')}
+              </a>
+            )}
+          </div>
+
+          {socialLinks.length > 0 && (
+            <div className="hero-socials">
+              {socialLinks.map((social) => (
+                <a
+                  key={social.label}
+                  href={social.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="social-link"
+                  aria-label={social.label}
+                >
+                  <social.icon />
+                </a>
+              ))}
+            </div>
+          )}
         </div>
       </div>
 

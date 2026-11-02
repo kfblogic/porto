@@ -7,8 +7,6 @@ import { getProjectSlug } from '../lib/projectSlug'
 import { useAppSettings } from '../context/AppSettingsContext'
 
 const ALL_CATEGORY = 'All'
-// Warna strip kartu per kategori, seperti kartu berstrip pemisah jenis data.
-const STRIPES = ['#1f4fa3', '#2f7d5b', '#e9573f', '#f2c230']
 
 export default function Projects({ projects, categories }) {
   const { t } = useAppSettings()
@@ -32,7 +30,7 @@ export default function Projects({ projects, categories }) {
   const isEmpty = !filtered || filtered.length === 0
 
   return (
-    <section id="projects" className="section desk-section">
+    <section id="projects" className="section">
       <div className="container" ref={ref}>
         <div className="section-header">
           <h2 className="section-title">{t('sections.projects.title')}</h2>
@@ -73,19 +71,13 @@ export default function Projects({ projects, categories }) {
           </div>
         ) : (
           <div className="projects-grid">
-            {filtered.map((project, index) => {
+            {filtered.map((project) => {
               const cover = getProjectCoverSrc(project)
               const imageCount = getProjectImages(project).length
               const projectSlug = getProjectSlug(project)
 
               return (
-                <Link
-                  key={project.id}
-                  to={`/project/${projectSlug}`}
-                  className="project-card"
-                  data-seq={`P${String(index + 1).padStart(3, '0')}`}
-                  style={{ '--stripe': STRIPES[Math.max(0, displayCategories.indexOf(project.category) - 1) % STRIPES.length] }}
-                >
+                <Link key={project.id} to={`/project/${projectSlug}`} className="project-card">
                   <div className="project-image-container">
                     {cover ? (
                       <img src={cover} alt={project.name} className="project-image" />
@@ -106,7 +98,7 @@ export default function Projects({ projects, categories }) {
                       <p className="project-excerpt">{project.excerpt}</p>
                     )}
                     <div className="project-foot">
-                      <span className="project-more">{t('sections.projects.viewDetail')} <ArrowRight size={14} aria-hidden /></span>
+                      <span className="project-more">{t('sections.projects.viewDetail')} <ArrowRight size={16} aria-hidden /></span>
                       <span className="project-category-tag">{project.category}</span>
                     </div>
                   </div>
